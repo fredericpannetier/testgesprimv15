@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+         <!-- Customer codification sequence -->
+        <record id="di_customer_seq" model="ir.sequence">
+            <field name="name">Customer codification</field>
+            <field name="code">di.res.partner.customer.seq</field>
+            <field name="prefix">C</field>
+            <field name="padding">7</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+        </record>
+    <!-- Supplier codification sequence -->
+        <record id="di_supplier_seq" model="ir.sequence">
+            <field name="name">Supplier codification</field>
+            <field name="code">di.res.partner.supplier.seq</field>
+            <field name="prefix">S</field>
+            <field name="padding">7</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+        </record>    
+
+    </data>
+</odoo>

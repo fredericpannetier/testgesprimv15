@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_address_improvement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:58+0000\n"
+"PO-Revision-Date: 2021-09-20 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_address_form
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "City"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model:ir.model.fields,field_description:partner_address_improvement.field_res_partner__di_company_country_code
+#: model:ir.model.fields,field_description:partner_address_improvement.field_res_users__di_company_country_code
+msgid "Company country code"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_address_form
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "Country"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model:ir.model.fields,field_description:partner_address_improvement.field_res_partner__di_default_address
+#: model:ir.model.fields,field_description:partner_address_improvement.field_res_users__di_default_address
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "Default address"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model:ir.model.fields,help:partner_address_improvement.field_res_partner__di_default_address
+#: model:ir.model.fields,help:partner_address_improvement.field_res_users__di_default_address
+msgid "Default adress in sale order"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.ges_purchase_order_form
+msgid "Name, TIN, Email, or Reference"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_res_partner_filter
+msgid "Parent Partner"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_address_form
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "State"
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_address_form
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "Street 2..."
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_address_form
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "Street..."
+msgstr ""
+
+#. module: partner_address_improvement
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_address_form
+#: model_terms:ir.ui.view,arch_db:partner_address_improvement.di_view_partner_form
+msgid "ZIP"
+msgstr ""

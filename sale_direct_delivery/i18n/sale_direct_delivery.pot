@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_direct_delivery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:58+0000\n"
+"PO-Revision-Date: 2021-09-20 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_direct_delivery
+#: model_terms:ir.ui.view,arch_db:sale_direct_delivery.di_direct_delivery_wiz
+msgid "Cancel"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model_terms:ir.ui.view,arch_db:sale_direct_delivery.di_direct_delivery_wiz
+msgid "Confirm deliveries"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model,name:sale_direct_delivery.model_di_direct_delivery_wiz
+msgid "Confirm quotations assign products and validate deliveries"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.actions.act_window,name:sale_direct_delivery.di_action_direct_deliveries_wiz
+#: model_terms:ir.ui.view,arch_db:sale_direct_delivery.di_direct_delivery_wiz
+msgid "Direct delivery"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz__display_name
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_stock_move__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz__id
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_stock_move__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz____last_update
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_stock_move____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model.fields,field_description:sale_direct_delivery.field_di_direct_delivery_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: code:addons/sale_direct_delivery/wizards/di_wiz_direct_delivery.py:0
+#, python-format
+msgid "Process completed."
+msgstr ""
+
+#. module: sale_direct_delivery
+#: model:ir.model,name:sale_direct_delivery.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: sale_direct_delivery
+#: code:addons/sale_direct_delivery/wizards/di_wiz_direct_delivery.py:0
+#, python-format
+msgid ""
+"Warning ! Some of the deliveries have not been validated due to a lack of "
+"stock."
+msgstr ""

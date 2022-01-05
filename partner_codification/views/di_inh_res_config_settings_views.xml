@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="di_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">di.res.config.settings.view.form.inherit.partner</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='contacts_settings']" position="after">
+                    <h2>Partner automatic codification</h2>
+                    <div class="row mt16 o_settings_container" id="di_customer_automatic_codification">
+                        <div class="col-12 col-lg-6 o_setting_box" id="di_customer_automatic_codification_cb">
+                            <div class="o_setting_left_pane">
+                                <field name="di_cus_seq"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="di_cus_seq" />                                                            
+                            </div>
+                        </div>  
+                        <div class="col-12 col-lg-6 o_setting_box" id="di_supplier_automatic_codification_cb">
+                            <div class="o_setting_left_pane">
+                                <field name="di_sup_seq"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="di_sup_seq" />                                                            
+                            </div>
+                        </div>                       
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

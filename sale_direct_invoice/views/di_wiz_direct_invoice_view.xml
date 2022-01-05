@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record id="di_direct_invoice_wiz" model="ir.ui.view">
+        <field name="name">di.direct.invoice.form</field>
+        <field name="model">di.direct.invoice.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Direct invoice">  
+            <group>
+                <field name="confirm_invoice"/>
+            </group>          	
+                <footer>
+                    <button string="Confirm invoices" type="object" 
+                        name="di_massive_invoices"  default_focus="1" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="di_action_direct_invoices_wiz" model="ir.actions.act_window">
+        <field name="name">Direct invoice</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.direct.invoice.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>        
+        <field name="binding_model_id" ref="sale.model_sale_order"/>                
+        <field name="binding_view_types">list,form</field>        
+    </record>
+    
+</odoo>

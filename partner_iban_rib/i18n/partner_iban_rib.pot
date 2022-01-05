@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_iban_rib
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:58+0000\n"
+"PO-Revision-Date: 2021-09-20 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanacc
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__di_ibanacc
+msgid "Account"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,help:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanacc
+#: model:ir.model.fields,help:partner_iban_rib.field_res_partner_bank__di_ibanacc
+msgid "Account "
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__acc_number
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__acc_number
+msgid "Account Number"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model,name:partner_iban_rib.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanbk
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__di_ibanbk
+msgid "Bank code"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,help:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanbk
+#: model:ir.model.fields,help:partner_iban_rib.field_res_partner_bank__di_ibanbk
+msgid "Bank code "
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanbksortcode
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__di_ibanbksortcode
+msgid "Bank sort code"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,help:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanbksortcode
+#: model:ir.model.fields,help:partner_iban_rib.field_res_partner_bank__di_ibanbksortcode
+msgid "Bank sort code "
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanctry
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__di_ibanctry
+msgid "Country code"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,help:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanctry
+#: model:ir.model.fields,help:partner_iban_rib.field_res_partner_bank__di_ibanctry
+msgid "Country code "
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__di_ibankey
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__di_ibankey
+msgid "Iban key"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,help:partner_iban_rib.field_account_setup_bank_manual_config__di_ibankey
+#: model:ir.model.fields,help:partner_iban_rib.field_res_partner_bank__di_ibankey
+msgid "Iban key "
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,field_description:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanribkey
+#: model:ir.model.fields,field_description:partner_iban_rib.field_res_partner_bank__di_ibanribkey
+msgid "RIB key"
+msgstr ""
+
+#. module: partner_iban_rib
+#: model:ir.model.fields,help:partner_iban_rib.field_account_setup_bank_manual_config__di_ibanribkey
+#: model:ir.model.fields,help:partner_iban_rib.field_res_partner_bank__di_ibanribkey
+msgid "RIB key "
+msgstr ""

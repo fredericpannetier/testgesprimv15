@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="di_grid_sale_wiz" model="ir.ui.view">
+        <field name="name">di.sale.grid.form</field>
+        <field name="model">di.sale.grid.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Sale Grid">
+                <group>                
+                    <group>                                              
+                        <field name="so_id"/>                               
+                    </group>                                      
+                </group>
+                <separator />
+                <label for="product_ids"/>
+                <field name="product_ids">
+                    <tree order="display_name">
+                        <field name="display_name" />                                               
+                    </tree>
+                </field>
+                <footer>
+                    <button string="Validate" type="object" name="di_grid_validate"
+                        default_focus="1" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

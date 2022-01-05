@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tax_on_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:59+0000\n"
+"PO-Revision-Date: 2021-09-20 15:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: tax_on_tax
+#: model:ir.model.fields,help:tax_on_tax.field_account_tax__di_tax_id
+msgid "Add a tax on the amount of the tax."
+msgstr "Ajoute une taxe sur le montant de la taxe."
+
+#. module: tax_on_tax
+#: model:ir.model.fields,field_description:tax_on_tax.field_account_tax__display_name
+#: model:ir.model.fields,field_description:tax_on_tax.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: tax_on_tax
+#: model:ir.model.fields,field_description:tax_on_tax.field_account_tax__id
+#: model:ir.model.fields,field_description:tax_on_tax.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: tax_on_tax
+#: model:ir.model.fields,field_description:tax_on_tax.field_account_tax____last_update
+#: model:ir.model.fields,field_description:tax_on_tax.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: tax_on_tax
+#: model:ir.model,name:tax_on_tax.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: tax_on_tax
+#: model:ir.model,name:tax_on_tax.model_account_tax
+msgid "Tax"
+msgstr "Taxe"
+
+#. module: tax_on_tax
+#: model:ir.model.fields,field_description:tax_on_tax.field_account_tax__di_tax_id
+msgid "Tax on tax"
+msgstr "Taxe sur la taxe"
+
+#. module: tax_on_tax
+#: model_terms:ir.ui.view,arch_db:tax_on_tax.di_account_tax_form
+msgid "Tax on the tax"
+msgstr "Taxe sur la taxe"
+
+#. module: tax_on_tax
+#: code:addons/tax_on_tax/models/di_inh_account_tax.py:0
+#, python-format
+msgid ""
+"Unable to mix any taxes being price included with taxes affecting the base "
+"amount but not included in price."
+msgstr ""
+"Impossible de mélanger des taxes inclues dans le prix avec des taxes "
+"affectant le montant de base mais non inclues dans le prix."

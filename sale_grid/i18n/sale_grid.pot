@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_grid
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:58+0000\n"
+"PO-Revision-Date: 2021-09-20 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_grid
+#: model_terms:ir.ui.view,arch_db:sale_grid.di_salegrid_view_order_form
+msgid "Allow to import previous sales into new sale order"
+msgstr ""
+
+#. module: sale_grid
+#: model_terms:ir.ui.view,arch_db:sale_grid.di_grid_sale_wiz
+msgid "Cancel"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model,name:sale_grid.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__display_name
+#: model:ir.model.fields,field_description:sale_grid.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields.selection,name:sale_grid.selection__res_config_settings__di_sale_grid_mode__horizon
+msgid "Horizon"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__id
+#: model:ir.model.fields,field_description:sale_grid.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz____last_update
+#: model:ir.model.fields,field_description:sale_grid.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields.selection,name:sale_grid.selection__res_config_settings__di_sale_grid_mode__order_number
+msgid "Order Number"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__product_ids
+msgid "Previous sales"
+msgstr ""
+
+#. module: sale_grid
+#: model_terms:ir.ui.view,arch_db:sale_grid.di_grid_sale_wiz
+#: model_terms:ir.ui.view,arch_db:sale_grid.di_salegrid_view_order_form
+#: model_terms:ir.ui.view,arch_db:sale_grid.ges_res_config_settings_view_form
+msgid "Sale Grid"
+msgstr ""
+
+#. module: sale_grid
+#: model_terms:ir.ui.view,arch_db:sale_grid.ges_res_config_settings_view_form
+msgid "Sale Grid Settings"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_di_sale_grid_wiz__so_id
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_res_config_settings__di_sale_horizon
+msgid "Sale grid horizon"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,help:sale_grid.field_res_config_settings__di_sale_horizon
+msgid "Sale grid horizon in days "
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,help:sale_grid.field_res_config_settings__di_sale_order_num
+msgid "Sale grid horizon in order number "
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_res_config_settings__di_sale_grid_mode
+msgid "Sale grid type"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,field_description:sale_grid.field_res_config_settings__di_sale_order_num
+msgid "Sale order number"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model.fields,help:sale_grid.field_res_config_settings__di_sale_grid_mode
+msgid "Search type for sale grid"
+msgstr ""
+
+#. module: sale_grid
+#: model_terms:ir.ui.view,arch_db:sale_grid.di_grid_sale_wiz
+msgid "Validate"
+msgstr ""
+
+#. module: sale_grid
+#: model:ir.model,name:sale_grid.model_di_sale_grid_wiz
+msgid "Wizard to import previous sales into new sale order"
+msgstr ""

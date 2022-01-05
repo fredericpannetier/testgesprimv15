@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_direct_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:59+0000\n"
+"PO-Revision-Date: 2021-09-20 15:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: sale_direct_invoice
+#: model_terms:ir.ui.view,arch_db:sale_direct_invoice.di_direct_invoice_wiz
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__confirm_invoice
+msgid "Confirm invoice"
+msgstr "Confirmer les factures"
+
+#. module: sale_direct_invoice
+#: model_terms:ir.ui.view,arch_db:sale_direct_invoice.di_direct_invoice_wiz
+msgid "Confirm invoices"
+msgstr "Confirmer les factures"
+
+#. module: sale_direct_invoice
+#: model:ir.model,name:sale_direct_invoice.model_di_direct_invoice_wiz
+msgid "Confirm quotations assign products and validate invoices"
+msgstr "Confirme les devis, affecte les articles et valide les factures"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: sale_direct_invoice
+#: model:ir.actions.act_window,name:sale_direct_invoice.di_action_direct_invoices_wiz
+#: model_terms:ir.ui.view,arch_db:sale_direct_invoice.di_direct_invoice_wiz
+msgid "Direct invoice"
+msgstr "Facturer directement"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Modification par"
+
+#. module: sale_direct_invoice
+#: model:ir.model.fields,field_description:sale_direct_invoice.field_di_direct_invoice_wiz__write_date
+msgid "Last Updated on"
+msgstr "Dernière Modification le"
+
+#. module: sale_direct_invoice
+#: code:addons/sale_direct_invoice/wizards/di_wiz_direct_invoice.py:0
+#, python-format
+msgid ""
+"Warning ! Some of the orders have not been invoiced. Please check the "
+"concerned orders."
+msgstr ""
+"Attention ! Certaines commandes n'ont pas été facturées. Veuillez vérifier "
+"les commandes concernées."

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record id="di_direct_delivery_wiz" model="ir.ui.view">
+        <field name="name">di.direct.delivery.form</field>
+        <field name="model">di.direct.delivery.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Direct delivery">            	
+                <footer>
+                    <button string="Confirm orders" type="object" 
+                        name="di_massive_order_confirm"  default_focus="1" />
+                    <button string="Confirm deliveries" type="object" 
+                        name="di_massive_deliveries"  default_focus="1" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="di_action_direct_deliveries_wiz" model="ir.actions.act_window">
+        <field name="name">Direct delivery</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.direct.delivery.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <!-- <field name="view_id" ref="di_direct_delivery_wiz" />      -->
+        <field name="binding_model_id" ref="sale.model_sale_order"/>                
+        <field name="binding_view_types">list,form</field>
+        <!-- <field name="binding_type">action</field>                             -->
+    </record>
+    <!-- <record id="action_view_sale_advance_payment_inv" model="ir.actions.act_window">
+            <field name="name">Create invoices</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.advance.payment.inv</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            
+            <field name="binding_model_id" ref="sale.model_sale_order" />
+            <field name="binding_view_types">list</field>
+        </record> -->
+    
+
+    <!-- <act_window
+        id="di_action_direct_deliveries_wiz"                        
+        name="Direct delivery"
+        res_model="di.direct.delivery.wiz"
+        src_model="sale.order"
+        view_mode="form"
+        target="new"
+        view_type="form"
+        view_id="di_direct_delivery_wiz">    
+    </act_window>        -->
+</odoo>

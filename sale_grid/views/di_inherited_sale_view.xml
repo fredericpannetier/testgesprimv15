@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo> 
+	<!-- surcharge vue commande + lignes -->
+	<record id="di_salegrid_view_order_form" model="ir.ui.view">
+		<field name="name">di.salegrid.sale.order.form</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">
+			<xpath expr="//header/field[@name='state']" position="before">
+				<button class="oe_edit_only" name="di_salegrid_action" type="object"
+					string="Sale Grid" help="Allow to import previous sales into new sale order" />
+			</xpath>
+		</field>
+	</record>
+</odoo>
