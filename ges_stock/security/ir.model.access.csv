@@ -1,0 +1,6 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_ges_stock_ges_inventory","access.ges.stock.ges.inventory","model_ges_inventory","base.group_user",1,1,1,1
+"access_ges_stock_ges_inventory_move","access.ges.stock.ges.inventory.move","model_ges_inventory_move","base.group_user",1,1,1,1
+"access_ges_stock_ges_inventory_move_line","access.ges.stock.ges.inventory.move.line","model_ges_inventory_move_line","base.group_user",1,1,1,1
+"access_ges_stock_ges_print_inventory_wiz","access.ges.stock.ges.print.inventory.wiz","model_ges_print_inventory_wiz","base.group_user",1,1,1,1
+"access_ges_stock_ges_stock_history","access.ges.stock.ges.stock.history","model_ges_stock_history","base.group_user",1,1,1,1

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ges_view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field eval="80" name="priority" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="ges_picker_req" invisible='1'/>
+                <label for="ges_picker_id" string="Picker" style="font-weight:bold;"/>
+                <field name="ges_picker_id" nolabel="1" attrs="{'required':[('ges_picker_req', '==', True)]}" />                                                                                                                           
+            </xpath>
+            <xpath expr="//page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='lot_ids']" position="replace"/>
+            <xpath expr="//page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="after">
+                <field name="ges_category_id" optional="hide" />   
+                <field name="ges_origin_id" optional="hide" />   
+                <field name="ges_brand_id" optional="hide" />   
+                <field name="ges_size_id" optional="hide" /> 
+            </xpath>
+            <xpath expr="//group[@name='other_infos']" position="inside">
+                <field name="ges_copies"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

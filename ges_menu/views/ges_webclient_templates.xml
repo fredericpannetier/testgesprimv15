@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <!-- Adds all assets in Odoo -->
+        <template id="di_assets_backend" name="Backend Assets  surcharge (used in backend interface)" inherit_id="web.assets_backend">
+             <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/ges_base/static/js/ges_form_controller.js"></script>                 
+            </xpath>            
+        </template>
+            
+    </data>
+</odoo> 

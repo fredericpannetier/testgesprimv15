@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record id="ges_print_forecast_wiz" model="ir.ui.view">
+        <field name="name">ges.forecast.form</field>
+        <field name="model">ges.print.forecast.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print Forecast">  
+            <group>
+                <group>
+                    <field name="po"/>
+                    <field name="so"/>
+                </group>
+                <group>
+                    <field name="draft"/>
+                    <field name="only_missing"/>                      
+                </group> 
+                <group>
+                    <field name="from_date"/>
+                    <field name="to_date"/>                      
+                </group>                              
+            </group>            
+                <footer>
+                    <!-- <button string="Print" type="object" name="print_forecast"  default_focus="1"  context="{'from_date': datetime.datetime.now(),'ges_draft':draft}"/> -->
+                    <button string="Print" type="object" name="print_forecast"  default_focus="1" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_print_forecast_wiz" model="ir.actions.act_window">
+        <field name="name">Print forecast</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.print.forecast.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>                    
+    </record>    
+</odoo>

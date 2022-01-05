@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>    
+    <template id="ges_report_stock_inventory" inherit_id="stock.report_stock_inventory">   
+        <!-- <xpath expr="//div" position="attributes">
+            <attribute name="class">o_stock_reports_page o_stock_reports_no_print</attribute>        
+        </xpath>
+        <xpath expr="//table/thead/tr/th[7]" position="replace">
+            <th>Entrées</th>
+            <th>Sorties</th>
+            <th>Colis</th>
+            <th>Pièces</th>
+            <th>Poids brut</th>
+            <th>Tare</th>
+            <th>Poids net</th>
+        </xpath>  -->
+        <xpath expr="//table/thead/tr/th[6]" position="after">
+            <th>Partner name</th>
+        </xpath>
+       
+    </template>
+     <template id="ges_report_stock_body_print" inherit_id="stock.report_stock_body_print">   
+        <!-- <xpath expr="//table/thead/tr/th[7]" position="replace">
+            <th>Entrées</th>
+            <th>Sorties</th>
+            <th>Colis</th>
+            <th>Pièces</th>
+            <th>Poids brut</th>
+            <th>Tare</th>
+            <th>Poids net</th>
+        </xpath>       -->
+        <xpath expr="//table/thead/tr/th[6]" position="after">
+            <th>Partner name</th>
+        </xpath>
+       
+    </template>    
+   
+</odoo>

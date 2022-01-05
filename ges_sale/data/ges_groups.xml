@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+              
+        <record id="ges_group_input_form_mode_sol" model="res.groups">
+            <field name="name">Input data in form mode for sale order lines</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+        <record id="ges_group_input_top_mode_sol" model="res.groups">
+            <field name="name">Input data at the top of the table for sale order lines</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+        <record id="ges_group_input_price_after_pack_sol" model="res.groups">
+            <field name="name">Input price after packages for sale order lines</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+       
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+
+# -*- coding: utf-8 -*-
+
+from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
+
+
+class GesPackaging(models.Model):
+    _name = "ges.packaging"
+    _description = "Packaging"
+    _order = "name"
+
+    company_id = fields.Many2one('res.company', string='Company',
+                                 readonly=True,  default=lambda self: self.env.user.company_id)
+    des = fields.Char(string="Description", required=True)
+    name = fields.Char(string="Code", required=True)
+    tare = fields.Float(string="Tare", digits='Stock Weight')
+
+    @api.constrains('name')
+    def _check_name(self):
+        for tab in self:
+            if tab.name:
+                name = tab.search([
+                    ('id', '!=', tab.id),
+                    ('name', '=', tab.name)], limit=1)
+                if name:
+                    raise ValidationError(_("Code is already used"))

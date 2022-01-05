@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="ges_sale_order_view_search_inherit_sale" model="ir.ui.view">
+        <field name="name">ges.sale.order.search.inherit.sale</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_sale"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='order_date']" position="after">
+                <separator/>
+                <filter domain="[('invoice_status','=','no')]"
+                    name="to_deliver" string="To deliver"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="ges_action_quotations_with_onboarding" model="ir.actions.act_window">
+        <field name="name">Quotations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="view_mode">tree,kanban,form,calendar,pivot,graph,activity</field>
+        <field name="search_view_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+        <field name="context">{'search_default_draft': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new quotation, the first step of a new sale!
+            </p>
+            <p>
+                Once the quotation is confirmed by the customer, it becomes a sales
+                order.
+                <br/>
+                You will be able to create an invoice and collect the payment.
+            </p>
+        </field>
+    </record>
+    <record id="ges_action_orders_to_deliver" model="ir.actions.act_window">
+        <field name="name">Sales Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,kanban,form,calendar,pivot,graph,activity</field>
+        <field name="search_view_id" ref="sale.sale_order_view_search_inherit_sale"/>
+        <field name="context">{'search_default_to_deliver': 1}</field>
+        <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel'))]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                    Create a new quotation, the first step of a new sale!
+                </p>
+            <p>
+                    Once the quotation is confirmed, it becomes a sales order.<br/> You will be able to create an invoice and collect the payment.
+                </p>
+        </field>
+    </record>
+    <record id="ges_view_order_tree" model="ir.ui.view">
+        <field name="name">ges.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field eval="80" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='commitment_date']" position="replace">
+                <field name="ges_prepdt" optional="show"/>
+                <field name="ges_deliverydt" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="ges_view_quotation_tree" model="ir.ui.view">
+        <field name="name">ges.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field eval="80" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='commitment_date']" position="replace">
+                <field name="ges_prepdt" optional="show"/>
+                <field name="ges_deliverydt" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="ges_view_order_form_editable_list" model="ir.ui.view">
+        <field name="name">ges.view.order.form.editable.list</field>
+        <field name="model">sale.order</field>
+        <field eval="78" name="priority"/>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field
+            eval="[(6,0, [ref('ges_sale.ges_group_input_form_mode_sol')])]" name="groups_id"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                <attribute name="editable"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="ges_view_order_form_editable_top_list" model="ir.ui.view">
+        <field name="name">ges.view.order.form.editable.top.list</field>
+        <field name="model">sale.order</field>
+        <field eval="78" name="priority"/>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field
+            eval="[(6,0, [ref('ges_sale.ges_group_input_top_mode_sol')])]" name="groups_id"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                <attribute name="editable">top</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="ges_price_view_order_form" model="ir.ui.view">
+        <field name="name">ges.proce.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field
+            eval="[(6,0, [ref('ges_sale.ges_group_input_price_after_pack_sol')])]" name="groups_id"/>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field eval="79" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='price_unit']" position="replace"/>
+        </field>
+    </record>
+    <record id="ges_view_order_form" model="ir.ui.view">
+        <field name="name">ges.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field eval="80" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="ges_copies"/>
+            </xpath>
+            <xpath expr="//h1" position="replace">
+                <h3>
+                    <field name="name" readonly="1"/>
+                </h3>
+            </xpath>
+            <xpath expr="//group[@name='sale_header']" position="attributes">
+                <attribute name="col">10</attribute>
+                <attribute add="width:100%;" name="style"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_invoice_id']" position="replace"/>
+            <xpath expr="//field[@name='partner_shipping_id']" position="replace"/>
+            <xpath expr="//group[@name='partner_details']" position="attributes">
+                <attribute name="colspan">2</attribute>
+                <attribute add="width:20%;" name="style"/>
+            </xpath>
+            <xpath expr="//group[@name='partner_details']" position="after">
+                <group colspan="2" name="ges_partner_address" style="width:20%;">
+                    <field context="{'default_type':'invoice'}"
+                        groups="sale.group_delivery_invoice_address"
+                        name="partner_invoice_id" options="{&quot;always_reload&quot;: True}"/>
+                    <field context="{'default_type':'delivery'}"
+                        groups="sale.group_delivery_invoice_address"
+                        name="partner_shipping_id" options="{&quot;always_reload&quot;: True}"/>
+                </group>
+                <!-- <field name="di_invoice_grouping" />
+                <field name="di_periodicity_invoice" /> -->
+            </xpath>
+            <xpath expr="//field[@name='validity_date']" position="replace"/>
+            <xpath expr="//div[@class='o_td_label'][1]" position="replace"/>
+            <xpath expr="//div[@class='o_td_label'][1]" position="replace"/>
+            <xpath expr="//field[@name='date_order'][1]" position="replace"/>
+            <xpath expr="//field[@name='date_order'][1]" position="replace"/>
+            <xpath expr="//group[@name='ges_partner_address']" position="after">
+                <group colspan="2" name="order_dates" style="width:20%;">
+                    <div class="o_td_label">
+                        <label for="date_order" string="Date order"/>
+                    </div>
+                    <field name="date_order" nolabel="1"/>
+                    <field name="ges_prepdt"/>
+                    <field name="ges_deliverydt"/>
+                    <field
+                        attrs="{'invisible': [('state', 'in', ['sale', 'done'])]}" name="validity_date"/>
+                    <!-- <div class="o_td_label" attrs="{'invisible': [('state', 'in', ['draft', 'sent'])]}">
+                        <label for="date_order" string="Date"/>
+                    </div>
+                    <field name="date_order" attrs="{'required': [('state', 'in', ['sale', 'done'])], 'invisible': [('state', 'in', ['draft', 'sent'])]}" nolabel="1"/> -->
+                </group>
+            </xpath>
+            <xpath expr="//group[@name='order_details']" position="attributes">
+                <attribute name="colspan">2</attribute>
+                <attribute add="width:20%;" name="style"/>
+            </xpath>
+            <!-- <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="ges_prepdt"/>
+                <field name="ges_deliverydt"/>
+            </xpath> -->
+            <!--  -->
+            <xpath expr="//group[@name='sale_shipping']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <!-- <xpath expr="//span[@name='expected_date_span']" position="attributes"> 
+                <attribute name="invisible">1</attribute>                
+            </xpath> -->
+            <xpath expr="//tree/field[@name='price_unit']" position="attributes">
+                <attribute name="options">{"bg_color":"aqua"}</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='product_uom_qty']" position="attributes">
+                <attribute name="options">{"bg_color":"lightgreen"}</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='name']" position="replace">
+                <field
+                    attrs="{'readonly': [('product_id', '!=', False)]}"
+                    name="name" optional="show" widget="section_and_note_text"/>
+                <field name="ges_category_id" optional="hide"/>
+                <field name="ges_origin_id" optional="hide"/>
+                <field name="ges_brand_id" optional="hide"/>
+                <field name="ges_size_id" optional="hide"/>
+                <field name="ges_pack" optional="show" string="Packages"/>
+                <field
+                    groups="ges_sale.ges_group_input_price_after_pack_sol"
+                    name="price_unit" options="{&quot;bg_color&quot;:&quot;aqua&quot;}"/>
+                <field name="ges_piece" optional="show" string="Pieces"/>
+                <field name="ges_gweight" optional="show"/>
+                <field name="ges_tare" optional="show"/>
+                <field name="ges_nweight" optional="show"/>
+            </xpath>
+            <xpath expr="//group/group/label[@for='product_uom_qty']" position="before">
+                <field name="ges_category_id"/>
+                <field name="ges_origin_id"/>
+                <field name="ges_brand_id"/>
+                <field name="ges_size_id"/>
+                <field name="ges_pack" string="Packages"/>
+                <field name="ges_piece" string="Pieces"/>
+                <field name="ges_gweight"/>
+                <field name="ges_tare"/>
+                <field name="ges_nweight"/>
+            </xpath>
+            <xpath expr="//page/field[@name='order_line']" position="after">
+                <div>
+                    <label for="ges_pack" string="Total packages"/>
+                    <field name="ges_pack" readonly="1"/>
+                </div>
+                <div>
+                    <label for="ges_piece" string="Total pieces"/>
+                    <field name="ges_piece" readonly="1"/>
+                </div>
+                <div>
+                    <label for="ges_nweight" string="Total net weight"/>
+                    <field name="ges_nweight" readonly="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

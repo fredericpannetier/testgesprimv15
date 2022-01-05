@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+     <!-- <record id="ges_interfel_temp" model="account.tax.template">
+            <field name="description">Interfel</field>
+            <field name="chart_template_id" ref="l10n_fr.l10n_fr_pcg_chart_template"/>
+            <field name="type_tax_use">sale</field>
+            <field name="name">Interfel</field>
+            <field name="amount_type">percent</field>
+            <field name="amount" eval="0.206"/>
+            <field name="tax_group_id" ref="ges_menu.ges_tax_group_tva_interfel"/> 
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',                    
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',                    
+                    'account_id': ref('l10n_fr.pcg_44571'),
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',                    
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',                    
+                'account_id': ref('l10n_fr.pcg_44571'),
+                }),
+            ]"/>   
+            
+            
+           
+        </record>    -->
+         
+    </data>
+    <data noupdate="1">
+        
+        
+        <record id="ges_stock_location_loss"  model="stock.location">
+            <field name="name">Loss</field>
+            <field name="location_id" ref="stock.stock_location_locations_virtual" />  
+            <field name="usage">inventory</field>
+            <field name="company_id"></field>   
+        </record>  
+        <record id="ges_stock_location_dest"  model="stock.location">
+            <field name="name">Destructions</field>
+            <field name="location_id" ref="stock.stock_location_locations_virtual" />  
+            <field name="usage">inventory</field>
+            <field name="company_id"></field>   
+        </record> 
+        <record id="ges_purch_pricelist"  model="product.pricelist">
+            <field name="name">Purchase prices</field>         
+        </record>
+        <record id="ges_pp_pricelist"  model="product.pricelist">
+            <field name="name">PP</field>         
+        </record>
+
+
+         <!-- <record id="ges_tax_group_tva_interfel" model="account.tax.group">
+            <field name="name">Interfel</field>
+        </record>
+        <record id="ges_interfel" model="account.tax">
+            <field name="description">Interfel</field>            
+            <field name="type_tax_use">sale</field>
+            <field name="name">Interfel</field>
+            <field name="amount_type">percent</field>
+            <field name="amount" eval="0.206"/>
+            <field name="tax_group_id" ref="ges_menu.ges_tax_group_tva_interfel"/>
+            <field name="di_tax_id" ref="l10n_fr.tva_normale"/> 
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',                    
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',                    
+                    'account_id': ref('l10n_fr.pcg_44571'),
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',                    
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',                    
+                'account_id': ref('l10n_fr.pcg_44571'),
+                }),
+            ]"/>   
+            
+            
+           
+        </record>      
+         -->
+       
+            
+        
+        <record id="ges_default_settings" model="res.config.settings">
+            <field name="group_stock_production_lot" eval="1"/>
+            <field name="group_stock_multi_locations" eval="1"/>
+            <field name="group_sale_delivery_address" eval="1"/>
+            <field name="group_simple_pal" eval="1"/>
+            <field name="group_proforma_sales" eval="1"/>
+            <field name="group_product_pricelist" eval="1"/>
+            <field name="product_pricelist_setting" eval="'advanced'"/>
+            <field name="group_uom" eval="1"/>
+            <field name="ges_dest_location" ref="ges_menu.ges_stock_location_dest" />
+            <field name="ges_loss_location" ref="ges_menu.ges_stock_location_loss" />
+            <field name="ges_purch_pricelist" ref="ges_menu.ges_purch_pricelist" />
+            <field name="ges_pp_pricelist" ref="ges_menu.ges_pp_pricelist" />
+            <field name="sale_tax_id" ref="l10n_fr.tva_reduite" />
+            <field name="purchase_tax_id" ref="l10n_fr.tva_acq_reduite" />
+            
+            
+        </record>    
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('ges_default_settings')]"/>                            
+        </function>   
+        
+
+      
+        
+        <!-- <record id="ges_set_unit_typ" model="uom.uom">
+            <field name="group_stock_production_lot" eval="1"/>
+            <field name="group_stock_multi_locations" eval="1"/>
+            <field name="group_sale_delivery_address" eval="1"/>
+            <field name="group_proforma_sales" eval="1"/>
+            <field name="group_product_pricelist" eval="1"/>
+            <field name="product_pricelist_setting" eval="'advanced'"/>
+            <field name="group_uom" eval="1"/>
+            <field name="ges_dest_location" ref="ges_menu.ges_stock_location_dest" />
+            <field name="ges_loss_location" ref="ges_menu.ges_stock_location_loss" />
+            <field name="sale_tax_id" ref="l10n_fr.tva_reduite" />
+            <field name="purchase_tax_id" ref="l10n_fr.tva_acq_reduite" />
+            
+            
+        </record>    
+        <function model="uom.uom" name="execute">
+            <value eval="[ref('ges_set_unit_typ')]"/>                            
+        </function>           -->
+    </data>
+</odoo>

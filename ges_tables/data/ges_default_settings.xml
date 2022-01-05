@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>        
+    <data noupdate="1">                                   
+        <record id="ges_tables_install_handle_record" model="ges.tables.install.handle">
+            <field name="name">Install - uninstall handler ges tables</field>
+        </record>
+        <record id="ges_product_uom_package" model="uom.uom">
+            <field name="category_id" ref="uom.product_uom_categ_unit"/>
+            <field name="name">Package</field>
+            <field name="factor" eval="1.0"/>
+            <field name="uom_type">bigger</field>
+            <field name="ges_unittype">Package</field>
+        </record> 
+    </data>
+</odoo>

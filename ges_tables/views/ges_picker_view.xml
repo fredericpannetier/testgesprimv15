@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--Pallet Product -->
+    <record id="view_picker_tree" model="ir.ui.view">
+        <field name="name">ges.picker.tree</field>
+        <field name="model">ges.picker</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Picker">
+                <field name="name"/>
+                <field name="label"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_picker_form" model="ir.ui.view">
+        <field name="name">ges.picker.form</field>
+        <field name="model">ges.picker</field>
+        <field name="arch" type="xml">
+            <form string="Picker">
+                <sheet string="Picker">
+                    <group>
+                        <field name="company_id" invisible="1"/>
+                        <field name="name"/>
+                        <field name="label"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_picker" model="ir.actions.act_window">
+        <field name="name">Picker</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.picker</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+ 
+</odoo>

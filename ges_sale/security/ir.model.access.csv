@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_ges_sale_ges_print_forecast_wiz","access.ges.sale.ges.print.forecast.wiz","model_ges_print_forecast_wiz","base.group_user",1,1,1,1
+"access_ges_sale_ges_sale_stat","access.ges.sale.ges.sale.stat","model_ges_sale_stat","base.group_user",1,1,1,1
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="ges_res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">ges.res.config.settings.view.form.inherit</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]" position="inside">
+				<div class="app_settings_block" data-string="Gesprim" string="Gesprim"
+					data-key="ges_base" groups="base.group_user">
+					<h2>Gesprim Settings</h2>
+					<div class="row mt16 o_settings_container" name="gesprim_settings_container">
+					   <div class="col-12 col-lg-6 o_setting_box" id="variant_options1">
+    						<div class="o_setting_left_pane" >
+    						  <field name="ges_picker_bool" />
+       						</div>
+    						<div class="o_setting_right_pane">
+    						    <label for="ges_picker_bool" />     						          						                                                                                                          
+    						</div>
+    					</div>
+    					<div class="col-12 col-lg-6 o_setting_box" id="variant_options2">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_marg_mini" />
+                                <field name="ges_marg_mini" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="variant_options3">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_prepdelay" />
+                                <field name="ges_prepdelay" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="variant_options4">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_deliverydelay" />
+                                <field name="ges_deliverydelay" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="variant_options5">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_loss_location" />
+                                <field name="ges_loss_location" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="variant_options6">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_dest_location" />
+                                <field name="ges_dest_location" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="variant_options7">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_inv_lot" />
+                                <field name="ges_inv_lot" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="variant_options8">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_purch_pricelist" />
+                                <field name="ges_purch_pricelist" />                                                                                                                                                                       
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 col-lg-6 o_setting_box" id="variant_options8">
+                            <div class="o_setting_left_pane" >                              
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ges_pp_pricelist" />
+                                <field name="ges_pp_pricelist" />                                                                                                                                                                       
+                            </div>
+                        </div> -->
+					</div>
+					<h2>Pallet settings</h2>
+                    <div class="row mt16 o_settings_container" name="pallet_setting_container">                    
+                        <div class="col-12 col-lg-6 o_setting_box" id="pallet_options1">                          
+                            <div class="o_setting_left_pane">
+                                <field name="group_manage_pal"/>                                
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="group_manage_pal"/>                                                            
+                            </div>
+                        </div>  
+                        <div class="col-12 col-lg-6 o_setting_box" id="pallet_options2" attrs="{'invisible': [('group_manage_pal', '==', False)]}">                          
+                            <div class="o_setting_left_pane">
+                                <field name="group_simple_pal"/>                                
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="group_simple_pal"/>                                                            
+                            </div>
+                        </div>                                                                
+                    </div>
+				</div>
+			</xpath>
+		</field>
+	</record>	
+
+	<record id="ges_action_config_settings" model="ir.actions.act_window">
+		<field name="name">Settings</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">res.config.settings</field>
+		<field name="view_id" ref="ges_res_config_settings_view_form" />
+		<field name="view_mode">form</field>
+		<field name="target">inline</field>
+		<field name="context">{'module' : 'ges_base'}</field>
+	</record>
+</odoo>

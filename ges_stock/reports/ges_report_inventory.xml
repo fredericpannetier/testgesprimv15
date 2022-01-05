@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ges_report_inventory">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            <t t-as="wiz" t-foreach="docs">                                                              
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <table class="table table-condensed table-bordered" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="100%">
+                                    <h3 style="text-align: center">
+                                        <span>Inventory </span>
+                                        <span>from </span>
+                                        <span t-field="wiz.date"/>                                        
+                                    </h3>
+                                </th>               
+                            </tr>
+                        </thead>
+                    </table>
+                    <!-- <div class="text-center">
+                        <h2>Inventory</h2>
+                        <h3>Date : <span t-field="wiz.date"/></h3>                    
+                    </div> -->
+                    <table class="table table-sm o_main_table table-bordered text-center">
+                        <thead>
+                            <tr style="font-weight:bold">
+                                <th class="text-left">Product</th>
+                                <th>UoM</th>
+                                <t t-if="wiz.lot_detail">
+                                    <th>Lot</th>
+                                </t>                                
+                                <th>Quantity</th>
+                                <th>Packages</th>
+                                <th>Pieces</th>
+                                <th>Net weight</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <!-- <t t-set="passage" t-value="0" />
+                        <t t-set="TotQte" t-value="0.0" />
+                        <t t-set="TotPack" t-value="0.0" />
+                        <t t-set="TotPieces" t-value="0.0" />
+                        <t t-set="TotWeight" t-value="0.0" />-->
+                        <t t-set="TotValue" t-value="0.0" />
+                        <t t-set="sauv_product_id_name" t-value="' '" />                         
+                        <tbody class="sale_tbody">
+                            <t t-as="quant" t-foreach="wiz.quant_ids.sorted(key=lambda q: (q.product_id.name, q.lot_id.name))">
+                                <t t-if="sauv_product_id_name != quant.product_id.name">
+                                    <tr style="font-weight:bold">
+                                        <td class="text-left"><span t-esc="quant.product_id.name"/></td>
+                                        <td><span t-esc="quant.product_id.uom_id.name"/></td>
+                                        <t t-if="wiz.lot_detail">
+                                            <td></td>
+                                        </t>                                
+                                        <td><span t-esc="round(quant.ges_qte_tot,3)"/></td>
+                                        <td><span t-esc="round(quant.ges_pack_tot,3)"/></td>
+                                        <td><span t-esc="round(quant.ges_piece_tot,3)"/></td>
+                                        <td><span t-esc="round(quant.ges_nweight_tot,3)"/></td>
+                                        <td><span t-esc="'%.2f'% round(quant.ges_value_tot,3)"/> <span t-field="wiz.currency_symbol"/></td>                                        
+                                    </tr>   
+                                    
+                                </t>
+                                <!-- <t t-if="sauv_product_id_name !=' ' and sauv_product_id_name != quant.product_id.name ">                                
+                                    <tr>
+                                        <td><h3><span t-esc="sauv_product_id_name"/></h3></td>
+                                        <t t-if="wiz.lot_detail">
+                                            <td></td>
+                                        </t>                                
+                                        <td><h3><span t-esc="round(TotQte,3)"/></h3></td>
+                                        <td><h3><span t-esc="round(TotPack,3)"/></h3></td>
+                                        <td><h3><span t-esc="round(TotPieces,3)"/></h3></td>
+                                        <td><h3><span t-esc="round(TotWeight,3)"/></h3></td>
+                                        <td><h3><span t-esc="round(TotValue,3)"/></h3></td>                                        
+                                    </tr>
+                                    
+                                    <t t-set="TotQte" t-value="0.0" />
+                                    <t t-set="TotPack" t-value="0.0" />
+                                    <t t-set="TotPieces" t-value="0.0" />
+                                    <t t-set="TotWeight" t-value="0.0" />
+                                    <t t-set="TotValue" t-value="0.0" />
+                                </t> -->
+                                <t t-set="sauv_product_id_name" t-value="quant.product_id.name" />
+                                <t t-if="wiz.lot_detail">
+                                    <tr>                                    
+                                        <!-- <td><span t-esc="sauv_product_id_name"/></td>                                     -->
+                                        <td></td>
+                                        <td></td>
+                                        <td><span t-field="quant.lot_id.name"/></td>                                                                                                            
+                                        <td><span t-esc="round(quant.quantity,3)"/></td>
+                                        <td><span t-esc="round(quant.ges_pack,3)"/></td>
+                                        <td><span t-esc="round(quant.ges_piece,3)"/></td>
+                                        <td><span t-esc="round(quant.ges_nweight,3)"/></td>
+                                        <td><span t-esc="'%.2f'% round(quant.value,3)"/> <span t-field="wiz.currency_symbol"/></td>                                          
+                                    </tr>
+                                </t>  
+                                <t t-set="TotValue" t-value="TotValue + quant.value" />
+                                <!-- <t t-set="TotQte" t-value="TotQte + quant.quantity" />
+                                <t t-set="TotPack" t-value="TotPack + quant.ges_pack" /> 
+                                <t t-set="TotPieces" t-value="TotPieces + quant.ges_piece" /> 
+                                <t t-set="TotWeight" t-value="TotWeight + quant.ges_nweight" /> 
+                                
+                                <t t-set="passage" t-value="1" />                             -->
+                            </t>
+                            <!-- <t t-if="passage==1">
+                                <tr>
+                                    <td><h3><span t-esc="sauv_product_id_name"/></h3></td>
+                                    <t t-if="wiz.lot_detail">
+                                        <td></td>
+                                    </t>                                              
+                                    <td><h3><span t-esc="round(TotQte,3)"/></h3></td>
+                                    <td><h3><span t-esc="round(TotPack,3)"/></h3></td>
+                                    <td><h3><span t-esc="round(TotPieces,3)"/></h3></td>
+                                    <td><h3><span t-esc="round(TotWeight,3)"/></h3></td>
+                                    <td><h3><span t-esc="round(TotValue,3)"/></h3></td>                                     
+                                </tr>
+                            </t> -->
+                            <tr  style="font-weight:bold">
+                                <td  class="text-left">Total value</td>
+                                <td></td>
+                                <t t-if="wiz.lot_detail">
+                                    <td></td>
+                                </t>                                              
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><span t-esc="'%.2f'% round(TotValue,3)"/> <span t-field="wiz.currency_symbol"/></td>                                     
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+        </t>
+    </template>
+    
+    <record id="ges_action_report_inventory" model="ir.actions.report">
+        <field name="name">Print inventory</field>
+        <field name="model">ges.print.inventory.wiz</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ges_stock.ges_report_inventory</field>
+        <field name="report_file">ges_stock.ges_report_inventory</field>
+        <field name="print_report_name">'Print inventory'</field>                        
+    </record>
+                    
+     
+</odoo>

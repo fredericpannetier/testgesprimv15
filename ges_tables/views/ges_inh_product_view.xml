@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="ges_product_template_only_form_view" model="ir.ui.view">
+		<field name="name">ges.product.template.only.form.view</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_form_view" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">			   				
+			<!-- on change le libellé du champ category -->
+			<xpath expr="//field[@name='categ_id']" position="replace">
+				<field name="categ_id" string="Family"/>
+			</xpath>
+			<!-- on ajouter le poids unitaire et le PCB -->
+			<xpath expr="//page[@name='general_information']/group/group[2]" position="inside">	
+				<label for="ges_pob" style="font-style: oblique" />
+				<field name="ges_pob" style="font-style: oblique" nolabel='1' />		
+				<label for="ges_uweight" style="font-style: oblique" />
+				<field name="ges_uweight" style="font-style: oblique" nolabel='1' />				
+			</xpath>											
+			<!-- ajout onglet Caractéristiques -->
+			<xpath expr="//page[@name='inventory']" position="after">
+				<page name="specifs" string="Characteristics" style="font-style: oblique;">
+					<group col="12">
+						<group colspan="8" string="Default values">
+							<!-- On ne peut pas se contenter de mettre <field name="ges_categorie_id"/> 
+								car sinon on ne peut pas modifier le style du label pour le mettre en italique 
+								ni ajouter la désignation sur la même ligne. -->
+							<label for="ges_category_id" string="Category" />
+							<div>
+							 <field name="ges_category_id"  context="{'default_record_type': 'category'}" 
+                                domain="[ ('record_type', '=', 'category') ]" />
+								<!-- <field class="oe_inline" name="ges_category_id" /> -->
+								<field class="oe_inline" name="ges_category_des"
+									nolabel="1" readonly="1" style="margin-left:40px;" />
+							</div>
+							<label for="ges_origin_id" string="Origin" />
+							<div>
+								<!-- <field class="oe_inline" name="ges_origin_id" /> -->
+								<field name="ges_origin_id"  context="{'default_record_type': 'origin'}" 
+                                domain="[('record_type', '=', 'origin') ]" />
+								<field class="oe_inline" name="ges_origin_des"
+									nolabel="1" readonly="1" style="margin-left:40px" />
+							</div>
+							<label for="ges_brand_id" string="Brand" />
+							<div>
+								<!-- <field class="oe_inline" name="ges_brand_id" /> -->
+								<field name="ges_brand_id"  context="{'default_record_type': 'brand'}" 
+                                domain="[('record_type', '=', 'brand') ]" />
+								<field class="oe_inline" name="ges_brand_des" nolabel="1"
+									readonly="1" style="margin-left:40px" />
+							</div>
+							<label for="ges_size_id" string="Size" />
+							<div>
+								<!-- <field class="oe_inline" name="ges_size_id" /> -->
+								<field name="ges_size_id"  context="{'default_record_type': 'size'}" 
+                                domain="[('record_type', '=', 'size') ]" />
+								<field class="oe_inline" name="ges_size_des"
+									nolabel="1" readonly="1" style="margin-left:40px" />
+							</div>	
+							<label for="ges_packaging_id" string="Packaging" />
+                               <div>
+                                   <field class="oe_inline" name="ges_packaging_id" />
+                                   <field class="oe_inline" name="ges_packaging_des"
+                                       nolabel="1" readonly="1" style="margin-left:40px" />
+                               </div>														
+						</group>
+						<group colspan="4">
+						</group>
+					</group>
+				</page>
+			</xpath>				
+		</field>
+	</record>
+
+	<record id="ges_product_pricelist_view" model="ir.ui.view">
+		<field name="name">ges.product.pricelist.view</field>
+		<field name="model">product.pricelist</field>
+		<field name="inherit_id" ref="product.product_pricelist_view"/>
+		<field eval="99" name="priority"/>
+		<field name="arch" type="xml">
+		
+			<xpath expr="//tree/field[@name='price']" position="after">			
+				<field name="ges_uom" string="Unit" />			
+			</xpath>				
+		
+		</field>
+	</record>
+
+
+	<!-- -->
+	<record id="ges_product_template_tree_view" model="ir.ui.view">
+		<field name="name">ges.product.template.tree.view</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_tree_view" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">				
+			<xpath expr="//field[@name='categ_id']" position="replace">
+				<field name="categ_id" string="Family"/>
+			</xpath>
+		</field>
+	</record>
+
+	<!-- mode liste en priorité - tous les articles -->
+	<record id="product.product_template_action_all" model="ir.actions.act_window">
+		<field name="name">Products</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.template</field>
+		<field name="view_mode">tree,kanban,form</field>
+	</record>
+	<!-- mode liste en priorité - articles en ventes -->
+	<record id="product.product_template_action" model="ir.actions.act_window">
+		<field name="name">Products</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.template</field>
+		<field name="view_mode">tree,kanban,form</field>
+		<field name="view_id" ref="product.product_template_tree_view" />
+	</record>
+	<!-- mode liste en priorité - articles en achats -->
+	<record id="purchase.product_normal_action_puchased" model="ir.actions.act_window">
+		<field name="name">Products</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.template</field>
+		<field name="view_mode">tree,kanban,form</field>
+	</record>							
+</odoo>

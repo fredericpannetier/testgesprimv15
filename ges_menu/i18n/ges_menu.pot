@@ -1,0 +1,237 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-19 12:39+0000\n"
+"PO-Revision-Date: 2021-10-19 12:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ges_menu
+#: model:ir.model.fields.selection,name:ges_menu.selection__res_config_settings__ges_inv_lot__all
+msgid "All"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model,name:ges_menu.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ges_menu
+#: model:res.config.settings,invoice_terms:ges_menu.ges_default_settings
+msgid ""
+"Conformément à l'article L. 441-6 du Code du commerce, tout retard de "
+"règlement supérieur à la date d'échéance est susceptible de donner lieu à "
+"une pénalité égale à trois fois le taux de l'intérêt légal et versement "
+"d'une indemnité de 40€ pour frais de recouvrement (loi 2012-387 du "
+"22-03-12). Tous les litiges sont exclusivement du ressort du Tribunal de "
+"Commerce De Nantes. Conditions d'escompte: néant. Détail CGV au verso"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_deliverydelay
+msgid "Default delivery delay"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_prepdelay
+msgid "Default preparation delay"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,help:ges_menu.field_res_config_settings__ges_prepdelay
+msgid "Default preparation delay between entry date and preparation date"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,help:ges_menu.field_res_config_settings__ges_deliverydelay
+msgid "Default preparation delay between preparation date and delivery date"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_delivery
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_delivery_p
+msgid "Delivery"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_dest_location
+msgid "Destruction location"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_files
+msgid "Files"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields.selection,name:ges_menu.selection__res_config_settings__ges_inv_lot__first
+msgid "First"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim
+#: model_terms:ir.ui.view,arch_db:ges_menu.ges_res_config_settings_view_form
+msgid "Gesprim"
+msgstr ""
+
+#. module: ges_menu
+#: model_terms:ir.ui.view,arch_db:ges_menu.ges_res_config_settings_view_form
+msgid "Gesprim Settings"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,help:ges_menu.field_res_config_settings__group_simple_pal
+msgid ""
+"If not checked, it will show advanced functionalities for palletization "
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_invoicing
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_invoicing_p
+msgid "Invoicing"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_label_printing
+msgid "Label printing"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_settings_logbook
+msgid "Logbook"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_loss_location
+msgid "Loss location"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_inv_lot
+msgid "Lot printing method"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__group_manage_pal
+#: model:res.groups,name:ges_menu.group_manage_pal
+msgid "Manage pallets"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_marg_mini
+msgid "Minimal Margin ratio"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,help:ges_menu.field_res_config_settings__ges_marg_mini
+msgid "Minimal Margin ratio to control on sale orders "
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,help:ges_menu.field_res_config_settings__ges_inv_lot
+msgid ""
+"On the report Invoice with lots or delivery slips, print all the lots or "
+"only the first with all quantity computed."
+msgstr ""
+
+#. module: ges_menu
+#: model:product.pricelist,name:ges_menu.ges_pp_pricelist
+msgid "PP"
+msgstr ""
+
+#. module: ges_menu
+#: model_terms:ir.ui.view,arch_db:ges_menu.ges_res_config_settings_view_form
+msgid "Pallet settings"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_picker_bool
+msgid "Picker Required"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,help:ges_menu.field_res_config_settings__ges_picker_bool
+msgid "Picker Required on delivery orders"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_purch_pricelist
+msgid "Purchase pricelist"
+msgstr ""
+
+#. module: ges_menu
+#: model:product.pricelist,name:ges_menu.ges_purch_pricelist
+msgid "Purchase prices"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_purchases
+msgid "Purchases"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_reporting
+msgid "Reporting"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__ges_pp_pricelist
+msgid "Sale pricelist"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_sales
+msgid "Sales"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.actions.act_window,name:ges_menu.ges_action_config_settings
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_settings
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_settings_settings
+msgid "Settings"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_shipping
+msgid "Shipping"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.model.fields,field_description:ges_menu.field_res_config_settings__group_simple_pal
+#: model:res.groups,name:ges_menu.group_simple_pal
+msgid "Simple palletization"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_stock
+msgid "Stock"
+msgstr ""
+
+#. module: ges_menu
+#: model:ir.ui.menu,name:ges_menu.menu_gesprim_tables
+msgid "Tables"
+msgstr ""

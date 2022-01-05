@@ -1,0 +1,481 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_tables
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:59+0000\n"
+"PO-Revision-Date: 2021-09-20 15:32+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_view_partner_property_form
+msgid "Accounting Entries"
+msgstr "Ecritures comptable"
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_uom_uom__ges_unittype
+msgid "Allow to calculate packages quantity"
+msgstr "Autoriser le calcul du nombre de colis"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_inh_di_table.py:0
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_brand_id
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_brand_id
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_multi_table_search
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+#, python-format
+msgid "Brand"
+msgstr "Marque"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_categ
+msgid "Categories"
+msgstr "Catégories"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_inh_di_table.py:0
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_category_id
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_category_id
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_multi_table_search
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+#, python-format
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+msgid "Characteristics"
+msgstr "Caractéristiques"
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_res_partner__ges_val_deliv
+#: model:ir.model.fields,help:ges_tables.field_res_users__ges_val_deliv
+msgid "Check if the delivery note must be valuated"
+msgstr "Vérifie si le bon de livraison doit être valorisé"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__name
+msgid "Code"
+msgstr "Code"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_brand.py:0
+#: code:addons/ges_tables/models/ges_category.py:0
+#: code:addons/ges_tables/models/ges_origin.py:0
+#: code:addons/ges_tables/models/ges_packaging.py:0
+#: code:addons/ges_tables/models/ges_picker.py:0
+#: code:addons/ges_tables/models/ges_size.py:0
+#, python-format
+msgid "Code is already used"
+msgstr "Le code est déjà utilisé"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__company_id
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: ges_tables
+#: model_terms:ir.actions.act_window,help:ges_tables.ges_res_partner_action_customer
+msgid "Create a new customer in your address book"
+msgstr "Créé un nouveau client dans votre carnet d'adresse"
+
+#. module: ges_tables
+#: model_terms:ir.actions.act_window,help:ges_tables.ges_res_partner_action_supplier
+msgid "Create a new supplier in your address book"
+msgstr "Créé un nouveau fournisseur dans votre carnet d'adresse"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__create_uid
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__create_uid
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__create_date
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__create_date
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ges_tables
+#: model:ir.actions.act_window,name:ges_tables.ges_res_partner_action_customer
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_customer
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_customer_customer
+msgid "Customers"
+msgstr "Clients"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_default_note
+msgid "Default notes"
+msgstr "Notes par défaut"
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_res_partner__ges_deliverydelay
+#: model:ir.model.fields,help:ges_tables.field_res_users__ges_deliverydelay
+msgid "Default preparation delay between preparation date and delivery date"
+msgstr ""
+"Délai de préparation par défaut entre la date de préparation et la date "
+"de livraison"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+msgid "Default values"
+msgstr "Valeurs par défaut"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_deliverydelay
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_deliverydelay
+msgid "Delivery delay"
+msgstr "Délai de livraison"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_deliv_copies
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_deliv_copies
+msgid "Delivery number of copies"
+msgstr "Nombre de copies en BL"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__des
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_packaging_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_packaging_des
+msgid "Description"
+msgstr "Description"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__display_name
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__display_name
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__display_name
+#: model:ir.model.fields,field_description:ges_tables.field_uom_uom__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_tree_view
+msgid "Family"
+msgstr "Famille"
+
+#. module: ges_tables
+#: model:ir.model,name:ges_tables.model_ges_tables_install_handle
+msgid "Handle the installation of Gesprim tables"
+msgstr "Gère l'installation des tables Gesprim"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__id
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__id
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__id
+#: model:ir.model.fields,field_description:ges_tables.field_uom_uom__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_tables_install_handle.py:0
+#, python-format
+msgid "Installing Gesprim tables"
+msgstr "Installation tables Gesprim"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_inv_copies
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_inv_copies
+msgid "Invoice number of copies"
+msgstr "Nombre de copies en facture"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__label
+msgid "Label "
+msgstr "Libellé "
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging____last_update
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker____last_update
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle____last_update
+#: model:ir.model.fields,field_description:ges_tables.field_uom_uom____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__write_uid
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__write_uid
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Modification par"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__write_date
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__write_date
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__write_date
+msgid "Last Updated on"
+msgstr "Dernière Modification le"
+
+#. module: ges_tables
+#: model:ir.model.fields.selection,name:ges_tables.selection__uom_uom__ges_unittype__misc_
+msgid "Misc."
+msgstr "Divers"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_tables_install_handle__name
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_brand_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_category_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_origin_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_size_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_brand_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_category_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_origin_des
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_size_des
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_view_partner_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: ges_tables
+#: model:ir.model.fields.selection,name:ges_tables.selection__uom_uom__ges_unittype__net_weight
+msgid "Net weight"
+msgstr "Poids net"
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_product_product__ges_pob
+#: model:ir.model.fields,help:ges_tables.field_product_template__ges_pob
+msgid "Number of products per outer box"
+msgstr "Nombre d'article par colis"
+
+#. module: ges_tables
+#: model_terms:ir.actions.act_window,help:ges_tables.ges_res_partner_action_customer
+msgid "Odoo helps you easily track all activities related to a customer."
+msgstr ""
+"Odoo vous aide à tracer facilement toutes les activités relatives à un "
+"client."
+
+#. module: ges_tables
+#: model_terms:ir.actions.act_window,help:ges_tables.ges_res_partner_action_supplier
+msgid "Odoo helps you easily track all activities related to a supplier."
+msgstr ""
+"Odoo vous aide à tracer facilement toutes les activités relatives à un "
+"fournisseur."
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_order_copies
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_order_copies
+msgid "Order number of copies"
+msgstr "Nombre de copies pour les commandes"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_inh_di_table.py:0
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_origin_id
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_origin_id
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_multi_table_search
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+#, python-format
+msgid "Origin"
+msgstr "Origine"
+
+#. module: ges_tables
+#: model:ir.model.fields.selection,name:ges_tables.selection__uom_uom__ges_unittype__package
+#: model:uom.uom,name:ges_tables.ges_product_uom_package
+msgid "Package"
+msgstr "Colis"
+
+#. module: ges_tables
+#: model:ir.actions.act_window,name:ges_tables.ges_action_packaging
+#: model:ir.model,name:ges_tables.model_ges_packaging
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_packaging_id
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_packaging_id
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:ges_tables.view_packaging_form
+#: model_terms:ir.ui.view,arch_db:ges_tables.view_packaging_tree
+msgid "Packaging"
+msgstr "Colisage"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_pob
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_pob
+msgid "Per outer box"
+msgstr "PCB"
+
+#. module: ges_tables
+#: model:ir.actions.act_window,name:ges_tables.ges_action_picker
+#: model:ir.model,name:ges_tables.model_ges_picker
+#: model_terms:ir.ui.view,arch_db:ges_tables.view_picker_form
+#: model_terms:ir.ui.view,arch_db:ges_tables.view_picker_tree
+msgid "Picker"
+msgstr "Préparateur"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_picker__name
+msgid "Picker code"
+msgstr "Code préparateur"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_picker
+msgid "Pickers"
+msgstr "Préparateurs"
+
+#. module: ges_tables
+#: model:ir.model.fields.selection,name:ges_tables.selection__uom_uom__ges_unittype__piece
+msgid "Piece"
+msgstr "Pièce"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_pricelist
+msgid "Pricelists"
+msgstr "Tarifs"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_pricelists_by_product
+msgid "Pricelists by product"
+msgstr "Tarifs par article"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_prices
+msgid "Prices"
+msgstr "Tarifs"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_view_partner_property_form
+msgid "Printing"
+msgstr "Impression"
+
+#. module: ges_tables
+#: model:ir.model,name:ges_tables.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Unité de mesure d'article"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_product
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_product_products
+msgid "Products"
+msgstr "Article"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_ranktour
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_ranktour
+#: model:ir.model.fields,help:ges_tables.field_res_partner__ges_ranktour
+#: model:ir.model.fields,help:ges_tables.field_res_users__ges_ranktour
+msgid "Rank in Tour"
+msgstr "Rang dans la tournée"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_table_shipping
+msgid "Shipping"
+msgstr "Transport"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_inh_di_table.py:0
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_size_id
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_size_id
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_multi_table_search
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_template_only_form_view
+#, python-format
+msgid "Size"
+msgstr "Calibre"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_supplier
+msgid "Suppliers"
+msgstr "Fournisseurs"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_tables_multi_table
+msgid "Table"
+msgstr "Table"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_ges_packaging__tare
+msgid "Tare"
+msgstr "Tare"
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_product_product__ges_brand_id
+#: model:ir.model.fields,help:ges_tables.field_product_template__ges_brand_id
+msgid "The Brand of the product."
+msgstr "La marque de l'article."
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_product_product__ges_origin_id
+#: model:ir.model.fields,help:ges_tables.field_product_template__ges_origin_id
+msgid "The Origin of the product."
+msgstr "L'origine de l'article."
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_product_product__ges_size_id
+#: model:ir.model.fields,help:ges_tables.field_product_template__ges_size_id
+msgid "The Size of the product."
+msgstr "Le calibre de l'article."
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_product_product__ges_category_id
+#: model:ir.model.fields,help:ges_tables.field_product_template__ges_category_id
+msgid "The category of the product."
+msgstr "La catégorie de l'article."
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_tour
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_tour
+#: model:ir.model.fields,help:ges_tables.field_res_partner__ges_tour
+#: model:ir.model.fields,help:ges_tables.field_res_users__ges_tour
+msgid "Tour"
+msgstr "Tournée"
+
+#. module: ges_tables
+#: code:addons/ges_tables/models/ges_tables_install_handle.py:0
+#, python-format
+msgid "Uninstalling Gesprim tables"
+msgstr "Désinstallation tables Gesprim"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.ges_product_pricelist_view
+msgid "Unit"
+msgstr "Unité"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_product_pricelist_item__ges_uom
+msgid "Unit of Measure Name"
+msgstr "Unité de mesure Nom"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_uom_uom__ges_unittype
+msgid "Unit type"
+msgstr "Type d'unité"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_product_product__ges_uweight
+#: model:ir.model.fields,field_description:ges_tables.field_product_template__ges_uweight
+msgid "Unit weight"
+msgstr "Unité de poids"
+
+#. module: ges_tables
+#: model:ir.ui.menu,name:ges_tables.menu_gesprim_uom
+msgid "Units of mesure"
+msgstr "Unités de mesure"
+
+#. module: ges_tables
+#: model:ir.model.fields,field_description:ges_tables.field_res_partner__ges_val_deliv
+#: model:ir.model.fields,field_description:ges_tables.field_res_users__ges_val_deliv
+msgid "Valuated delivery note"
+msgstr "Bon de livraison valorisé"
+
+#. module: ges_tables
+#: model:ir.actions.act_window,name:ges_tables.ges_res_partner_action_supplier
+msgid "Vendors"
+msgstr "Fournisseurs"
+
+#. module: ges_tables
+#: model:ir.model.fields,help:ges_tables.field_product_product__ges_uweight
+#: model:ir.model.fields,help:ges_tables.field_product_template__ges_uweight
+msgid "Weight per product"
+msgstr "Poids par article"
+
+#. module: ges_tables
+#: model_terms:ir.ui.view,arch_db:ges_tables.di_view_partner_tree
+msgid "Zip code"
+msgstr "Code postal"

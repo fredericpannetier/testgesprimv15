@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ges_report_forecast">
+        <t t-call="web.html_container">
+        <t t-call="web.internal_layout">
+            <t t-as="wiz" t-foreach="docs">   
+             <t t-set="wiz" t-value="wiz.with_context(ges_draft=wiz.draft,from_date=wiz.from_date,to_date=wiz.to_date)" />                                                           
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <h2>Forecast</h2>                    
+                    <table class="table table-sm o_main_table">
+                        <thead style="display: table-row-group">
+                            <tr>
+                                <th>Product</th>
+                                <th>Stock</th>
+                                <t t-if="wiz.po">
+                                    <th>Incoming quantity</th>
+                                </t>             
+                                <t t-if="wiz.so">
+                                    <th>Outgoing quantity</th>
+                                </t>   
+                                <th>Forecasted</th>         
+                            </tr>
+                        </thead>                        
+                        <tbody class="sale_tbody">
+                            <t t-as="prod" t-foreach="wiz.product_ids"> 
+                                <t t-if="(wiz.po and prod.incoming_qty &gt; 0) or (wiz.so and prod.outgoing_qty &gt; 0) or (wiz.only_missing)"> 
+                                    <t t-if="(wiz.only_missing and prod.virtual_available &lt; 0) or not wiz.only_missing ">                              
+                                        <tr>                                    
+                                            <td><span t-field="prod.display_name"/></td>                                    
+                                            <td><span t-field="prod.qty_available"/></td>    
+                                            <t t-if="wiz.po">                                                                
+                                                <td><span t-field="prod.incoming_qty"/></td>
+                                            </t>
+                                            <t t-if="wiz.so">
+                                                <td><span t-field="prod.outgoing_qty"/></td>
+                                            </t>
+                                            <td><span t-field="prod.virtual_available"/></td>                                    
+                                        </tr>  
+                                    </t>  
+                                </t>                                                    
+                            </t>                            
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+        </t>
+    </template>
+    
+    <record id="ges_action_report_forecast" model="ir.actions.report">
+        <field name="name">Print forecast</field>
+        <field name="model">ges.print.forecast.wiz</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ges_sale.ges_report_forecast</field>
+        <field name="report_file">ges_sale.ges_report_forecast</field>
+        <field name="print_report_name">'Print forecast'</field>                        
+    </record>                  
+     
+</odoo>

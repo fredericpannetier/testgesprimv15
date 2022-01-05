@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <!-- ***Menu Fichiers -->
+    <menuitem id="menu_gesprim_product" name="Products" sequence="10" parent="ges_menu.menu_gesprim_files" />
+        <menuitem id="menu_gesprim_product_products" name="Products" sequence="10" parent="ges_tables.menu_gesprim_product" action="product.product_template_action_all" />
+        <menuitem id="menu_gesprim_categ" name="Categories" sequence="11" parent="ges_tables.menu_gesprim_product" action="product.product_category_action_form" />
+        <menuitem id="menu_gesprim_uom" name="Units of mesure" sequence="20" parent="ges_tables.menu_gesprim_product" action="uom.product_uom_form_action" />
+        
+        
+        
+    <menuitem id="menu_gesprim_prices" name="Prices" sequence="20" parent="ges_menu.menu_gesprim_files" />            
+        <menuitem id="menu_gesprim_pricelist" name="Pricelists" parent="ges_tables.menu_gesprim_prices" action="product.product_pricelist_action2" groups="product.group_product_pricelist" sequence="10" />
+        <menuitem id="menu_gesprim_pricelists_by_product" name="Pricelists by product" parent="ges_tables.menu_gesprim_prices" action="product_pricelist_show_all.di_action_pricelists_by_product" groups="product.group_product_pricelist" sequence="20"/>
+        
+    <menuitem id="menu_gesprim_table_shipping" name="Shipping" sequence="50" parent="ges_menu.menu_gesprim_files" />
+        
+    <menuitem id="menu_gesprim_customer" name="Customers" sequence="30" parent="ges_menu.menu_gesprim_files" />    
+    <menuitem id="menu_gesprim_customer_customer" name="Customers" sequence="10" parent="ges_tables.menu_gesprim_customer" action="ges_res_partner_action_customer"/>
+    <menuitem id="menu_gesprim_supplier" name="Suppliers" sequence="40" parent="ges_menu.menu_gesprim_files" action="ges_res_partner_action_supplier"/>     
+    <menuitem id="menu_gesprim_picker" name="Pickers" sequence="49" parent="ges_menu.menu_gesprim_files" action="ges_action_picker" />
+	<!-- ****Menu Tables -->	
+	<menuitem id="menu_gesprim_tables_multi_table" sequence="20" parent="ges_menu.menu_gesprim_tables" action="multi_table.action_multi_table" />
+	
+	<!-- <menuitem id="menu_gesprim_categories" sequence="20" parent="ges_menu.menu_gesprim_tables" action="ges_action_category" />
+	<menuitem id="menu_gesprim_origins" sequence="30" parent="ges_menu.menu_gesprim_tables" action="ges_action_origin" />
+	<menuitem id="menu_gesprim_brands" sequence="40" parent="ges_menu.menu_gesprim_tables" action="ges_action_brand" />
+	<menuitem id="menu_gesprim_sizes" sequence="50" parent="ges_menu.menu_gesprim_tables" action="ges_action_size" /> -->
+	
+    
+    <menuitem id="menu_gesprim_default_note" sequence="40" parent="ges_menu.menu_gesprim_settings" action="default_notes.di_action_default_note"  /> 
+</odoo>

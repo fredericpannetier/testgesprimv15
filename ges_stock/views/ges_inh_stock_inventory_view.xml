@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_stock_inventory" xml:space="preserve">
+    <t t-name="DemoExample" t-extend="DemoExample">
+        <t t-jquery='container-fluid o_stock_reports_page o_stock_reports_no_print' t-operation='replace'>
+            <p>Your Company Name</p>
+        </t>
+    </t>
+</template>
+</odoo>

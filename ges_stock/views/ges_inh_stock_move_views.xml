@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <!-- <record id="di_ges_stock_view_move_line_tree_traceability" model="ir.ui.view">
+        <field name="name">di.ges.stock.move.line.tree.traceability</field>
+        <field name="model">stock.traceability.report</field>
+        <field name="inherit_id" ref="stock.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='location_dest_id']" position="after">
+                <field name="ges_partner_id" />                                                                                                                                                         
+            </xpath>
+        </field>
+    </record>  -->
+    <record id="di_ges_stock_view_move_line_tree" model="ir.ui.view">
+        <field name="name">di.ges.stock.move.line.tree</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="ges_category_id" optional="hide" />   
+                <field name="ges_origin_id" optional="hide" />   
+                <field name="ges_brand_id" optional="hide" />   
+                <field name="ges_size_id" optional="hide" />                                                                                                                                                                      
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="after">
+                <field name="ges_suppbatch" optional="show" />    
+            </xpath>
+            <xpath expr="//field[@name='qty_done']" position="replace">
+                <field name="ges_partner_name" optional="show"/>
+                <field name="ges_io" optional="show"/>
+                <field name="ges_packages_sign" optional="show" string="Packages"/>
+                <field name="ges_pieces_sign" optional="show" string="Pieces"/>
+                <field name="ges_nweight_sign" optional="show"/>
+                <field name="ges_qty_done_sign" />                                                                                                                                                           
+            </xpath>
+            <xpath expr="//field[@name='product_uom_id']" position="after">
+                <field name="ges_price" optional="show"/>
+                <field name="ges_amount_sign" optional="show"/>                                                                                                                                                             
+            </xpath>
+        </field>
+        
+    </record>
+      
+    <record id="di_ges_stock_view_move_line_form" model="ir.ui.view">
+        <field name="name">di.ges.stock.move.line.form</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_form"/>
+        <field eval="80" name="priority" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="ges_category_id" optional="hide" />   
+                <field name="ges_origin_id" optional="hide" />   
+                <field name="ges_brand_id" optional="hide" />   
+                <field name="ges_size_id" optional="hide" />                                                                                                                                                                      
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="after">
+                <field name="ges_suppbatch" />                                                                                                                                                            
+            </xpath>
+            <xpath expr="//label[@for='qty_done']" position="before">
+                <field name="ges_pack" optional="show" string="Packages"/>
+                <field name="ges_piece" optional="show" string="Pieces"/>
+                <field name="ges_gweight" optional="show"/>
+				<field name="ges_tare" optional="show"/>
+                <field name="ges_nweight" optional="show"/>                                                                                                                                                           
+            </xpath>
+        </field>
+    </record>   
+    <record id="di_ges_stock_view_stock_move_line_operation_tree" model="ir.ui.view">
+        <field name="name">di.ges.stock.move.line.operations.tree</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_operation_tree"/>
+        <field eval="80" name="priority" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="ges_category_id" optional="hide" />   
+                <field name="ges_origin_id" optional="hide" />   
+                <field name="ges_brand_id" optional="hide" />   
+                <field name="ges_size_id" optional="hide" />                                                                                                                                                                      
+            </xpath>
+            <xpath expr="//field[@name='lot_name']" position="after">
+                <field name="ges_suppbatch" />                                                                                                                                                            
+            </xpath>
+            <xpath expr="//field[@name='product_uom_qty']" position="after">
+                <field name="ges_pack" optional="show" string="Packages"/>
+                <field name="ges_piece" optional="show" string="Pieces"/>
+                <field name="ges_gweight" optional="show"/>
+				<field name="ges_tare" optional="show"/>
+                <field name="ges_nweight" optional="show"/>                                                                                                                                                           
+            </xpath>
+        </field>
+    </record>    
+    <record id="di_ges_stock_view_stock_move_line_detailed_operation_tree" model="ir.ui.view">
+        <field name="name">di.ges.stock.move.line.operations.tree</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>
+        <field eval="80" name="priority" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="ges_category_id" optional="hide" />   
+                <field name="ges_origin_id" optional="hide" />   
+                <field name="ges_brand_id" optional="hide" />   
+                <field name="ges_size_id" optional="hide" />                                                                                                                                                                      
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="after">
+                <field name="ges_suppbatch" />                                                                                                                                                            
+            </xpath>
+            <xpath expr="//field[@name='product_uom_qty']" position="after">
+                <field name="ges_pack" optional="show" string="Packages"/>
+                <field name="ges_piece" optional="show" string="Pieces"/>
+                <field name="ges_gweight" optional="show"/>
+				<field name="ges_tare" optional="show"/>
+                <field name="ges_nweight" optional="show"/>                                                                                                                                                           
+            </xpath>            
+        </field>
+    </record>   
+    <record id="ges_view_pickingtype_filter" model="ir.ui.view">
+        <field name="name">ges.stock.picking.type.filter</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.view_pickingtype_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='groupby_code']" position="before">             
+                <filter name="outgoing" string="Shipment"
+                    domain="[('code','=','outgoing')]" help="Shipment Flow" />
+                <filter name="incoming" string="Receipt"
+                    domain="[('code','=','incoming')]" help="Receipt Flow"/>
+                <separator />
+            </xpath>
+        </field>
+    </record>   
+    <record id="ges_stock_picking_type_action_in" model="ir.actions.act_window">
+        <field name="name">Inventory Overview</field>
+        <field name="res_model">stock.picking.type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="context">{'search_default_incoming': 1}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new operation type
+          </p><p>
+            The operation type system allows you to assign each stock
+            operation a specific type which will alter its views accordingly.
+            On the operation type you could e.g. specify if packing is needed by default,
+            if it should show the customer.
+          </p>
+        </field>
+    </record>
+    <record id="ges_stock_picking_type_action_out" model="ir.actions.act_window">
+        <field name="name">Inventory Overview</field>
+        <field name="res_model">stock.picking.type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="context">{'search_default_outgoing': 1}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new operation type
+          </p><p>
+            The operation type system allows you to assign each stock
+            operation a specific type which will alter its views accordingly.
+            On the operation type you could e.g. specify if packing is needed by default,
+            if it should show the customer.
+          </p>
+        </field>
+    </record>       
+</odoo>

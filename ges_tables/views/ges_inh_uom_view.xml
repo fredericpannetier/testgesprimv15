@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="ges_product_uom_tree_view" model="ir.ui.view">
+		<field name="name">ges.uom.uom.tree</field>
+		<field name="model">uom.uom</field>
+		<field name="inherit_id" ref="uom.product_uom_tree_view" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">			   				
+			<!-- ajout du champ type d'unité -->
+			<xpath expr="//tree" position="inside">
+				<field name="ges_unittype"/>						
+			</xpath>				
+		</field>
+	</record>
+	<record id="ges_product_uom_form_view" model="ir.ui.view">
+		<field name="name">ges.uom.uom.form</field>
+		<field name="model">uom.uom</field>
+		<field name="inherit_id" ref="uom.product_uom_form_view" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">			   				
+			<!-- ajout du champ type d'unité -->
+			<xpath expr="//sheet/group/group[2]" position="inside">
+				<label for="ges_unittype" style="font-style: oblique" />
+				<field name="ges_unittype" style="font-style: oblique" nolabel='1' />
+			</xpath>				
+		</field>
+	</record>
+</odoo>

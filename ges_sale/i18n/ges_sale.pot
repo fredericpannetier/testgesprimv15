@@ -1,0 +1,612 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-19 12:42+0000\n"
+"PO-Revision-Date: 2021-10-19 12:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ges_sale
+#: model:ir.actions.report,print_report_name:ges_sale.ges_action_report_forecast
+msgid "'Print forecast'"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_brand_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+msgid "Brand"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_print_forecast_wiz
+msgid "Cancel"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields.selection,name:ges_sale.selection__ges_sale_stat__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_category_id
+msgid "Category"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+msgid "Category - Size"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__company_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Company"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__draft
+msgid "Count draft orders"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.ui.menu,name:ges_sale.menu_gesprim_invoicing_period
+msgid "Create Invoice From Periodicity"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.actions.act_window,help:ges_sale.ges_action_orders_to_deliver
+#: model_terms:ir.actions.act_window,help:ges_sale.ges_action_quotations_with_onboarding
+msgid "Create a new quotation, the first step of a new sale!"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__partner_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Customer"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__country_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Customer Country"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Date"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_form
+msgid "Date order"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.ui.menu,name:ges_sale.menu_gesprim_order_to_invoice
+msgid "Deliveries to invoice"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_commitment_date
+msgid "Delivery Date"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__commitment_date
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_deliverydt
+msgid "Delivery date"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_sale_order__ges_deliverydt
+#: model:ir.model.fields,help:ges_sale.field_sale_order__ges_prepdt
+msgid "Delivery date wanted by the customer"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+msgid "Description"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__display_name
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__display_name
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__display_name
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields.selection,name:ges_sale.selection__ges_sale_stat__state__draft
+msgid "Draft Quotation"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Extended Filters"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_forecast
+msgid "Forecast"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_forecast
+msgid "Forecasted"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__from_date
+msgid "From"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__ges_gweight
+msgid "Gross Weight"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_gweight
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_gweight
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+msgid "Gross weight"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_gweight_inv
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_gweight_inv
+msgid "Gross weight to invoice"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Group By"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__id
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__id
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__id
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__po
+msgid "Incoming"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_forecast
+msgid "Incoming quantity"
+msgstr ""
+
+#. module: ges_sale
+#: model:res.groups,name:ges_sale.ges_group_input_top_mode_sol
+msgid "Input data at the top of the table for sale order lines"
+msgstr ""
+
+#. module: ges_sale
+#: model:res.groups,name:ges_sale.ges_group_input_form_mode_sol
+msgid "Input data in form mode for sale order lines"
+msgstr ""
+
+#. module: ges_sale
+#: model:res.groups,name:ges_sale.ges_group_input_price_after_pack_sol
+msgid "Input price after packages for sale order lines"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz____last_update
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat____last_update
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order____last_update
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ges_sale
+#: code:addons/ges_sale/models/ges_inh_sale.py:0
+#, python-format
+msgid "Line margin %s %% below minimum margin %s %%"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__ges_nweight
+msgid "Net Weight"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_nweight
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_nweight
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+msgid "Net weight"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_nweight_inv
+msgid "Net weight to invoice"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_copies
+msgid "Number of copies"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_pack
+#: model:ir.model.fields,help:ges_sale.field_ges_sale_stat__ges_pack
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_pack
+msgid "Number of packages"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_pack_inv
+msgid "Number of packages to invoice"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_piece
+#: model:ir.model.fields,help:ges_sale.field_ges_sale_stat__ges_piece
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_piece
+msgid "Number of pieces"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_piece_inv
+msgid "Number of pieces to invoice"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.actions.act_window,help:ges_sale.ges_action_quotations_with_onboarding
+msgid ""
+"Once the quotation is confirmed by the customer, it becomes a sales\n"
+"                order.\n"
+"                <br>\n"
+"                You will be able to create an invoice and collect the payment."
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.actions.act_window,help:ges_sale.ges_action_orders_to_deliver
+msgid ""
+"Once the quotation is confirmed, it becomes a sales order.<br> You will be "
+"able to create an invoice and collect the payment."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__only_missing
+msgid "Only missing"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__order_id
+msgid "Order #"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__date
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Order Date"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__name
+msgid "Order Reference"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_origin_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+msgid "Origin"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__so
+msgid "Outgoing"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_forecast
+msgid "Outgoing quantity"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__ges_pack
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_form
+msgid "Packages"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__ges_piece
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_form
+msgid "Pieces"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_prepdt
+msgid "Preparation date"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_print_forecast_wiz
+msgid "Print"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_print_forecast_wiz
+msgid "Print Forecast"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.actions.act_window,name:ges_sale.ges_action_print_forecast_wiz
+#: model:ir.actions.report,name:ges_sale.ges_action_report_forecast
+#: model:ir.model,name:ges_sale.model_ges_print_forecast_wiz
+#: model:ir.ui.menu,name:ges_sale.menu_gesprim_print_forecast
+msgid "Print forecast"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_forecast
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Product"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__categ_id
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Product Category"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__product_id
+msgid "Product Variant"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__product_ids
+msgid "Products to print"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__product_uom_qty
+msgid "Qty Ordered"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields.selection,name:ges_sale.selection__ges_sale_stat__state__sent
+msgid "Quotation Sent"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.actions.act_window,name:ges_sale.ges_action_quotations_with_onboarding
+#: model:ir.ui.menu,name:ges_sale.menu_gesprim_quotations
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Quotations"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_inh_partner_tree
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_partner_form
+msgid "Rank Tour"
+msgstr ""
+
+#. module: ges_sale
+#: code:addons/ges_sale/models/ges_inh_sale.py:0
+#: code:addons/ges_sale/models/ges_inh_sale.py:0
+#, python-format
+msgid "Requested date is too soon."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.ui.menu,name:ges_sale.menu_gesprim_sale_stat
+msgid "Sale analysis"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.ui.menu,name:ges_sale.menu_gesprim_saleorders
+msgid "Sale orders"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.actions.act_window,name:ges_sale.ges_action_order_stat_all
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_graph
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_pivot
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Sales Analysis"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields.selection,name:ges_sale.selection__ges_sale_stat__state__done
+msgid "Sales Done"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model,name:ges_sale.model_sale_order
+#: model:ir.model.fields.selection,name:ges_sale.selection__ges_sale_stat__state__sale
+msgid "Sales Order"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model,name:ges_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.actions.act_window,name:ges_sale.ges_action_orders_to_deliver
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Sales Orders"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model,name:ges_sale.model_ges_sale_stat
+msgid "Sales Stat"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_ges_print_forecast_wiz__only_missing
+msgid "Show only missing products"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_size_id
+msgid "Size"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__state
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_product_search
+msgid "Status"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_report_forecast
+msgid "Stock"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_tare
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_tare
+msgid "Tare"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order_line__ges_tare_inv
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_tare_inv
+msgid "Tare to invoice"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_brand_id
+msgid "The Brand of the product."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_origin_id
+msgid "The Origin of the product."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_size_id
+msgid "The Size of the product."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_category_id
+msgid "The category of the product."
+msgstr ""
+
+#. module: ges_sale
+#: code:addons/ges_sale/models/ges_inh_sale.py:0
+#, python-format
+msgid ""
+"The delivery date is sooner than the\n"
+"                                    expected date.You may be unable to honor\n"
+"                                     the delivery date."
+msgstr ""
+
+#. module: ges_sale
+#: code:addons/ges_sale/models/ges_inh_sale.py:0
+#, python-format
+msgid ""
+"The delivery date is sooner than the\n"
+"                        expected date.You may be unable to honor the\n"
+"                                     delivery date."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,help:ges_sale.field_sale_order_line__ges_commitment_date
+msgid ""
+"This is the delivery date promised to the customer. If set, the delivery "
+"order will be scheduled based on this date rather than product lead times."
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.actions.act_window,help:ges_sale.ges_action_order_stat_all
+msgid ""
+"This stat performs analysis on your quotations and sales orders. Analysis "
+"check your sales revenues and sort it by different group criteria (salesman,"
+" partner, product, etc.) Use this stat to perform analysis on sales not "
+"having invoiced yet. If you want to analyse your turnover, you should use "
+"the Invoice Analysis stat in the Accounting application."
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_print_forecast_wiz__to_date
+msgid "To"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_sale_order_view_search_inherit_sale
+msgid "To deliver"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_gweight
+msgid "Total gross weight"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_nweight
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_piece
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_form
+msgid "Total net weight"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_sale_order__ges_pack
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_form
+msgid "Total packages"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_order_form
+msgid "Total pieces"
+msgstr ""
+
+#. module: ges_sale
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_inh_partner_tree
+#: model_terms:ir.ui.view,arch_db:ges_sale.ges_view_partner_form
+msgid "Tour"
+msgstr ""
+
+#. module: ges_sale
+#: model:ir.model.fields,field_description:ges_sale.field_ges_sale_stat__product_uom
+msgid "Unit of Measure"
+msgstr ""

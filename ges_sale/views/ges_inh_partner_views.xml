@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Partner -->
+    <record id="ges_view_inh_partner_tree" model="ir.ui.view">
+        <field name="name">res.inh.partner.tree</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field string="Tour" name="ges_tour"/>
+                <field string="Rank Tour" name="ges_ranktour"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="ges_view_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="after">
+                <field string="Tour" name="ges_tour"/>
+                <field string="Rank Tour" name="ges_ranktour"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

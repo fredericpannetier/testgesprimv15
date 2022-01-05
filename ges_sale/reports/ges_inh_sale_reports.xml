@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="ges_report_saleorder_document" inherit_id="sale.report_saleorder_document">
+    <xpath expr="//th[@name='th_description']" position="replace">
+        <th name="th_description" class="text-left">            
+            <div>Description</div>
+            <div>Category - Size</div>            
+        </th>        
+    </xpath>
+    <xpath expr="//th[@name='th_quantity']" position="before">    
+        <th name="ges_th_orig_brand" class="text-left">            
+            <div>Origin</div>
+            <div>Brand</div>
+        </th>
+        <th name="ges_th_packages" class="text-right">
+            <div>Packages</div>            
+        </th>
+        
+        <th name="ges_th_pieces" class="text-right">
+            <div>Pieces</div>            
+        </th>
+        <th name="ges_th_nweight" class="text-right">
+            <div>Net weight</div>            
+            <div>Gross weight</div>
+        </th>      
+    </xpath>
+    <xpath expr="//td[@name='td_name']" position="replace">    
+        <td name="td_name" class="text-left">            
+            <div><span t-field="line.name"/></div>
+            <div><span t-field="line.ges_category_id.name"/> - <span t-field="line.ges_size_id.name"/></div>            
+        </td>        
+    </xpath>   
+    <xpath expr="//td[@name='td_quantity']" position="before">
+        <td name="ges_td_orig_brand" class="text-left">                          
+            <div><span t-field="line.ges_origin_id.name"/></div>
+            <div><span t-field="line.ges_brand_id.name"/></div>            
+        </td>    
+        <td name="ges_td_packages" class="text-right">              
+            <div><span t-field="line.ges_pack"/></div>                    
+        </td>
+        <td name="ges_td_pieces" class="text-right">            
+            <div><span t-field="line.ges_piece"/></div>                    
+        </td>
+        <td name="ges_td_nweight" class="text-right">            
+            <div><span t-field="line.ges_nweight"/></div>            
+            <div><span t-field="line.ges_gweight"/></div>            
+        </td>      
+    </xpath>    
+  </template>
+  
+  <template id="ges_report_saleorder" inherit_id="sale.report_saleorder">
+    <xpath expr="//t[@t-call='sale.report_saleorder_document']" position="replace">
+        <t t-if="doc.ges_copies == 0">
+            <t t-set="copies" t-value="1"/>                
+        </t>
+        <t t-else="">
+            <t t-set="copies" t-value="doc.ges_copies"/>                    
+        </t>
+        <t t-foreach="range(copies)" t-as="n">
+            <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
+        </t>        
+    </xpath>      
+  </template>
+  
+  <template id="ges_report_saleorder_pro_forma" inherit_id="sale.report_saleorder_pro_forma">
+    <xpath expr="//t[@t-call='sale.report_saleorder_document']" position="replace">
+        <t t-if="doc.ges_copies == 0">
+            <t t-set="copies" t-value="1"/>                
+        </t>
+        <t t-else="">
+            <t t-set="copies" t-value="doc.ges_copies"/>                    
+        </t>
+        <t t-foreach="range(copies)" t-as="n">
+            <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
+        </t>        
+    </xpath>      
+  </template>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+           
+   <record id="ges_multi_table_search" model="ir.ui.view">
+        <field name="name">ges.multi.table.search</field>
+        <field name="model">di.multi.table</field>
+        <field name="inherit_id" ref="multi_table.multi_table_search" />
+        <field eval="80" name="priority" />
+        <field name="arch" type="xml">                                      
+            <xpath expr="//field[@name='name']" position="after">
+                <filter domain="[('record_type', '=', 'size')]" name="type" string="Size"/>
+                <filter domain="[('record_type', '=', 'brand')]" name="type" string="Brand"/>
+                <filter domain="[('record_type', '=', 'category')]" name="type" string="Category"/>
+                <filter domain="[('record_type', '=', 'origin')]" name="type" string="Origin"/>
+            </xpath>                        
+        </field>
+    </record> 
+</odoo>

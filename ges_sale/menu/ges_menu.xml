@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+	<!-- ***Menu Ventes -->
+	<menuitem id="menu_gesprim_quotations" name="Quotations" sequence="10" parent="ges_menu.menu_gesprim_sales" action="ges_action_quotations_with_onboarding" />
+	<menuitem id="menu_gesprim_saleorders" name="Sale orders" sequence="20" parent="ges_menu.menu_gesprim_sales" action="ges_action_orders_to_deliver" />
+	<menuitem id="menu_gesprim_print_forecast" name="Print forecast" sequence="30" parent="ges_menu.menu_gesprim_sales" action="ges_action_print_forecast_wiz" />
+	<!-- ****Menu Livraison -->
+	
+	<!-- ****Menu Facturation -->
+	<menuitem id="menu_gesprim_order_to_invoice" name="Deliveries to invoice" sequence="10" parent="ges_menu.menu_gesprim_invoicing" action="sale.action_orders_to_invoice" />
+	<menuitem id="menu_gesprim_invoicing_period" sequence="20" parent="ges_menu.menu_gesprim_invoicing" action="sale_order_toinvoice_period.action_create_invoiceperiod" />
+
+	<menuitem id="menu_gesprim_sale_stat" name="Sale analysis" sequence="20" parent="ges_menu.menu_gesprim_reporting" action="ges_sale.ges_action_order_stat_all" />
+    <!-- <menuitem id="menu_gesprim_sales_journal" name="Sales Journal" sequence="30" parent="ges_menu.menu_gesprim_invoicing" action="sale.action_wiz_sales_journal" /> -->
+</odoo>

@@ -1,0 +1,1166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-19 12:44+0000\n"
+"PO-Revision-Date: 2021-10-19 14:55+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: ges_stock
+#: model:ir.actions.report,print_report_name:ges_stock.ges_action_report_delivery_nonvaluated
+#: model:ir.actions.report,print_report_name:ges_stock.ges_action_report_delivery_valuated
+msgid "'Delivery Slip - %s - %s' % (object.partner_id.name or '', object.name)"
+msgstr "'Bon de livraison - %s - %s' % (object.partner_id.name or '', object.name)"
+
+#. module: ges_stock
+#: model:ir.actions.report,print_report_name:ges_stock.ges_action_report_inventory
+msgid "'Print inventory'"
+msgstr "'Imprimer resserre'"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_usage_loc_dest
+msgid ""
+"* Vendor Location: Virtual location representing the source location for products coming from your vendors\n"
+"* View: Virtual location used to create a hierarchical structures for your warehouse, aggregating its child locations ; "
+"can't directly contain products\n"
+"* Internal Location: Physical locations inside your own warehouses,\n"
+"* Customer Location: Virtual location representing the destination location for products sent to your customers\n"
+"* Inventory Loss: Virtual location serving as counterpart for inventory operations used to correct stock levels (Physical "
+"inventories)\n"
+"* Production: Virtual counterpart location for production operations: this location consumes the components and produces "
+"finished products\n"
+"* Transit Location: Counterpart location that should be used in inter-company or inter-warehouses operations"
+msgstr ""
+"* Emplacement fournisseur: emplacement virtuel représentant l'emplacement source des articles provenant des fournisseurs\n"
+"* Vue: emplacement virtuel utilisé pour avoir une struture hiérarchique de votre entrepôt, aggrégeant ses emplacements "
+"enfants; ne peut directelent contenir des articles\n"
+"* Emplacement interne: emplacements physiques au sein de vos entrepôts,\n"
+"* Emplacement client: emplacement virtuel représentant l'emplacement de destination des articles envoyés à vos clients\n"
+"* Perte d'inventaire: emplacement virtuel servant de contre-partie pour les opérations d'inventaire utilisées pour corriger "
+"les niveaux de stock (Inventaires physiques)\n"
+"* Production: emplacement virtuel servant de contre-partie pour les opérations de produiction: cet emplacement consomme les "
+"composants et produit les articles finis\n"
+"* Emplacement de transit: emplacement de contre-partie qui est utilisé lors des opérations inter-sociétés ou inter-entrepôts"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<span>Delivery </span>"
+msgstr "<span>Livraison </span>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid ""
+"<span>Inventory </span>\n"
+"                                        <span>from </span>"
+msgstr ""
+"<span>Resserre </span>\n"
+"                                        <span>du </span>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<span>Receipt </span>"
+msgstr "<span>Réception </span>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Brand</strong>"
+msgstr "<strong>Marque</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Category - Size</strong>"
+msgstr "<strong>Categorie - Calibre</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Gross weight</strong>"
+msgstr "<strong>Poids brut</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Net weight</strong>"
+msgstr "<strong>Poids net</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "<strong>Order:</strong>"
+msgstr "<strong>Commande:</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Origin</strong>"
+msgstr "<strong>Origine</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Packages</strong>"
+msgstr "<strong>Colis</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Pieces</strong>"
+msgstr "<strong>Pièces</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "<strong>Product</strong>"
+msgstr "<strong>Article</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "<strong>Shipping Date:</strong>"
+msgstr "<strong>Date d'envoi:</strong>"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "<strong>Signature</strong>"
+msgstr "<strong>Signature</strong>"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__stock_picking__ges_imp_lot__all
+msgid "All"
+msgstr "Tout"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_ges_inventory__start_empty
+msgid "Allows to start with an empty inventory."
+msgstr "Autoriser à démarrer avec un inventaire vide."
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_ges_inventory__prefill_counted_quantity
+msgid "Allows to start with prefill counted quantity for each lines or with all counted quantity set to zero."
+msgstr "Autoriser à démarrer avec les quantités préremplies pour chaque ligne ou avec les quantité comptées à 0."
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_amount
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_amount
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_amount_sign
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_amount
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "Amount"
+msgstr "Montant"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_search_product_lot_filter
+msgid "Available"
+msgstr "Disponible"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_picking
+msgid "Barcode"
+msgstr "Code-barre"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_brand_id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_brand_id
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "Brand"
+msgstr "Marque"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_export_stock_info_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_print_inventory_wiz
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid "Cancel Inventory"
+msgstr "Annuler inventaire"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__ges_inventory__state__cancel
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__category_ids
+msgid "Categories"
+msgstr "Catégories"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__category_ids
+msgid "Categories of products to print"
+msgstr "Catégories articles à imprimer"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__category
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_category_id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_category_id
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_export_stock_info_form
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "Category - Size"
+msgstr "Category - Calibre"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__company_id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__company_id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__company_id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__prefill_counted_quantity
+msgid "Counted Quantities"
+msgstr "Quantité comptées"
+
+#. module: ges_stock
+#: model_terms:ir.actions.act_window,help:ges_stock.ges_stock_picking_type_action_in
+#: model_terms:ir.actions.act_window,help:ges_stock.ges_stock_picking_type_action_out
+msgid "Create a new operation type"
+msgstr "Créer un nouveau type d'opération"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__stock_move_ids
+msgid "Created Moves"
+msgstr "Lignes créées"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__create_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__create_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__create_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__create_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__create_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__create_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__create_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__create_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__currency_symbol
+msgid "Currency"
+msgstr "Devise"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_ges_print_inventory_wiz__currency_symbol
+msgid "Currency sign, to be used when printing amounts."
+msgstr "Devise signée, utilisée pour imprimer les montants."
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_ges_stock_history
+msgid "Current Stock History"
+msgstr "Historique du stock"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__date
+msgid "Date"
+msgstr "Date"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__ges_inventory__prefill_counted_quantity__counted
+msgid "Default to stock on hand"
+msgstr "Quantités en stock par défaut"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__ges_inventory__prefill_counted_quantity__zero
+msgid "Default to zero"
+msgstr "Zéro par défaut"
+
+#. module: ges_stock
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_customer_delivery
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_supplier_delivery
+msgid "Delivery Order"
+msgstr "Livraison"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inh_stock_quant.py:0 model:ir.actions.server,name:ges_stock.ges_action_view_dest
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_view_dest
+#, python-format
+msgid "Destructions"
+msgstr "Destructions"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inventory.py:0
+#, python-format
+msgid "Detailed Operations"
+msgstr "Détail des opérations"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+msgid "Details"
+msgstr "Détails"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_production_lot__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_traceability_report__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__ges_inventory__state__draft
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_filter
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__start_empty
+msgid "Empty Inventory"
+msgstr "Inventaire vide"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_export_stock_info_form
+msgid "Export Product with Stock Info"
+msgstr "Export du stock par article"
+
+#. module: ges_stock
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_export_stock_info
+msgid "Export inventory"
+msgstr "Exporter resserre"
+
+#. module: ges_stock
+#: model:ir.actions.act_window,name:ges_stock.ges_action_export_stock_info
+msgid "Export product stock in Excel"
+msgstr "Export du stock par produit dans Excel"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__stock_picking__ges_imp_lot__first
+msgid "First"
+msgstr "Premier"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_picker_req
+msgid "Ges Picker Req"
+msgstr "Préparateur requis"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_gweight
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_gweight
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_gweight
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_gweight
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "Gross weight"
+msgstr "Poids brut"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_production_lot__id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_traceability_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inventory.py:0
+#, python-format
+msgid "INV:"
+msgstr "INV:"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_ges_inventory__date
+msgid ""
+"If the inventory adjustment is not validated, date at which the theoritical quantities have been checked.\n"
+"If the inventory adjustment is validated, date at which the inventory adjustment has been validated."
+msgstr ""
+"Si l'ajustement d'inventaire n'est pas validé, date à laquelle les quantités théoriques ont été calculées.\n"
+"Si l'ajustement d'inventaire est validé, date à laquelle l'inventaire a été validé."
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid ""
+"If you cancel this inventory adjustment, all its inventory adjustment lines will be lost. Are you sure you want to discard "
+"it ?"
+msgstr "Si vous annulez cet inventaire, toutes ses lignes seront perdues. Etes-vous sur de vouloir l'annuler ?"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__ges_inventory__state__confirm
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_filter
+msgid "In Progress"
+msgstr "En cours"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__exhausted
+msgid "Include Exhausted Products"
+msgstr "Inclure les articles  épuisés"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_ges_inventory__exhausted
+msgid "Include also products with quantity of 0"
+msgstr "Inclure aussi les articles avec une quantité à 0"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__stock_move_line__ges_io__incoming
+msgid "Incoming"
+msgstr "Entrée"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__incoming_date
+msgid "Incoming date"
+msgstr "Date d'entrée"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_io
+msgid "Incoming/ Outgoing"
+msgstr "Entrée/Sortie"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inh_stock_move.py:0
+#, python-format
+msgid "Internal"
+msgstr "Interne"
+
+#. module: ges_stock
+#: model:ir.actions.server,name:ges_stock.ges_action_view_quants model:ir.model,name:ges_stock.model_ges_inventory
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__inventory_id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_inventory_id
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_inventory_menu
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_view_quants
+msgid "Inventory"
+msgstr "Resserre"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid "Inventory Adjustment FIFO"
+msgstr "Ajustement resserre FIFO"
+
+#. module: ges_stock
+#: model:ir.actions.act_window,name:ges_stock.action_inventory_form
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_inventory
+msgid "Inventory Adjustments FIFO"
+msgstr "Ajustements resserre FIFO"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__date
+msgid "Inventory Date"
+msgstr "Date de resserre"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+msgid "Inventory Details"
+msgstr "Détails d'inventaire"
+
+#. module: ges_stock
+#: model:ir.actions.act_window,name:ges_stock.ges_stock_picking_type_action_in
+#: model:ir.actions.act_window,name:ges_stock.ges_stock_picking_type_action_out
+msgid "Inventory Overview"
+msgstr "Inventaire vue d'ensemble"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__name
+msgid "Inventory Reference"
+msgstr "Référence resserre"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_ges_inventory_move
+msgid "Inventory move"
+msgstr "Ligne d'inventaire"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_ges_inventory_move_line
+msgid "Inventory move line"
+msgstr "Ventilations d'inventaire"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_stock_production_lot____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant____last_update
+#: model:ir.model.fields,field_description:ges_stock.field_stock_traceability_report____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__write_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__write_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__write_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__write_uid
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Modification par"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__write_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__write_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__write_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__write_date
+#: model:ir.model.fields,field_description:ges_stock.field_ges_stock_history__write_date
+msgid "Last Updated on"
+msgstr "Dernière Modification le"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__location_id
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_usage_loc_dest
+msgid "Location Type"
+msgstr "Type d'emplacement"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__location_ids
+msgid "Locations"
+msgstr "Emplacements"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inh_stock_quant.py:0 model:ir.actions.server,name:ges_stock.ges_action_view_loss
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_view_loss
+#, python-format
+msgid "Loss"
+msgstr "Pertes"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_quant_search_view
+msgid "Loss Location"
+msgstr "Emplacement perte"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__lot_id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid "Lot"
+msgstr "Lot"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_production_lot__ges_available
+msgid "Lot available"
+msgstr "Lot disponible"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_imp_lot
+msgid "Lot printing method"
+msgstr "Méthode d'impression des lots"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lot/N° série"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_tree
+msgid "Lot/Serial Number Inventory"
+msgstr "Lot/Série"
+
+#. module: ges_stock
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_lot
+msgid "Lots/Serial Numbers"
+msgstr "Lots/Séries"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__move_id
+msgid "Move"
+msgstr "Ligne"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+msgid "Move Detail"
+msgstr "Détail ligne"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__move_line_ids
+msgid "Move lines"
+msgstr "Ventilations"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__move_ids
+msgid "Moves"
+msgstr "Lignes"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__name
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__name
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_brand_des
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_category_des
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_origin_des
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_size_des
+msgid "Name"
+msgstr "Nom"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__nweight
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__nweight
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_nweight
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_nweight
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_nweight_sign
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_nweight
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_nweight_tot
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_nweight
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_nweight
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_nweight
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_nweight_tot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid "Net weight"
+msgstr "Poids net"
+
+#. module: ges_stock
+#: model:ir.actions.report,name:ges_stock.ges_action_report_delivery_nonvaluated
+msgid "Non valuated delivery Slip"
+msgstr "Bon de livraison non valorisé"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_copies
+msgid "Number of copies"
+msgstr "Nombre de copies"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_pack
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_pack
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_pack
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_pack_tot
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_pack
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_pack
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_pack
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_pack_tot
+msgid "Number of packages"
+msgstr "Nombre de colis"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_piece
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_piece
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_piece
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_piece_tot
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_piece
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_piece
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_piece
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_piece_tot
+msgid "Number of pieces"
+msgstr "Nombre de pièces"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_stock_picking__ges_imp_lot
+msgid "On the report Invoice with lots or delivery slips, print all the lots or only the first with all quantity computed."
+msgstr "Sur l'impression de la facture avec lot, imprimer tous les lots ou seulement le premier avec la quantité globale."
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inventory.py:0
+#, python-format
+msgid "Only a stock manager can validate an inventory adjustment."
+msgstr "Seul un utilisateur de type manager de stock peut valider un ajustement d'inventaire."
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_origin_id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_origin_id
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "Origin"
+msgstr "Origine"
+
+#. module: ges_stock
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_other_flows
+msgid "Other flows"
+msgstr "Autres flux"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__stock_move_line__ges_io__outgoing
+msgid "Outgoing"
+msgstr "Sortie"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_packages_sign
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_move_line_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_move_line_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_stock_move_line_detailed_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_stock_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_form_editable
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_tree_editable
+msgid "Packages"
+msgstr "Colis"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__pack
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__pack
+msgid "Packages number"
+msgstr "Nombre de colis"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_partner
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_partner_name
+msgid "Partner"
+msgstr "Tiers"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_stock_body_print
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_stock_inventory
+msgid "Partner name"
+msgstr "Nom tiers"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_picker_id
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_picking_form
+msgid "Picker"
+msgstr "Préparateur"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_pieces_sign
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_move_line_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_move_line_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_stock_move_line_detailed_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.di_ges_stock_view_stock_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_form_editable
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_stock_quant_tree_editable
+msgid "Pieces"
+msgstr "Pièces"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__pieces
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__pieces
+msgid "Pieces number"
+msgstr "Nombre de pièces"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_price
+msgid "Price"
+msgstr "Prix"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_print_inventory_wiz
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: ges_stock
+#: model:ir.actions.act_window,name:ges_stock.ges_action_print_inventory_wiz
+#: model:ir.actions.report,name:ges_stock.ges_action_report_inventory
+#: model:ir.model,name:ges_stock.model_ges_print_inventory_wiz
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_print_inventory
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_print_inventory_wiz
+msgid "Print inventory"
+msgstr "Imprimer resserre"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__lot_detail
+msgid "Print lot detail"
+msgstr "Imprimer détail lot"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__product_id
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__product_id
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_filter
+msgid "Product"
+msgstr "Article"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements d'article (Ligne de mouvement de stock)"
+
+#. module: ges_stock
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_product_moves
+msgid "Product moves"
+msgstr "Grand livre de stock"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__product_ids
+msgid "Products"
+msgstr "Article"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__product_ids
+msgid "Products to print"
+msgstr "Articles à imprimer"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_purchase_price
+msgid "Purchase price"
+msgstr "Prix d'achat"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_print_inventory_wiz__quant_ids
+msgid "Quant"
+msgstr "Stock"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__qty
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__qty
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_qty_done_sign
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_qte_tot
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_qte_tot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_stock_quant
+msgid "Quants"
+msgstr "Stock"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_pickingtype_filter
+msgid "Receipt"
+msgstr "Réception"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_pickingtype_filter
+msgid "Receipt Flow"
+msgstr "Flux de réception"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_filter
+msgid "Reference"
+msgstr "Référence"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_sale_price
+msgid "Sale price"
+msgstr "Prix de vente"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_filter
+msgid "Search Inventory"
+msgstr "Recherche inventaire"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_search
+msgid "Search Inventory Moves"
+msgstr "Recherche lignes inventaire"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid "Set to Draft"
+msgstr "Mettre en brouillon"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_pickingtype_filter
+msgid "Shipment"
+msgstr "Expédition"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_view_pickingtype_filter
+msgid "Shipment Flow"
+msgstr "Flux d'expédition"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_size_id
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_size_id
+msgid "Size"
+msgstr "Calibre"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_ges_inventory__product_ids
+msgid "Specify Products to focus your inventory on particular Products."
+msgstr "Choix des articles pour se focaliser sur certains articles."
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid "Start Inventory"
+msgstr "Démarrer resserre"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory__state
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__state
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__state
+msgid "Status"
+msgstr "Statut"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_stock_move
+msgid "Stock Move"
+msgstr "Stock déplacer"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inh_stock_quant.py:0
+#, python-format
+msgid "Stock On Hand"
+msgstr "En stock"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_suppbatch
+#: model:ir.model.fields,field_description:ges_stock.field_stock_production_lot__ges_suppbatch
+msgid "Supplier lot"
+msgstr "Lot fournisseur"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move__ges_tare
+#: model:ir.model.fields,field_description:ges_stock.field_stock_move_line__ges_tare
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_tare
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_tare
+msgid "Tare"
+msgstr "Tare"
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_brand_id
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_brand_id
+msgid "The Brand of the product."
+msgstr "La marque de l'article."
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_origin_id
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_origin_id
+msgid "The Origin of the product."
+msgstr "L'origine de l'article."
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_size_id
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_size_id
+msgid "The Size of the product."
+msgstr "Le calibre de l'article."
+
+#. module: ges_stock
+#: model:ir.model.fields,help:ges_stock.field_stock_move__ges_category_id
+#: model:ir.model.fields,help:ges_stock.field_stock_move_line__ges_category_id
+msgid "The category of the product."
+msgstr "La catégorie de l'article."
+
+#. module: ges_stock
+#: model_terms:ir.actions.act_window,help:ges_stock.ges_stock_picking_type_action_in
+#: model_terms:ir.actions.act_window,help:ges_stock.ges_stock_picking_type_action_out
+msgid ""
+"The operation type system allows you to assign each stock\n"
+"            operation a specific type which will alter its views accordingly.\n"
+"            On the operation type you could e.g. specify if packing is needed by default,\n"
+"            if it should show the customer."
+msgstr ""
+"Le type d'opération système vous autorise à affecter à chaque opération de stock \n"
+"un type spécifique qui modifiera sa vue en conséquence.\n"
+"Sur le type d'opération, vous pourriez spécifier si un colisage est nécessaire par défaut,\n"
+"si il doit afficher le client."
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__nweight_theo
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__nweight_theo
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+msgid "Theoretical net weight"
+msgstr "Poids net théorique"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+msgid "Theoretical packages"
+msgstr "Colis théoriques"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__pack_theo
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__pack_theo
+msgid "Theoretical packages number"
+msgstr "Nombre de colis théorique"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+msgid "Theoretical pieces"
+msgstr "Pièces théoriques"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__pieces_theo
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__pieces_theo
+msgid "Theoretical pieces number"
+msgstr "Nombre de pièces théorique"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_form
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_line_operation_tree
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_inventory_move_tree
+msgid "Theoretical qty"
+msgstr "Quantité théorique"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move__qty_theo
+#: model:ir.model.fields,field_description:ges_stock.field_ges_inventory_move_line__qty_theo
+msgid "Theoretical quantity"
+msgstr "Quantité théorique"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_stock_report_delivery_aggregated_move_lines
+msgid "Total amount"
+msgstr "Montant total"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_gweight
+msgid "Total gross weight"
+msgstr "Poids brut total"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_stock_report_delivery_aggregated_move_lines
+msgid "Total gross weight :"
+msgstr "Poids brut total :"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_nweight
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_piece
+msgid "Total net weight"
+msgstr "Poids net total"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_stock_report_delivery_aggregated_move_lines
+msgid "Total net weight :"
+msgstr "Poids net total :"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_picking__ges_pack
+msgid "Total packages"
+msgstr "Total colis"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_stock_report_delivery_aggregated_move_lines
+msgid "Total packages :"
+msgstr "Total colis :"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_stock_report_delivery_aggregated_move_lines
+msgid "Total pieces :"
+msgstr "Total pièces :"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid "Total value"
+msgstr "Valeur totale"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_stock_traceability_report
+msgid "Traceability Report"
+msgstr "Rapport de traçabilité"
+
+#. module: ges_stock
+#: model:ir.model,name:ges_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: ges_stock
+#: model:ir.ui.menu,name:ges_stock.menu_gesprim_stock_transfers
+msgid "Transfers"
+msgstr "Transferts"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_delivery_document_firstlot
+msgid "Unit price"
+msgstr "Prix unitaire"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid "UoM"
+msgstr "Udm"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid "Validate Inventory"
+msgstr "Valider resserre"
+
+#. module: ges_stock
+#: model:ir.model.fields.selection,name:ges_stock.selection__ges_inventory__state__done
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_filter
+msgid "Validated"
+msgstr "Validé"
+
+#. module: ges_stock
+#: model:ir.actions.report,name:ges_stock.ges_action_report_delivery_valuated
+msgid "Valuated delivery Slip"
+msgstr "Bon de livraison valorisé"
+
+#. module: ges_stock
+#: model:ir.model.fields,field_description:ges_stock.field_stock_quant__ges_value_tot
+#: model:ir.model.fields,help:ges_stock.field_stock_quant__ges_value_tot
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_report_inventory
+msgid "Value"
+msgstr "Valeur"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.ges_export_stock_info_form
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inventory.py:0
+#, python-format
+msgid "You can't validate the inventory '%s', maybe this inventory has been already validated or isn't ready."
+msgstr "Vous ne pouvez pas valider l'inventaire '%s', peut-être est-il déjà validé ou n'est pas prêt."
+
+#. module: ges_stock
+#: code:addons/ges_stock/models/ges_inventory.py:0
+#, python-format
+msgid ""
+"You cannot set a negative product quantity in an inventory line:\n"
+"\t%s - qty: %s"
+msgstr ""
+"Vous ne pouvez pas saisir une quantité négative dans un inventaire :\n"
+"\t%s - qté: %s"
+
+#. module: ges_stock
+#: model_terms:ir.ui.view,arch_db:ges_stock.view_inventory_form
+msgid "e.g. Annual inventory"
+msgstr "e.g. Inventaire annuel"

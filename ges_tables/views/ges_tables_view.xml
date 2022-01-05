@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--Origin -->
+    <!-- <record id="view_origin_tree" model="ir.ui.view">
+        <field name="name">ges.origin.tree</field>
+        <field name="model">ges.origin</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Origin">
+                <field name="name"/>
+                <field name="des"/>             
+            </tree>
+        </field>
+    </record>
+    <record id="view_origin_form" model="ir.ui.view">
+        <field name="name">ges.origin.form</field>
+        <field name="model">ges.origin</field>
+        <field name="arch" type="xml">
+            <form string="Origin">
+                <sheet modifiers="{}" string="Origin">
+                    <group>
+                        <field can_create="true" can_write="true"
+                            modifiers="{'readonly':true}" name="company_id" invisible="1"/>
+                        <field modifiers="{'required':true}" name="name"/>
+                        <field modifiers="{'required':true}" name="des"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_origin" model="ir.actions.act_window">
+        <field name="name">Origins</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.origin</field>        
+        <field name="view_mode">tree,form</field>        
+    </record> -->
+    <!-- Category
+    <record id="view_category_tree" model="ir.ui.view">
+        <field name="name">ges.category.tree</field>
+        <field name="model">ges.category</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Category">
+                <field name="name"/>
+                <field name="des"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_category_form" model="ir.ui.view">
+        <field name="name">ges.category.form</field>
+        <field name="model">ges.category</field>
+        <field name="arch" type="xml">
+            <form string="Category">
+                <sheet modifiers="{}" string="Category">
+                    <group>
+                        <field can_create="true" can_write="true"
+                            modifiers="{'readonly':true}" name="company_id" invisible="1"/>
+                        <field modifiers="{'required':true}" name="name"/>
+                        <field modifiers="{'required':true}" name="des"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_category" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.category</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+    Brand
+    <record id="view_brand_tree" model="ir.ui.view">
+        <field name="name">ges.brand.tree</field>
+        <field name="model">ges.brand</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Brand">
+                <field name="name"/>
+                <field name="des"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_brand_form" model="ir.ui.view">
+        <field name="name">ges.brand.form</field>
+        <field name="model">ges.brand</field>
+        <field name="arch" type="xml">
+            <form string="Brand">
+                <sheet modifiers="{}" string="Brand">
+                    <group>
+                        <field can_create="true" can_write="true"
+                            modifiers="{'readonly':true}" name="company_id" invisible="1" />
+                        <field modifiers="{'required':true}" name="name"/>
+                        <field modifiers="{'required':true}" name="des"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_brand" model="ir.actions.act_window">
+        <field name="name">Brands</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.brand</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+    Size -->
+    <!-- <record id="view_size_tree" model="ir.ui.view">
+        <field name="name">ges.size.tree</field>
+        <field name="model">ges.size</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Size">
+                <field name="name"/>
+                <field name="des"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_size_form" model="ir.ui.view">
+        <field name="name">ges.size.form</field>
+        <field name="model">ges.size</field>
+        <field name="arch" type="xml">
+            <form string="Size">
+                <sheet modifiers="{}" string="Size">
+                    <group>
+                        <field can_create="true" can_write="true"
+                            modifiers="{'readonly':true}" name="company_id" invisible="1"/>
+                        <field modifiers="{'required':true}" name="name"/>
+                        <field modifiers="{'required':true}" name="des"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_size" model="ir.actions.act_window">
+        <field name="name">Sizes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.size</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+     -->
+    <!--Packaging -->
+    <record id="view_packaging_tree" model="ir.ui.view">
+        <field name="name">ges.packaging.tree</field>
+        <field name="model">ges.packaging</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Packaging">
+                <field name="name"/>
+                <field name="des"/>
+                <field name="tare"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_packaging_form" model="ir.ui.view">
+        <field name="name">ges.packaging.form</field>
+        <field name="model">ges.packaging</field>
+        <field name="arch" type="xml">
+            <form string="Packaging">
+                <sheet modifiers="{}" string="Packaging">
+                    <group>
+                        <field can_create="true" can_write="true"
+                            modifiers="{'readonly':true}" name="company_id" invisible="1"/>
+                        <field modifiers="{'required':true}" name="name"/>
+                        <field modifiers="{'required':true}" name="des"/>
+                        <field name="tare"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ges_action_packaging" model="ir.actions.act_window">
+        <field name="name">Packaging</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.packaging</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+          
+</odoo>

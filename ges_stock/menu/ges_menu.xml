@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- ***Menu Livraison Client-->
+	<menuitem id="menu_gesprim_customer_delivery" name="Delivery Order" sequence="10" parent="ges_menu.menu_gesprim_delivery" action="ges_stock_picking_type_action_out"/>
+	<!-- ***Menu Livraison Fournisseur-->
+	<menuitem id="menu_gesprim_supplier_delivery" name="Delivery Order" sequence="10" parent="ges_menu.menu_gesprim_delivery_p" action="ges_stock_picking_type_action_in"/>	
+	<!-- ***Menu Stock -->	
+	
+	<menuitem action="stock.action_production_lot_form" id="menu_gesprim_stock_lot" parent="ges_menu.menu_gesprim_stock" groups="stock.group_production_lot" sequence="10"/>	   
+
+    <menuitem id="menu_gesprim_stock_inventory_menu" name="Inventory" parent="ges_menu.menu_gesprim_stock" sequence="20"/>        
+    <menuitem action="ges_action_view_quants" id="menu_gesprim_stock_view_quants" name="Inventory" parent="ges_stock.menu_gesprim_stock_inventory_menu" sequence="10" />
+    <menuitem action="action_inventory_form" id="menu_gesprim_stock_inventory" parent="ges_stock.menu_gesprim_stock_inventory_menu" sequence="20"/>
+    <menuitem action="ges_action_print_inventory_wiz" id="menu_gesprim_stock_print_inventory" name="Print inventory" parent="ges_stock.menu_gesprim_stock_inventory_menu" sequence="30" />
+    <menuitem action="ges_action_export_stock_info" id="menu_gesprim_stock_export_stock_info" name="Export inventory" parent="ges_stock.menu_gesprim_stock_inventory_menu" sequence="40" />
+    <menuitem id="menu_gesprim_stock_other_flows" name="Other flows" parent="ges_menu.menu_gesprim_stock" sequence="30"/>        
+    <menuitem action="ges_action_view_loss" id="menu_gesprim_stock_view_loss" name="Loss" parent="ges_stock.menu_gesprim_stock_other_flows" sequence="10" />
+    <menuitem action="ges_action_view_dest" id="menu_gesprim_stock_view_dest" name="Destructions" parent="ges_stock.menu_gesprim_stock_other_flows" sequence="20" />
+    <menuitem action="stock.action_picking_tree_all" id="menu_gesprim_stock_transfers" name="Transfers" parent="ges_stock.menu_gesprim_stock_other_flows" sequence="30" />
+
+    <menuitem action="stock.stock_move_line_action" id="menu_gesprim_stock_product_moves" name="Product moves" parent="ges_menu.menu_gesprim_stock" sequence="40" />        
+    
+</odoo>

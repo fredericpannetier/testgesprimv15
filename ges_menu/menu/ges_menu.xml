@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+	<!-- Top Menu -->
+	<menuitem id="menu_gesprim" name="Gesprim" web_icon="ges_base,static/description/icon.png" sequence="309"/>
+	<!-- **Menu Gesprim -->
+	<menuitem id="menu_gesprim_files" name="Files" sequence="10" parent="menu_gesprim" />
+	<menuitem id="menu_gesprim_sales" name="Sales" sequence="20" parent="menu_gesprim" />
+	<menuitem id="menu_gesprim_shipping" name="Shipping" sequence="25" parent="menu_gesprim" />
+	<menuitem id="menu_gesprim_purchases" name="Purchases" sequence="30" parent="menu_gesprim" />
+	<menuitem id="menu_gesprim_stock" name="Stock" sequence="40" parent="menu_gesprim" />
+	<!-- <menuitem id="menu_gesprim_accounting" name="Accounting" sequence="50" parent="menu_gesprim" /> -->
+	<menuitem id="menu_gesprim_label_printing" name="Label printing" sequence="60" parent="menu_gesprim" />
+	<menuitem id="menu_gesprim_reporting" name="Reporting" sequence="70" parent="menu_gesprim" />
+	<menuitem id="menu_gesprim_settings" name="Settings" sequence="100" parent="menu_gesprim" />		
+	<!-- ***Menu Fichiers -->		
+	<menuitem id="menu_gesprim_tables" name="Tables" sequence="200" parent="menu_gesprim_files" />
+	<!-- ***Menu Ventes-->
+	<menuitem id="menu_gesprim_delivery" name="Delivery" sequence="50" parent="menu_gesprim_sales" />	   
+	<menuitem id="menu_gesprim_invoicing" name="Invoicing" sequence="100" parent="menu_gesprim_sales" />
+		<!-- ***Menu Achats-->
+	<menuitem id="menu_gesprim_delivery_p" name="Delivery" sequence="50" parent="menu_gesprim_purchases" />
+	<menuitem id="menu_gesprim_invoicing_p" name="Invoicing" sequence="100" parent="menu_gesprim_purchases" />
+	<!--Menu Accounting  -->
+	<!-- ***Menu Paramètres -->
+	<menuitem id="menu_gesprim_settings_settings" name="Settings" sequence="10" parent="menu_gesprim_settings" action="ges_action_config_settings" />
+	<menuitem id="menu_gesprim_settings_logbook" name="Logbook" sequence="20" parent="menu_gesprim_settings" action="logbook.di_action_logbook" /> 		
+</odoo>
