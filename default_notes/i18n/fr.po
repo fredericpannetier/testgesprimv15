@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* default_notes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:59+0000\n"
+"PO-Revision-Date: 2021-09-20 16:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: default_notes
+#: model_terms:ir.actions.act_window,help:default_notes.di_action_default_note
+msgid "Aide"
+msgstr "Aide"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: default_notes
+#: model:ir.model,name:default_notes.model_di_default_note
+msgid "Default note"
+msgstr "Note par défaut"
+
+#. module: default_notes
+#: model:ir.actions.act_window,name:default_notes.di_action_default_note
+#: model:ir.ui.menu,name:default_notes.menu_default_note
+msgid "Default notes"
+msgstr "Notes par défaut"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: default_notes
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Group by"
+msgstr "Regrouper par"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__id
+msgid "ID"
+msgstr "ID"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__item
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Item"
+msgstr "Objet"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Modification par"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__write_date
+msgid "Last Updated on"
+msgstr "Dernière Modification le"
+
+#. module: default_notes
+#: model_terms:ir.actions.act_window,help:default_notes.di_action_default_note
+msgid "Listing of the entries."
+msgstr "Liste des entrées"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__partner_id
+msgid "Partner"
+msgstr "Tiers"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__partnertag_id
+msgid "Partner tag"
+msgstr "Tag tiers"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__dn_print
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Print on delivery note"
+msgstr "Imprimer sur le bon de livraison"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__inv_print
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Print on invoice"
+msgstr "Imprimer sur la facture"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__po_print
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Print on purchase order"
+msgstr "Imprimer sur la commande d'achat"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__so_print
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Print on sale order"
+msgstr "Imprimer sur la commende de vente"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__product_id
+msgid "Product"
+msgstr "Article"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__productcat_id
+msgid "Product category"
+msgstr "Catégorie article"
+
+#. module: default_notes
+#: model_terms:ir.ui.view,arch_db:default_notes.di_default_note_search
+msgid "Search"
+msgstr "Recherche"
+
+#. module: default_notes
+#: model:ir.model.fields,field_description:default_notes.field_di_default_note__text
+msgid "Text to print"
+msgstr "Texte à imprimer"
+
+#. module: default_notes
+#: model_terms:ir.ui.view,arch_db:default_notes.di_view_default_note_form
+#: model_terms:ir.ui.view,arch_db:default_notes.di_view_default_note_tree
+msgid "Texts"
+msgstr "Textes"

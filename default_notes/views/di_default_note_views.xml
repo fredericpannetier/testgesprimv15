@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="di_default_note_search" model="ir.ui.view">
+        <field name="name">di.default.note.search</field>
+        <field name="model">di.default.note</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="text" />
+                <field name="partner_id" />
+                <field name="partnertag_id" />
+                <field name="product_id" />
+                <field name="productcat_id" />                             
+                <separator/>                
+                <group name="grp_default_note" expand="0" string="Group by">
+                    <filter name="item" context="{'group_by':'item'}" domain="[]" string="Item"/>
+                    <filter name="so_print" context="{'group_by':'so_print'}" domain="[]" string="Print on sale order"/>
+                    <filter name="po_print" context="{'group_by':'po_print'}" domain="[]" string="Print on purchase order"/>
+                    <filter name="dn_print" context="{'group_by':'dn_print'}" domain="[]" string="Print on delivery note"/>
+                    <filter name="inv_print" context="{'group_by':'inv_print'}" domain="[]" string="Print on invoice"/>
+                </group>               
+            </search>
+        </field>
+    </record>
+   
+    <record id="di_view_default_note_tree" model="ir.ui.view" >
+            <field name="name">di.view.default.note.tree</field>            
+            <field name="model">di.default.note</field>        
+            <field name="arch" type="xml">
+                <tree string="Texts" default_order = "item">
+                    <field name="item" />
+                    <field name="company_id" attrs="{'readonly': [('item', '!=', 'company')]}"/>
+                    <field name="partner_id" attrs="{'readonly': [('item', '!=', 'partner')]}"/>
+                    <field name="partnertag_id" attrs="{'readonly': [('item', '!=', 'partnertag')]}"/>
+                    <field name="product_id" attrs="{'readonly': [('item', '!=', 'product')]}"/>
+                    <field name="productcat_id" attrs="{'readonly': [('item', '!=', 'productcat')]}"/>                    
+                    <field name="so_print" />
+                    <field name="po_print" />
+                    <field name="dn_print" />
+                    <field name="inv_print" />
+                    <field name="text" />   
+                </tree>
+            </field>
+    </record>
+    
+    <record id="di_view_default_note_form" model="ir.ui.view">
+        <field name="name">di.view.default.note.form</field>
+        <field name="model">di.default.note</field>
+        <field name="arch" type="xml">
+            <form string="Texts">                
+                <sheet>                   
+                    <group name="table_texts">                                                
+                        <field name="item" />
+                        <field name="company_id" attrs="{'readonly': [('item', '!=', 'company')]}"/>
+                        <field name="partner_id" attrs="{'readonly': [('item', '!=', 'partner')]}"/>
+                        <field name="partnertag_id" attrs="{'readonly': [('item', '!=', 'partnertag')]}"/>
+                        <field name="product_id" attrs="{'readonly': [('item', '!=', 'product')]}"/>
+                        <field name="productcat_id" attrs="{'readonly': [('item', '!=', 'productcat')]}"/>                    
+                        <field name="so_print" />
+                        <field name="po_print" />
+                        <field name="dn_print" />
+                        <field name="inv_print" />
+                        <field name="text" />                                                                    
+                    </group>
+                </sheet>
+                               
+            </form>
+        </field>
+    </record>
+    
+    
+    <record id="di_action_default_note" model="ir.actions.act_window">
+        <field name="name">Default notes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.default.note</field>
+        <field name="view_id" ref="di_view_default_note_tree"/>
+        <field name="search_view_id" ref="di_default_note_search"/> 
+        
+        <field name="context">{'group_by':'item'}</field>  
+       
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Aide
+            </p>
+            <p>
+                Listing of the entries.
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="menu_default_note" sequence="999" parent="sale.menu_sale_config" action="default_notes.di_action_default_note"  />
+</odoo>

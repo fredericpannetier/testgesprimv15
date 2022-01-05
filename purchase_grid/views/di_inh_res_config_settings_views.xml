@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="ges_res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">ges.res.config.settings.view.form.inherit</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]" position="inside">
+				<div class="app_settings_block" data-string="Purchase_Grid"
+					string="Purchase Grid" data-key="purchase_grid" groups="base.group_user">
+					<h2>Purchase Grid Settings</h2>
+					<div class="row mt16 o_settings_container" name="gesprim_settings">
+					   <div class="col-12 col-lg-6 o_setting_box" id="purch_grid_options">
+    						<div class="o_setting_left_pane" />
+    						<div class="o_setting_right_pane">
+    							<label for="di_purch_grid_mode" />
+    							<field name="di_purch_grid_mode" />    							
+    						</div>
+    					</div>
+    					<div class="col-12 col-lg-6 o_setting_box" id="purch_grid_options">
+                            <div class="o_setting_left_pane" />
+                            <div class="o_setting_right_pane">
+                                <label for="di_purch_horizon" attrs="{'invisible': [('di_purch_grid_mode','!=', 'Horizon')]}"/>
+                                <field name="di_purch_horizon" attrs="{'invisible': [('di_purch_grid_mode','!=', 'Horizon')]}"/>                             
+                            </div>
+                        </div>						
+                        <div class="col-12 col-lg-6 o_setting_box" id="purch_grid_options">
+                            <div class="o_setting_left_pane" />
+                            <div class="o_setting_right_pane">
+                                <label for="di_purch_order_num" attrs="{'invisible': [('di_purch_grid_mode','!=', 'Order Number')]}"/>
+                                <field name="di_purch_order_num" attrs="{'invisible': [('di_purch_grid_mode','!=', 'Order Number')]}"/>                             
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

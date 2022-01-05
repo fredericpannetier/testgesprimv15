@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record id="di_direct_receive_wiz" model="ir.ui.view">
+        <field name="name">di.direct.receive.form</field>
+        <field name="model">di.direct.receive.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Direct receive">            	
+                <footer>
+                    <button string="Confirm orders" type="object" 
+                        name="di_massive_order_confirm"  default_focus="1" />
+                    <button string="Confirm deliveries" type="object" 
+                        name="di_massive_deliveries"  default_focus="1" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="di_action_direct_receive_wiz" model="ir.actions.act_window">
+        <field name="name">Direct receive</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.direct.receive.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>        
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>                
+        <field name="binding_view_types">list,form</field>        
+    </record>    
+</odoo>
