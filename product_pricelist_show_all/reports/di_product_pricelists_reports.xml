@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        
+    <template id="di_product_pricelists_print">        
+        <!-- <t t-call="web.html_container">
+            <t t-call="web.internal_layout">            -->
+                <span t-raw="wiz.product_pricelists"/>                           
+             <!-- </t>
+        </t>  -->
+    </template>
+
+    <template id="di_product_pricelists_print_wiz">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">            
+                <t t-foreach="docs" t-as="wiz">                                    
+                    <t t-call="product_pricelist_show_all.di_product_pricelists_print" />                                                                                
+                </t>            
+            </t>            
+        </t>
+    </template>
+
+	<record id="di_action_report_product_pricelists" model="ir.actions.report">
+	    <field name="name">Product pricelists</field>
+	    <field name="model">di.pricelists.by.product.wiz</field>
+	    <field name="report_type">qweb-pdf</field>
+	    <field name="report_name">product_pricelist_show_all.di_product_pricelists_print_wiz</field>
+	    <field name="report_file">product_pricelist_show_all.di_product_pricelists_print_wiz</field>
+	</record>
+	<!--  -->
+	
+	<template id="di_prices_print">                                                       
+        <table class="table table-condensed table-bordered" width="100%">
+            <thead>
+                <tr>
+                    <td>Code</td>
+                    <td>Description</td>
+                    <td>Packaging</td>
+                    <td>Unit</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>            
+                <t t-set="categ" t-value=""/>
+                
+                <t t-foreach="pricelist.di_products.sorted(key=lambda p: (p.product_id.categ_id.parent_id.name and p.product_id.categ_id.parent_id.name or 'zzzzzzzzzzzzzzzz', p.product_id.name, p.product_id.id))" t-as="prodprice">
+                    <t t-if="(promo is True and (prodprice.date_start is not False or prodprice.date_end is not False)) or (not promo)  ">
+                        <t t-set="print_price" t-value="True"/>    
+                    </t>
+                    <t t-else="">
+                        <t t-set="print_price" t-value="False"/>    
+                    </t>
+                    <t t-if="print_price is True">
+                        <t t-set="cust_price" t-value="0"/>
+                        <t t-if="cust != False">
+                            <t t-set="cust_price" t-value="pricelist.get_product_price(prodprice.product_id, 0, cust)"/>                        
+                        </t>
+                        <t t-if="cust_price != 0">
+                            <t t-if="categ != '' and categ != prodprice.product_id.categ_id.parent_id.name">
+                                <tr>                                
+                                    <td colspan="99"><span t-esc="prodprice.product_id.categ_id.parent_id.name" /></td>                                
+                                </tr>    
+                            </t>
+                            <t t-set="categ" t-value="prodprice.product_id.categ_id.parent_id.name"/>
+                            <t t-set="special_offer" t-value="prodprice.product_id.product_specialoffer(prodprice.date_start, prodprice.date_end, cust_price, prodprice.pricelist_id, prodprice.product_id)"/>
+                            
+                            <tr>
+                                <td><span t-esc="prodprice.product_id.default_code" /></td>
+                                <td><span t-esc="prodprice.product_id.name" /></td>
+                                <td><span t-esc="prodprice.product_id.ges_packaging_id.des" /></td>
+                                <td><span t-esc="prodprice.product_id.uom_id.name" /></td>
+                                <t t-if="special_offer">
+                                    <td>
+                                        <div>
+                                            <span t-esc="'%.2f'% cust_price" />  <span t-field="pricelist.company_id.currency_id.symbol"/>
+                                            <t t-if="not special_offer[0]">
+                                                <span> from 01/01/1900 </span>
+                                            </t>
+                                            <t t-else="">
+                                                <span> from </span> <span t-esc="special_offer[0]" />   
+                                            </t>
+                                            <t t-if="not special_offer[1]">
+                                                <span> to 31/12/9999 </span>
+                                            </t>
+                                            <t t-else="">
+                                                <span> to </span> <span t-esc="special_offer[1]" />   
+                                            </t>
+                                        </div>
+                                    </td>   
+                                </t>
+                                <t t-else="">
+                                    <td><span t-esc="'%.2f'% cust_price" />  <span t-field="pricelist.company_id.currency_id.symbol"/></td>                            
+                                </t>
+                            </tr>
+                        
+                        </t>
+                        <t t-else="">
+                            <t t-if="prodprice.price != 0">
+                                <t t-if="categ != '' and categ != prodprice.product_id.categ_id.parent_id.name">
+                                    <tr>
+                                        <td colspan="99"><span t-esc="prodprice.product_id.categ_id.parent_id.name" /></td>
+                                    </tr>    
+                                </t>
+                                <t t-set="categ" t-value="prodprice.product_id.categ_id.parent_id.name"/>
+                                <t t-set="special_offer" t-value="prodprice.product_id.product_specialoffer(prodprice.date_start, prodprice.date_end, cust_price, prodprice.pricelist_id, prodprice.product_id)"/>
+                                <tr>
+                                    <td><span t-esc="prodprice.product_id.default_code" /></td>
+                                    <td><span t-esc="prodprice.product_id.name" /></td>
+                                    <td><span t-esc="prodprice.product_id.ges_packaging_id.des" /></td>
+                                    <td><span t-esc="prodprice.product_id.uom_id.name" /></td>
+                                    <t t-if="special_offer">
+                                        <td>
+                                            <div>
+                                                <span t-esc="'%.2f'% prodprice.price" />  <span t-field="pricelist.company_id.currency_id.symbol"/>
+                                                <t t-if="not special_offer[0]">
+                                                    <span> from 01/01/1900 </span>
+                                                </t>
+                                                <t t-else="">
+                                                    <span> from </span> <span t-esc="special_offer[0]" />   
+                                                </t>
+                                                <t t-if="not special_offer[1]">
+                                                    <span> to 31/12/9999 </span>
+                                                </t>
+                                                <t t-else="">
+                                                    <span> to </span> <span t-esc="special_offer[1]" />   
+                                                </t>                                            
+                                            </div>
+                                            <div><span> else </span><span t-esc="'%.2f'% special_offer[2]" />  <span t-field="pricelist.company_id.currency_id.symbol"/></div>
+                                        </td>   
+                                    </t>
+                                    <t t-else="">
+                                        <td><span t-esc="'%.2f'% prodprice.price" />  <span t-field="pricelist.company_id.currency_id.symbol"/></td>                            
+                                    </t>
+
+                                    <!-- <td><span t-esc="'%.2f'% prodprice.price" />  <span t-field="pricelist.company_id.currency_id.symbol"/></td>                             -->
+                                </tr>
+                            </t>                          
+                        </t> 
+                    </t>     
+                </t>
+            </tbody>
+        </table>       
+    </template>
+	
+	<template id="di_customer_prices_print">
+        <t t-call="web.html_container"> 
+            <t t-call="web.external_layout">  
+                <t t-set="first" t-value="True"/>        
+                <t t-foreach="docs" t-as="cust"> 
+                    <t t-if="not first">
+                        <p style="page-break-before:always;"> </p>
+                    </t>
+                    <t t-set="first" t-value="False"/>
+                    <div class="page">
+                    <t t-set="pricelist" t-value="cust.property_product_pricelist"/> 
+                    <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/> 
+
+        
+                    <table class="table table-condensed table-bordered" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="100%">
+                                    <h2 style="text-align: center">
+                                        <span>Pricelist : </span>
+                                        <span t-esc="pricelist.name" />                                        
+                                    </h2>
+                                </th>               
+                            </tr>
+                            <tr>
+                                <th width="100%">
+                                    <h2 style="text-align: center">
+                                        <span>Customer : </span>
+                                        <span t-esc="cust.name" />                                        
+                                    </h2>
+                                </th>               
+                            </tr>
+                        </thead>
+                    </table>
+                        <!-- <h1> 
+                            <div>
+                                Pricelist : 
+                                <span t-esc="pricelist.name" />
+                            </div>
+                            <div>
+                                 : 
+                                <span t-esc="cust.name" />
+                            </div>
+                        </h1>      -->
+                                                   
+                        <t t-call="product_pricelist_show_all.di_prices_print" />
+                    </div>                                                                                
+                </t>
+            </t>            
+        </t>
+    </template>
+	
+	<record id="di_action_report_customer_prices" model="ir.actions.report">
+        <field name="name">Customer prices</field>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">product_pricelist_show_all.di_customer_prices_print</field>
+        <field name="report_file">product_pricelist_show_all.di_customer_prices_print</field>
+    </record>
+    
+    <template id="di_pricelist_prices_print">
+        <t t-call="web.html_container">  
+            <t t-call="web.external_layout">       
+                <t t-set="first" t-value="True"/>   
+                <t t-foreach="docs" t-as="pricelist">
+                    <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/> 
+                    <t t-if="not first">
+                        <p style="page-break-before:always;"> </p>
+                    </t>
+                    <t t-set="first" t-value="False"/>
+                    <div class="page">     
+                        <table class="table table-condensed table-bordered" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="100%">
+                                        <h2 style="text-align: center">
+                                            <span>Pricelist : </span>
+                                            <span t-esc="pricelist.name" />                                        
+                                        </h2>
+                                    </th>               
+                                </tr>                                
+                            </thead>
+                        </table>       
+                        <!-- <h1> 
+                            <div>
+                                Pricelist : 
+                                <span t-esc="pricelist.name" />
+                            </div>                            
+                        </h1>     
+                                                           -->
+                        <t t-set="cust" t-value="False"/>
+                        <t t-call="product_pricelist_show_all.di_prices_print" />
+                    </div>                                                                                
+                </t>
+            </t>            
+        </t>
+    </template>
+
+    <template id="di_customer_prices_print">
+        <t t-call="web.html_container"> 
+            <t t-call="web.external_layout">                          
+                <t t-foreach="docs" t-as="wiz"> 
+                    <t t-foreach="wiz.partner_ids" t-as="cust"> 
+                        <t t-set="first" t-value="True"/>
+                        <t t-if="not first">
+                            <p style="page-break-before:always;"> </p>
+                        </t>
+                        <t t-set="first" t-value="False"/>
+                        <div class="page">
+                        <t t-set="pricelist" t-value="cust.property_product_pricelist"/> 
+                        <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/> 
+                        <table class="table table-condensed table-bordered" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="100%">
+                                        <h2 style="text-align: center">
+                                            <span>Pricelist : </span>
+                                            <span t-esc="pricelist.name" />                                        
+                                        </h2>
+                                    </th>               
+                                </tr>
+                                <tr>
+                                    <th width="100%">
+                                        <h2 style="text-align: center">
+                                            <span>Customer : </span>
+                                            <span t-esc="cust.name" />                                        
+                                        </h2>
+                                    </th>               
+                                </tr>
+                            </thead>
+                        </table>                                                                         
+                            <t t-call="product_pricelist_show_all.di_prices_print" />
+                        </div> 
+                    </t>                                                                               
+                </t>
+            </t>            
+        </t>
+    </template>
+
+    <template id="di_product_pricelists_print_general_wiz">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">            
+                <t t-foreach="docs" t-as="wiz">
+                    <t t-set="first" t-value="True"/>   
+                    <t t-foreach="wiz.pricelist_ids" t-as="pricelist">
+                        <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/> 
+                        <t t-if="not first">
+                            <p style="page-break-before:always;"> </p>
+                        </t>
+                        <t t-set="first" t-value="False"/>
+                        <div class="page">     
+                            <table class="table table-condensed table-bordered" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="100%">
+                                            <h2 style="text-align: center">
+                                                <span>Pricelist : </span>
+                                                <span t-esc="pricelist.name" />                                        
+                                            </h2>
+                                        </th>               
+                                    </tr>                                
+                                </thead>
+                            </table>                                 
+                            <t t-set="cust" t-value="False"/>
+                            <t t-call="product_pricelist_show_all.di_prices_print" />
+                        </div>                                                                                                         
+                    </t>                                                                                                
+                </t>            
+            </t>            
+        </t>
+    </template>
+
+    <template id="di_product_pricelists_print_general_promo_wiz">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">            
+                <t t-foreach="docs" t-as="wiz">
+                    <t t-set="first" t-value="True"/>   
+                    <t t-foreach="wiz.pricelist_ids" t-as="pricelist">
+                        <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/> 
+                        <t t-if="not first">
+                            <p style="page-break-before:always;"> </p>
+                        </t>
+                        <t t-set="first" t-value="False"/>
+                        <div class="page">     
+                            <table class="table table-condensed table-bordered" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="100%">
+                                            <h2 style="text-align: center">
+                                                <span>Pricelist : </span>
+                                                <span t-esc="pricelist.name" />                                        
+                                            </h2>
+                                        </th>               
+                                    </tr>                                
+                                </thead>
+                            </table>                                 
+                            <t t-set="cust" t-value="False"/>
+                            <t t-set="promo" t-value="true"/>
+                            <t t-call="product_pricelist_show_all.di_prices_print" />
+                        </div>                                                                                                         
+                    </t>                                                                                                
+                </t>            
+            </t>            
+        </t>
+    </template>
+
+    <template id="di_product_pricelists_print_partner_wiz">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">            
+                <t t-foreach="docs" t-as="wiz"> 
+                    <t t-set="first" t-value="True"/>   
+                    <t t-foreach="wiz.partner_ids" t-as="cust">
+                        <t t-if="not first">
+                            <p style="page-break-before:always;"> </p>
+                        </t>
+                        <t t-set="first" t-value="False"/>                                                
+                        <div class="page">  
+                            <t t-set="pricelist" t-value="cust.property_product_pricelist"/> 
+                            <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/>   
+                            <table class="table table-condensed table-bordered" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="100%">
+                                            <h2 style="text-align: center">
+                                                <span>Pricelist : </span>
+                                                <span t-esc="pricelist.name" />                                        
+                                            </h2>
+                                        </th>               
+                                    </tr> 
+                                    <tr>
+                                        <th width="100%">
+                                            <h2 style="text-align: center">
+                                                <span>Customer : </span>
+                                                <span t-esc="cust.name" />                                        
+                                            </h2>
+                                        </th>               
+                                    </tr>                               
+                                </thead>
+                            </table>                                                             
+                            <t t-call="product_pricelist_show_all.di_prices_print" />
+                        </div>                                                                                                         
+                    </t>                                                                                                
+                </t>            
+            </t>            
+        </t>
+    </template>
+
+    <template id="di_product_pricelists_print_partner_promo_wiz">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">            
+                <t t-foreach="docs" t-as="wiz">
+                    <t t-set="first" t-value="True"/>   
+                    <t t-foreach="wiz.partner_ids" t-as="cust">
+                        <t t-if="not first">
+                            <p style="page-break-before:always;"> </p>
+                        </t>
+                        <t t-set="first" t-value="False"/>
+                        <div class="page">  
+                            <t t-set="pricelist" t-value="cust.property_product_pricelist"/> 
+                            <t t-set="toto" t-value="pricelist.env.add_to_compute(pricelist._fields['di_products'], pricelist.search([]))"/>   
+                            <table class="table table-condensed table-bordered" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="100%">
+                                            <h2 style="text-align: center">
+                                                <span>Pricelist : </span>
+                                                <span t-esc="pricelist.name" />                                        
+                                            </h2>
+                                        </th>               
+                                    </tr> 
+                                    <tr>
+                                        <th width="100%">
+                                            <h2 style="text-align: center">
+                                                <span>Customer : </span>
+                                                <span t-esc="cust.name" />                                        
+                                            </h2>
+                                        </th>               
+                                    </tr>                               
+                                </thead>
+                            </table>      
+                            <t t-set="promo" t-value="true"/>                                                       
+                            <t t-call="product_pricelist_show_all.di_prices_print" />
+                        </div>                                                                                                         
+                    </t>                                                                                                
+                </t>            
+            </t>            
+        </t>
+    </template>
+
+    <record id="di_action_report_print_pricelists_general" model="ir.actions.report">
+	    <field name="name">Pricelist general</field>
+	    <field name="model">di.pricelists.print.wiz</field>
+	    <field name="report_type">qweb-pdf</field>
+	    <field name="report_name">product_pricelist_show_all.di_product_pricelists_print_general_wiz</field>
+	    <field name="report_file">product_pricelist_show_all.di_product_pricelists_print_general_wiz</field>
+	</record>
+    <record id="di_action_report_print_pricelists_general_promo" model="ir.actions.report">
+	    <field name="name">Pricelist general promo</field>
+	    <field name="model">di.pricelists.print.wiz</field>
+	    <field name="report_type">qweb-pdf</field>
+	    <field name="report_name">product_pricelist_show_all.di_product_pricelists_print_general_promo_wiz</field>
+	    <field name="report_file">product_pricelist_show_all.di_product_pricelists_print_general_promo_wiz</field>
+	</record>
+
+    <record id="di_action_report_print_pricelists_partner" model="ir.actions.report">
+	    <field name="name">Pricelist partner</field>
+	    <field name="model">di.pricelists.print.wiz</field>
+	    <field name="report_type">qweb-pdf</field>
+	    <field name="report_name">product_pricelist_show_all.di_product_pricelists_print_partner_wiz</field>
+	    <field name="report_file">product_pricelist_show_all.di_product_pricelists_print_partner_wiz</field>
+	</record>
+    <record id="di_action_report_print_pricelists_partner_promo" model="ir.actions.report">
+	    <field name="name">Pricelist partner promo</field>
+	    <field name="model">di.pricelists.print.wiz</field>
+	    <field name="report_type">qweb-pdf</field>
+	    <field name="report_name">product_pricelist_show_all.di_product_pricelists_print_partner_promo_wiz</field>
+	    <field name="report_file">product_pricelist_show_all.di_product_pricelists_print_partner_promo_wiz</field>
+	</record>
+
+    
+                
+    <record id="di_action_report_pricelist_prices" model="ir.actions.report">
+        <field name="name">Pricelist prices</field>
+        <field name="binding_model_id" ref="product.model_product_pricelist"/>        
+        <field name="model">product.pricelist</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">product_pricelist_show_all.di_pricelist_prices_print</field>
+        <field name="report_file">product_pricelist_show_all.di_pricelist_prices_print</field>
+    </record>
+</odoo>

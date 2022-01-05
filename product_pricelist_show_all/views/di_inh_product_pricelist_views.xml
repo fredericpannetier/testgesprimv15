@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+	<record id="di_pricelist_product_rel_tree_view" model="ir.ui.view">            
+        <field name="name">di.pricelist.product.rel.tree.view</field>
+        <field name="model">di.pricelist.product.rel</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <tree string="Pricelists">                    
+                <field name="pricelist_id" string="Pricelist" readonly="1"/>                                                    
+                <field name="product_id" invisible="1" readonly="1"/>
+                <field name="price" readonly="1"/>                    
+            </tree>
+        </field>
+    </record>
+      
+    <record id="di_product_template_form_view" model="ir.ui.view">
+        <field name="name">di.product.template.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='open_pricelist_rules']" position="replace">
+                <button name="di_open_pricelists" icon="fa-arrow-right" type="object"
+                    groups="product.group_product_pricelist" class="oe_inline">
+                    <field name="di_pricelist_item_count" attrs="{'invisible': [('di_pricelist_item_count', '=', 0)]}"/>
+                    <span attrs="{'invisible': [('di_pricelist_item_count', '=', 1)]}">
+                      Extra Prices
+                    </span>
+                    <span attrs="{'invisible': [('di_pricelist_item_count', '!=', 1)]}">
+                      Extra Price
+                    </span>
+                </button>   
+            </xpath>
+        </field>            
+    </record>
+    
+    
+    <record id="di_pricelists_by_product_select_form_wiz" model="ir.ui.view">
+        <field name="name">di.pricelists.by.product.select.form.wiz</field>
+        <field name="model">di.pricelists.by.product.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Selection">
+                <group>
+                    <group>                
+                        <field name="pricelist_ids" required="1" nolabel="1"/>                                                                                                                                    
+                    </group>
+                    <group>                
+                        <field name="categ_ids" nolabel="1"/>                                                                                                                                    
+                    </group>
+                </group> 
+                <footer>
+                    <button string="View list" type="object" name="view_product_pricelists" default_focus="1" />
+                    <button string="Print list" type="object" name="print_product_pricelists"/>
+                    <button string="Export list" type="object" name="export_product_pricelists" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>               
+            </form>
+        </field>
+    </record>
+        
+    <record id="di_pricelists_by_product_form_wiz" model="ir.ui.view">
+        <field name="name">di.pricelists.by.product.form.wiz</field>
+        <field name="model">di.pricelists.by.product.view.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Pricelists">
+                <group>                                    
+                    <field name="product_pricelists" readonly="1" nolabel="1"/>                                                                                                                                    
+                </group>                
+            </form>
+        </field>
+    </record>    
+    
+    <record id="di_action_pricelists_by_product_view" model="ir.actions.act_window">
+        <field name="name">Pricelists by product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.pricelists.by.product.wiz</field>
+        <field name="target">main</field>
+        <field name="view_id" ref="di_pricelists_by_product_form_wiz"/>                               
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Aide
+            </p>
+            <p>
+               Pricelists by product
+            </p>
+        </field>
+    </record>
+    
+    <record id="di_action_pricelists_by_product" model="ir.actions.act_window">
+        <field name="name">Pricelists by product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.pricelists.by.product.wiz</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="di_pricelists_by_product_select_form_wiz"/>                               
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Aide
+            </p>
+            <p>
+               Pricelists by product
+            </p>
+        </field>
+    </record>
+
+
+    <record id="di_pricelists_print_view_wiz" model="ir.ui.view">
+        <field name="name">di.pricelists.print.view.wiz</field>
+        <field name="model">di.pricelists.print.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Selection">
+                <group>
+                    <group>                
+                        <field name="pricelist_ids_ids" invisible='1'/>
+                        <field name="prices_type"/>                                                                                                                                    
+                    </group>
+                    <group>                                        
+                        <field name="partner_ids"  attrs="{'invisible': [('prices_type', 'in', ('general','general_promo'))]}">
+                            <tree>
+                                <field name="ref"></field>
+                                <field name="display_name"></field>
+                            </tree>
+                        </field>                                                                                                                                    
+                    </group>                    
+                </group> 
+                <footer>                    
+                    <button string="Print" type="object" name="print_pricelists" default_focus="1" />                    
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>               
+            </form>
+        </field>
+    </record>
+
+    <record id="di_action_pricelist_print_wiz" model="ir.actions.act_window">
+        <field name="name">Print pricelist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.pricelists.print.wiz</field>
+		<field name="binding_model_id" ref="product.model_product_pricelist"/>            
+        <field name="view_mode">form</field>
+        <field name="target">new</field>                    
+    </record>
+
+
+    <menuitem id="di_menu_pricelists_by_product" name="Pricelists by product" parent="sale.product_menu_catalog" action="product_pricelist_show_all.di_action_pricelists_by_product" groups="product.group_product_pricelist" sequence="99"/>
+    
+    
+    
+</odoo>

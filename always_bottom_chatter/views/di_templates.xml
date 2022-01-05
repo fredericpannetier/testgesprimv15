@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <!-- Adds all assets in Odoo -->
+        <template id="di_assets_backend" name="Backend Assets  surcharge (used in backend interface)" inherit_id="web.assets_backend">
+             <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/always_bottom_chatter/static/js/di_form_renderer.js"></script>                 
+                <!-- <script type="text/javascript" src="/always_bottom_chatter/static/js/di_form_chatter.js"></script>                  -->
+            </xpath>   
+            <xpath expr="." position="inside">
+                <link
+                    rel="stylesheet"
+                    href="/always_bottom_chatter/static/scss/chatter_width.scss"
+                />
+            </xpath>         
+        </template>
+            
+    </data>
+</odoo> 

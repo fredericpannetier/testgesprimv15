@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_di_pricelist_product_rel","access.di.pricelist.product.rel","model_di_pricelist_product_rel","base.group_user",1,1,1,1
+"access_di_pricelists_by_product_wiz","access.di.pricelists.by.product.wiz","model_di_pricelists_by_product_wiz","base.group_user",1,1,1,1
+"access_di_pricelists_by_product_view_wiz","access.di.pricelists.by.product.view.wiz","model_di_pricelists_by_product_view_wiz","base.group_user",1,1,1,1
+"access_di_pricelists_print_wiz","access.di.pricelists.print.wiz","model_di_pricelists_print_wiz","base.group_user",1,1,1,1

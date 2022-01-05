@@ -1,0 +1,297 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_pricelist_show_all
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-21 15:01+0000\n"
+"PO-Revision-Date: 2021-09-21 15:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_pricelist_show_all
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#, python-format
+msgid ""
+"\n"
+"                        </h3>\n"
+"                    </th>\n"
+"                </tr>\n"
+"            </thead>\n"
+"        </table>\n"
+"        <table class=\"table\">\n"
+"            <thead>\n"
+"                <tr>\n"
+"                    <th>Product</th>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#, python-format
+msgid ""
+"\n"
+"        <table class=\"table table-condensed table-bordered\" width=\"100%\">\n"
+"            <thead>\n"
+"                <tr>\n"
+"                    <th width=\"100%\">\n"
+"                        <h3 style=\"text-align: center\">\n"
+"                        <span>Prices </span>\n"
+"                            <span>From </span>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#, python-format
+msgid " from %s"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#, python-format
+msgid " to %s </div>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#, python-format
+msgid "<div>else %s %s</div></td>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_product_template_form_view
+msgid ""
+"<span attrs=\"{'invisible': [('di_pricelist_item_count', '=', 1)]}\">\n"
+"                      Extra Prices\n"
+"                    </span>\n"
+"                    <span attrs=\"{'invisible': [('di_pricelist_item_count', '!=', 1)]}\">\n"
+"                      Extra Price\n"
+"                    </span>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_customer_prices_print
+msgid "<span>Customer : </span>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_customer_prices_print
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelist_prices_print
+msgid "<span>Pricelist : </span>"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.actions.act_window,help:product_pricelist_show_all.di_action_pricelists_by_product
+#: model_terms:ir.actions.act_window,help:product_pricelist_show_all.di_action_pricelists_by_product_view
+msgid "Aide"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelists_by_product_select_form_wiz
+msgid "Cancel"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__company_id
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__company_id
+msgid "Company"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__create_uid
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__create_uid
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__create_date
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__create_date
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.actions.report,name:product_pricelist_show_all.di_action_report_customer_prices
+msgid "Customer prices"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__display_name
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__display_name
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__display_name
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_pricelist__display_name
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_template__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelists_by_product_select_form_wiz
+msgid "Export list"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__id
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__id
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__id
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_pricelist__id
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_product__id
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,help:product_pricelist_show_all.field_di_pricelists_by_product_wiz__categ_ids
+msgid "If not completed, select all products"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel____last_update
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz____last_update
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz____last_update
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_pricelist____last_update
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_product____last_update
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_template____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__write_uid
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__write_uid
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__write_date
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__write_date
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model,name:product_pricelist_show_all.model_di_pricelist_product_rel
+msgid "Link between pricelists and products"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_product__di_pricelist_item_count
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_template__di_pricelist_item_count
+msgid "Number of price rules"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__price
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_prices_print
+msgid "Price"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model,name:product_pricelist_show_all.model_product_pricelist
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__pricelist_id
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelist_product_rel_tree_view
+msgid "Pricelist"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.actions.report,name:product_pricelist_show_all.di_action_report_pricelist_prices
+msgid "Pricelist prices"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#: code:addons/product_pricelist_show_all/models/di_inh_product.py:0
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__pricelist_ids
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_product__di_pricelists
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelist_product_rel_tree_view
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelists_by_product_form_wiz
+#, python-format
+msgid "Pricelists"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.actions.act_window,name:product_pricelist_show_all.di_action_pricelists_by_product
+#: model:ir.actions.act_window,name:product_pricelist_show_all.di_action_pricelists_by_product_view
+#: model:ir.ui.menu,name:product_pricelist_show_all.di_menu_pricelists_by_product
+#: model_terms:ir.actions.act_window,help:product_pricelist_show_all.di_action_pricelists_by_product
+#: model_terms:ir.actions.act_window,help:product_pricelist_show_all.di_action_pricelists_by_product_view
+msgid "Pricelists by product"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelists_by_product_select_form_wiz
+msgid "Print list"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model,name:product_pricelist_show_all.model_product_product
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__product_id
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_prices_print
+msgid "Product"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model,name:product_pricelist_show_all.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__categ_ids
+msgid "Product category"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.actions.report,name:product_pricelist_show_all.di_action_report_product_pricelists
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_view_wiz__product_pricelists
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelists_by_product_wiz__product_pricelists
+msgid "Product pricelists"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_product_pricelist__di_products
+msgid "Products"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.actions.server,name:product_pricelist_show_all.di_recompute_product_pricelists_ir_actions_server
+#: model:ir.cron,cron_name:product_pricelist_show_all.di_recompute_product_pricelists
+#: model:ir.cron,name:product_pricelist_show_all.di_recompute_product_pricelists
+msgid "Recompute product pricelists"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelists_by_product_select_form_wiz
+msgid "Selection"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model.fields,field_description:product_pricelist_show_all.field_di_pricelist_product_rel__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_prices_print
+msgid "Unit"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model_terms:ir.ui.view,arch_db:product_pricelist_show_all.di_pricelists_by_product_select_form_wiz
+msgid "View list"
+msgstr ""
+
+#. module: product_pricelist_show_all
+#: model:ir.model,name:product_pricelist_show_all.model_di_pricelists_by_product_view_wiz
+#: model:ir.model,name:product_pricelist_show_all.model_di_pricelists_by_product_wiz
+msgid "Wizard to show pricelists by product"
+msgstr ""

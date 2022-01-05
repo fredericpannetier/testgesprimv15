@@ -1,0 +1,11 @@
+<templates>
+    <div t-name="widget_last_prices.lastPricesWidget">
+        <div>
+            <a tabindex="0" t-attf-class="fa fa-line-chart"/>
+        </div>
+    </div>
+
+    <div t-name="widget_last_prices.PricesDetailPopOver">
+        <t t-raw='data.di_table_last_prices'/>            
+    </div>    
+</templates>
