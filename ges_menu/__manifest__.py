@@ -57,7 +57,7 @@
         'printing',  
         'widget_last_prices', 
         'always_bottom_chatter',
-        'web_sheet_full_width',
+        #FRPA 'web_sheet_full_width',
 #         'popup',
 #         'billing_statement',
 #         'cmp',
