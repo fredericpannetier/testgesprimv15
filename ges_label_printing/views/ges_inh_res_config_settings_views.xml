@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="ges_label_printing_res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">ges.label.printing.res.config.settings.view.form.inherit</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+		<field name="priority" eval="100"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='gesprim_settings_container']" position="after">			     			
+    			<h2>Label printing</h2>
+                <div class="row mt16 o_settings_container" name="printing_setting_container">                    
+                    <div class="col-12 col-lg-6 o_setting_box" id="printing_options1">                          
+                        <div class="o_setting_left_pane">
+                                                            
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="ges_default_label_printer"/>
+                            <field name="ges_default_label_printer"/>                                
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="printing_options2">                          
+ 
+                        <div class="o_setting_left_pane">
+                                                           
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="ges_default_label_model"/> 
+                            <field name="ges_default_label_model"/>                                
+                        </div>
+                    </div>                                            
+                </div>
+			</xpath> 
+		</field>
+	</record>
+</odoo>
+
+

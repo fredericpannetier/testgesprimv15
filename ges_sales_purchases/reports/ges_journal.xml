@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ges_wiz_journal">
+    <t t-set="doc" t-value="doc" />
+        <table class="table table-condensed table-bordered" width="100%">
+            <thead>
+                <tr>
+                    <th width="100%">
+                        <h3 style="text-align: center">
+                            <span>Journal </span>
+                            <span>From </span>
+                            <span t-field="doc.ges_dateB"/>
+                            <span> to </span>
+                            <span t-field="doc.ges_dateE"/>
+                        </h3>
+                    </th>               
+                </tr>
+            </thead>
+        </table>
+        <!-- <h2 style="text-align: center">Journal</h2>
+        <h4 style="text-align: center">
+            From 
+            <span t-field="doc.ges_dateB"/>
+            To   
+            <span t-field="doc.ges_dateE"/>
+        </h4> -->
+        <t t-set="TotHT" t-value="0.0" />
+        <t t-set="TotTTC" t-value="0.0" />
+        <t t-set="cpttax" t-value="0" />
+        <t t-set="cpttaxtot" t-value="0" />
+        <t t-set="TotBase1" t-value="0.0" />
+        <t t-set="TotAmount1" t-value="0.0" />
+        <t t-set="TotBase2" t-value="0.0" />
+        <t t-set="TotAmount2" t-value="0.0" />
+        <t t-set="TotBase3" t-value="0.0" />
+        <t t-set="TotAmount3" t-value="0.0" />
+        <t t-set="TotBase4" t-value="0.0" />
+        <t t-set="TotAmount4" t-value="0.0" />
+        <t t-set="TotBase5" t-value="0.0" />
+        <t t-set="TotAmount5" t-value="0.0" />
+        <table class="table table-condensed table-bordered" width="100%">
+            <t t-set="tax_group_ids" t-value="doc.tax_group_ids.sorted(key=lambda g: (g.name, g.id))"/>
+            <thead>
+                <tr>
+                    <th>
+                        <span style="text-align: center"><div>Date</div></span>
+                    </th>
+                    <th>
+                        <span style="text-align: center">Invoice</span>
+                    </th>
+                    <th>
+                        <span style="text-align: center">Partner</span>
+                    </th>
+                    <th>
+                        <span style="text-align: center">Untaxed amount</span>
+                    </th>
+                    <t t-foreach="tax_group_ids" t-as="group">                        
+                        <th>
+                            <span style="text-align: center"><span t-field="group.name"/> Base</span>
+                        </th>                        
+                        <th>
+                            <span style="text-align: center"><span t-field="group.name"/> Amount</span>
+                        </th>
+                        <t t-set="cpttaxtot" t-value="cpttaxtot+1" />                       
+                    </t>
+                    <th style="text-align: center">
+                        <span style="text-align: center">Total amount</span>
+                    </th>
+                </tr>
+            </thead>
+            <!-- impression des lignes, on fait un 2eme parcours afin de rester entre les balises table -->
+            <tbody>
+                <t t-foreach="doc.account_move_ids.sorted(key=lambda m: (m.date, m.name))" t-as="fact">
+                    <tr>
+                        <td>
+                            <span t-field="fact.date"/>
+                        </td>
+                        <td>
+                            <span t-field="fact.name"/>
+                        </td>
+                        <td>                      
+                            <span t-field="fact.partner_id.name"/>
+                        </td>
+                        <td>
+                            <span t-field="fact.amount_untaxed"/>
+                        </td>
+                        <t t-set="TotHT" t-value="TotHT+fact.amount_untaxed" />
+                        
+                        <t t-set="cpttax" t-value="0" />
+                        <t t-foreach="tax_group_ids" t-as="group">
+                            <t t-set="found" t-value="0"/>
+                            <t t-set="cpttax" t-value="cpttax+1" />
+                            <t t-foreach="fact.amount_by_group" t-as="amount_by_group">                        
+                                
+                                <t t-if="group.id == amount_by_group[6]">                                         
+                                    <t t-set="found" t-value="1"/>                                                                                                   
+                                    <td><span t-esc="amount_by_group[4]"/></td>                                        
+                                    <td><span t-esc="amount_by_group[3]"/></td>    
+                                    <t t-set="basestr" t-value="''.join(ch for ch in amount_by_group[4] if ch.isdigit() or ch ==',' or ch == '.')"/>
+                                    <t t-set="amountstr" t-value="''.join(ch for ch in amount_by_group[3] if ch.isdigit() or ch ==',' or ch == '.')"/>
+                                    <t t-set="base" t-value="basestr.replace(',','.')"/>
+                                    <t t-set="amount" t-value="amountstr.replace(',','.')"/>
+                                    <t t-if="cpttax==1">
+                                        <t t-set="TotBase1" t-value="TotBase1+float(base)" />
+                                        <t t-set="TotAmount1" t-value="TotAmount1+float(amount)" />   
+                                    </t>
+                                    <t t-if="cpttax==2">
+                                        <t t-set="TotBase2" t-value="TotBase2+float(base)" />
+                                        <t t-set="TotAmount2" t-value="TotAmount2+float(amount)" />   
+                                    </t>
+                                    <t t-if="cpttax==3">
+                                        <t t-set="TotBase3" t-value="TotBase3+float(base)" />
+                                        <t t-set="TotAmount3" t-value="TotAmount3+float(amount)" />   
+                                    </t>
+                                    <t t-if="cpttax==4">
+                                        <t t-set="TotBase4" t-value="TotBase4+float(base)" />
+                                        <t t-set="TotAmount4" t-value="TotAmount4+float(amount)" />   
+                                    </t>
+                                    <t t-if="cpttax==5">
+                                        <t t-set="TotBase5" t-value="TotBase5+float(base)" />
+                                        <t t-set="TotAmount5" t-value="TotAmount5+float(amount)" />   
+                                    </t>
+                                </t>                                
+                            </t>
+                            <t t-if="found == 0">
+                                <td></td>
+                                <td></td>
+                            </t>                           
+                        </t>
+                        <!-- <td>
+                            <span t-field="fact.amount_tax"/>
+                        </td> -->
+                        <td>
+                            <span t-field="fact.amount_total"/>
+                        </td>     
+                        <t t-set="TotTTC" t-value="TotTTC+fact.amount_total" />      
+                    </tr>
+                    
+                </t>  
+                <tr style="font-weight:bold">
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td><span t-esc="round(TotHT,2)"/> <span t-field="doc.currency_symbol"/></td>
+                    <!-- <t t-if="cpttax==5">
+                        <t t-set="iter" t-value="[1,2,3,4,5]" />                                      
+                    </t>
+                    <t t-if="cpttax==4">
+                        <t t-set="iter" t-value="[1,2,3,4]" />                                      
+                    </t>
+                    <t t-if="cpttax==3">
+                        <t t-set="iter" t-value="[1,2,3]" />                                      
+                    </t>
+                    <t t-if="cpttax==2">
+                        <t t-set="iter" t-value="[1,2]" />                                      
+                    </t>
+                    <t t-if="cpttax==1">
+                        <t t-set="iter" t-value="[1]" />                                      
+                    </t> -->
+                    <t t-foreach="[1,2,3,4,5]" t-as="i">
+                        <t t-if="cpttaxtot >= i">
+                            
+                            
+                            <t t-if="i==1">
+                                <td><span t-esc="round(TotBase1,2)"/> <span t-field="doc.currency_symbol"/></td>        
+                                <td><span t-esc="round(TotAmount1,2)"/> <span t-field="doc.currency_symbol"/></td>
+                            </t>
+                            <t t-if="i==2">
+                                <td><span t-esc="round(TotBase2,2)"/> <span t-field="doc.currency_symbol"/></td>        
+                                <td><span t-esc="round(TotAmount2,2)"/> <span t-field="doc.currency_symbol"/></td>
+                            </t>
+                            <t t-if="i==3">
+                                <td><span t-esc="round(TotBase3,2)"/> <span t-field="doc.currency_symbol"/></td>        
+                                <td><span t-esc="round(TotAmount3,2)"/> <span t-field="doc.currency_symbol"/></td>
+                            </t>
+                            <t t-if="i==4">
+                                <td><span t-esc="round(TotBase4,2)"/> <span t-field="doc.currency_symbol"/></td>        
+                                <td><span t-esc="round(TotAmount4,2)"/> <span t-field="doc.currency_symbol"/></td>
+                            </t>
+                            <t t-if="i==5">
+                                <td><span t-esc="round(TotBase5,2)"/> <span t-field="doc.currency_symbol"/></td>        
+                                <td><span t-esc="round(TotAmount5,2)"/> <span t-field="doc.currency_symbol"/></td>
+                            </t>
+                        </t>
+                    </t>                        
+                    <td><span t-esc="round(TotTTC,2)" /> <span t-field="doc.currency_symbol"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+    <template id="ges_wiz_imp_journal">        
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <t t-call="ges_sales_purchases.ges_wiz_journal"/>
+                    </div>
+                </t>
+            </t>        
+        </t>
+    </template>
+        
+    <record id="ges_wiz_report_journal" model="ir.actions.report">
+        <field name="name">Journal</field>
+        <field name="model">ges.print.journal.wiz</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ges_sales_purchases.ges_wiz_imp_journal</field>
+        <field name="report_file">ges_sales_purchases.ges_wiz_imp_journal</field>
+        <field name="print_report_name">'Journal'</field>                        
+    </record>
+</odoo>

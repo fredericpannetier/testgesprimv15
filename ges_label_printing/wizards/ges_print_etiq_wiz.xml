@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>  
+    <record id="ges_print_label_form_view_wiz" model="ir.ui.view">
+        <field name="name">ges.print.label.form.view.wiz</field>
+        <field name="model">ges.print.label.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print label">            
+                <!-- <div class="oe_title"> -->
+                    <group>
+                        <group>
+                            <field name="product_id" />
+                            <field name="show_lot_single" invisible ="1" />
+                            <field name="show_po_name_single" invisible ="1" />
+                            <field name="lot_id" attrs="{'invisible': [('show_lot_single', '=', False)]}" domain="[('product_id', '=', product_id)]" groups="stock.group_production_lot" context="{'default_product_id': product_id}" />
+                            <field name="po_name" string="Lot ( if not existing )" attrs="{'invisible': [('show_po_name_single', '=', False)]}"  groups="stock.group_production_lot" />
+                            <field name="bbd" />
+                            <field name="qty" />
+                            <field name="weight" />
+                            <field name="barcode" />
+                        </group>
+                        <group>
+                            <field name="packaging_date" />
+                            <field name="shipping_date" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="partner_id" />
+                            <field name="carrier_id" />
+                        </group>
+                        <group>
+                            <field name="model_id" />
+                            <field name="printer_id" />
+                            <field name="nblabel" />
+                        </group>
+                    </group>                                    
+                <!-- </div>                 -->
+                <footer>
+                    <button string="Print label" type="object" name="create_print_etiq"
+                        default_focus="1" class="oe_link"/>
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>               
+            </form>
+        </field>
+    </record>
+
+    <record id="ges_action_print_label" model="ir.actions.act_window">
+        <field name="name">Print label</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.print.label.wiz</field>
+        <field name="view_id" ref="ges_print_label_form_view_wiz"/>        
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record>  
+    
+    <record id="ges_print_label_purchase_order_form_view_wiz" model="ir.ui.view">
+        <field name="name">ges.print.label.purchase.order.form.view.wiz</field>
+        <field name="model">ges.print.label.purchase.order.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print labels">
+                <field name="label_to_print_ids" >
+                    <tree string="Labels" create="false" delete="false" editable="bottom">                                                
+                        <field name="product_id" />
+                        <field name="show_lot" invisible ="1" />
+                        <field name="show_po_name" invisible ="1" />
+                        <field name="lot_id" attrs="{'readonly': [('show_lot', '=', False)]}" domain="[('product_id', '=', product_id)]" groups="stock.group_production_lot" context="{'default_product_id': product_id}" />
+                        <field name="po_name" string="Lot" attrs="{'readonly': [('show_po_name', '=', False)]}"  groups="stock.group_production_lot" />
+                        <field name="bbd" />
+                        <field name="qty" />
+                        <field name="weight" />
+                        <field name="barcode" />
+                
+                        <field name="packaging_date" />
+                        <field name="shipping_date" />
+                        <field name="partner_id" />
+                        <field name="carrier_id" />
+                
+                        <field name="model_id" />
+                        <field name="printer_id" />
+                        <field name="nblabel" />
+                                                            
+                    </tree>
+                </field>
+                <footer>
+                    <button string="Print labels" type="object" name="create_print_etiq_purchase_order"
+                        default_focus="1" class="oe_link"/>
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="ges_action_print_label_purchase_order" model="ir.actions.act_window">
+        <field name="name">Print labels</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="binding_type">report</field>
+        <field name="res_model">ges.print.label.purchase.order.wiz</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>            
+        <field name="view_id" ref="ges_print_label_purchase_order_form_view_wiz"/>        
+        <field name="view_mode">form</field>
+        <!-- <field name="domain">[('journal_id.type', '=', 'cash')]</field> -->
+        <!-- <field name="domain">[('po_id', '=', self.env.context["active_id"])]</field>         -->
+        <field name="target">current</field>
+    </record>     
+     
+</odoo>

@@ -1,0 +1,191 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_sales_purchases
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:59+0000\n"
+"PO-Revision-Date: 2021-09-20 15:36+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: ges_sales_purchases
+#: model:ir.actions.report,print_report_name:ges_sales_purchases.ges_wiz_report_journal
+msgid "'Journal'"
+msgstr "'Journal'"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "<span> to </span>"
+msgstr "<span> à </span>"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid ""
+"<span>Journal </span>\n"
+"                            <span>From </span>"
+msgstr ""
+"<span>Journal </span>\n"
+"                            <span>du </span>"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__account_move_ids
+msgid "Account Journal"
+msgstr "Journal"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Amount"
+msgstr "Montant"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Base"
+msgstr "Montant base"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__ges_dateB
+msgid "Begining date"
+msgstr "Date début"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_print_journal_wiz_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__currency_symbol
+msgid "Currency"
+msgstr "Devise"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,help:ges_sales_purchases.field_ges_print_journal_wiz__currency_symbol
+msgid "Currency sign, to be used when printing amounts."
+msgstr "Devise signée, utilisée pour imprimer les montants"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Date"
+msgstr "Date"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__ges_dateE
+msgid "End date"
+msgstr "Date fin"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: ges_sales_purchases
+#: model:ir.actions.report,name:ges_sales_purchases.ges_wiz_report_journal
+msgid "Journal"
+msgstr "Journal"
+
+#. module: ges_sales_purchases
+#: model:ir.ui.menu,name:ges_sales_purchases.menu_gesprim_print_journal
+#: model:ir.ui.menu,name:ges_sales_purchases.menu_gesprim_print_journal_p
+msgid "Journal to Print"
+msgstr "Impression du journal"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__ges_journal
+#: model:ir.model.fields,help:ges_sales_purchases.field_ges_print_journal_wiz__ges_journal
+msgid "Journals"
+msgstr "Journaux"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Modification par"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__write_date
+msgid "Last Updated on"
+msgstr "Dernière Modification le"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Partner"
+msgstr "Tiers"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_print_journal_wiz_form
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: ges_sales_purchases
+#: model:ir.actions.act_window,name:ges_sales_purchases.ges_action_wiz_print_journal
+#: model:ir.actions.act_window,name:ges_sales_purchases.ges_action_wiz_print_journal_p
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_print_journal_wiz_form
+msgid "Print Journal"
+msgstr "Impression Journal"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_print_journal_wiz_form
+msgid "Sélection"
+msgstr "Sélection"
+
+#. module: ges_sales_purchases
+#: model:ir.model.fields,field_description:ges_sales_purchases.field_ges_print_journal_wiz__tax_group_ids
+msgid "Tax Group"
+msgstr "Groupe de taxe"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Total"
+msgstr "Total"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Total amount"
+msgstr "Montant total"
+
+#. module: ges_sales_purchases
+#: model_terms:ir.ui.view,arch_db:ges_sales_purchases.ges_wiz_journal
+msgid "Untaxed amount"
+msgstr "Total hors taxe"
+
+#. module: ges_sales_purchases
+#: model:ir.model,name:ges_sales_purchases.model_ges_print_journal_wiz
+msgid "ges.print.journal.wiz"
+msgstr "ges.print.journal.wiz"

@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_ges_sales_purchases_ges_print_journal_wiz","access.ges.sales.purchases.ges.print.journal.wiz","model_ges_print_journal_wiz","base.group_user",1,1,1,1
+"access_ges_generate_prices_coef","access.ges.sales.purchases.ges.generate.prices.coef","model_ges_generate_prices_coef","base.group_user",1,1,1,1

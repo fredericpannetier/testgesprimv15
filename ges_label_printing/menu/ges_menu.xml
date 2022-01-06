@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu label printing -->
+    <menuitem id="menu_gesprim_print_label" name="Print label" sequence="10" parent="ges_menu.menu_gesprim_label_printing" action="ges_label_printing.ges_action_print_label" />
+    <menuitem id="menu_gesprim_printers" name="Printers" sequence="20" parent="ges_menu.menu_gesprim_label_printing" action="printing.action_miadi_etiquette_printer" />
+    <menuitem id="menu_gesprim_label_models" name="Label models" sequence="30" parent="ges_menu.menu_gesprim_label_printing" action="printing.action_miadi_etiquette_etiqmodel" />
+    <!-- <menuitem id="menu_miadi_etiquette_parameter" name="Parameters" sequence="30" parent="menu_printing" action="action_miadi_etiquette_parameter"/> -->            
+</odoo>

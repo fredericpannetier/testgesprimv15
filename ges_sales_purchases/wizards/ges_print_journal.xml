@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="ges_print_journal_wiz_form" model="ir.ui.view">
+        <field name="name">ges.print.journal.wiz.form</field>
+        <field name="model">ges.print.journal.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print Journal">
+                <separator string="Sélection"/>
+                <group>
+                    <group>
+                        <field name="ges_journal" widget="many2many_tags"/>
+                        <field name="ges_dateB"/>                        
+                        <field name="ges_dateE"/>
+                    </group>
+                    <group/>
+                </group>
+                <footer>
+                    <button string="Print" type="object" name="edit_journal"
+                        default_focus="1" class="oe_link"/>                    
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ges_action_wiz_print_journal" model="ir.actions.act_window">
+        <field name="name">Print Journal</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.print.journal.wiz</field>                
+        <field name="context">{'journal_type':'sale'}</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record> 
+     <record id="ges_action_wiz_print_journal_p" model="ir.actions.act_window">
+        <field name="name">Print Journal</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.print.journal.wiz</field>                
+        <field name="context">{'journal_type':'purchase'}</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record> 
+    
+    </data>
+</odoo>

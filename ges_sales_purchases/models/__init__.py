@@ -1,0 +1,1 @@
+from . import ges_inh_pricelists

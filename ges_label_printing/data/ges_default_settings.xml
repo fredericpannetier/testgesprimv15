@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">                
+        <record id="ges_default_label_model"  model="di.printing.etiqmodel">
+            <field name="name">Gesprim label</field>
+            <field name="code">ges_label</field>
+            <field name="text_etiq">
+CT~~CD,~CC^~CT~
+^XA~TA000~JSN^LT0^MNW^MTT^PON^PMN^LH0,0^JMA^PR5,5~SD15^JUS^LRN^CI0^XZ
+^XA
+^MMT
+^PW456
+^LL0256
+^LS0
+^FT4,28^A0N,28,28^FB147,1,0,C^FH\^FD[compname[^FS
+^BY1,3,51^FT27,225^BCN,,Y,N
+^FD>:[barcode[^FS
+^FT4,82^A0N,23,28^FB108,1,0,C^FH\^FD[product[^FS
+^FT4,106^A0N,14,21^FH\^FDCat\82gorie :^FS
+^FT99,106^A0N,14,24^FH\^FD[category[^FS
+^FT4,127^A0N,14,21^FH\^FDCalibre :^FS
+^FT99,127^A0N,14,28^FH\^FD[size[^FS
+^FT4,148^A0N,14,21^FH\^FDMarque :^FS
+^FT99,148^A0N,14,21^FH\^FD[brand[^FS
+^FT4,166^A0N,14,21^FH\^FDQuantit\82 :^FS
+^FT99,166^A0N,14,19^FH\^FD[qty[^FS
+^FT2,43^A0N,11,16^FH\^FD[compstreet[^FS
+^FT296,43^A0N,11,16^FH\^FD[compzip[^FS
+^FT363,43^A0N,11,21^FH\^FD[compcity[^FS
+^FT4,55^A0N,11,16^FB87,1,0,C^FH\^FD[compphone[^FS
+^PQ1,0,1,Y^XZ
+
+            </field>
+            <field name="commentary">Default Gesprim label</field>
+            <field name="with_ean128" eval="1"/>            
+        </record>     
+        
+        <record id="ges_default_settings" model="res.config.settings">
+            <field name="ges_default_label_model" ref="ges_label_printing.ges_default_label_model" />            
+        </record>    
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('ges_default_settings')]"/>                            
+        </function>                            
+    </data>
+</odoo>

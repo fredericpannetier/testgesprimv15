@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>      
+    <!-- ****Menu Facturation -->
+    <menuitem id="menu_gesprim_print_journal" name="Journal to Print" sequence="40" parent="ges_menu.menu_gesprim_invoicing" action="ges_sales_purchases.ges_action_wiz_print_journal" />
+    <menuitem id="menu_gesprim_print_journal_p" name="Journal to Print" sequence="30" parent="ges_menu.menu_gesprim_invoicing_p" action="ges_sales_purchases.ges_action_wiz_print_journal_p" />
+    
+</odoo>
