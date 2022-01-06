@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ges_purchase_stock_view_production_lot_form" model="ir.ui.view">
+        <field name="name">ges.purchase.stock.production.lot.form</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="ges_purchase_price" force_save="1" />                                                                                                                                                            
+            </xpath>
+        </field>
+    </record>
+    <record id="ges_purchase_stock_view_production_lot_tree" model="ir.ui.view">
+        <field name="name">ges.purchase.stock.production.lot.tree</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="ges_purchase_price" force_save="1" />                                                                                                                                                            
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

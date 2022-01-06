@@ -1,0 +1,599 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_delivery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-19 12:33+0000\n"
+"PO-Revision-Date: 2021-10-19 14:46+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: ges_delivery
+#: code:addons/ges_delivery/models/ges_inh_delivery_grid.py:0
+#, python-format
+msgid "%s %.02f times %s %s"
+msgstr "%s %.02f fois %s %s"
+
+#. module: ges_delivery
+#: code:addons/ges_delivery/models/ges_inh_delivery_grid.py:0
+#, python-format
+msgid "%s fixed price %.02f"
+msgstr "%s prix fixe %.02f"
+
+#. module: ges_delivery
+#: code:addons/ges_delivery/models/ges_inh_delivery_grid.py:0
+#, python-format
+msgid "%s fixed price %.02f plus %.02f times %s %s"
+msgstr "%s prix fixe %.02f plus %.02f fois %s %s"
+
+#. module: ges_delivery
+#: model:ir.actions.report,print_report_name:ges_delivery.ges_report_carrier_ctrl
+msgid "'Carrier control'"
+msgstr "'Contrôle transporteur'"
+
+#. module: ges_delivery
+#: model:ir.actions.report,print_report_name:ges_delivery.ges_wiz_report_bordtrp
+msgid "'Shipping note'"
+msgstr "'Bordereau de transport'"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "<b>TOTAL CARRIER</b>"
+msgstr "TOTAL TRANSPORTEUR"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "<b>TOTAL</b>"
+msgstr "TOTAL"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "<span> to </span>"
+msgstr "<span> à </span>"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "<span>Carrier control from&amp;nbsp;</span>"
+msgstr "Contrôle transport du"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "<span>From </span>"
+msgstr "De"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "<span>Shipping Note du&amp;nbsp;</span>"
+msgstr "Bordereau transporteur du"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "<span>to</span>"
+msgstr "au"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "Address"
+msgstr "Adresse"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_carrier__ges_adminfees
+msgid "Administrative fees"
+msgstr "Frais administratifs"
+
+#. module: ges_delivery
+#: model_terms:ir.actions.act_window,help:ges_delivery.ges_action_delivery_price_rule
+msgid "Aide"
+msgstr "Aide"
+
+#. module: ges_delivery
+#: model:ir.model.fields,help:ges_delivery.field_delivery_carrier__ges_adminfees
+msgid "Amount added to the shipping price."
+msgstr "Montant ajouté au prix du transport."
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__begin_date
+msgid "Begin date"
+msgstr "Date début"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_bordtrp_wiz_form
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_wiz_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "Carriage amount"
+msgstr "Montant transport"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Carrier"
+msgstr "Transporteur"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__carrier_begin
+msgid "Carrier begin"
+msgstr "Transporteur début"
+
+#. module: ges_delivery
+#: model:ir.ui.menu,name:ges_delivery.menu_gesprim_carrierctrl
+msgid "Carrier control"
+msgstr "Contrôle transporteur"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__carrier_end
+msgid "Carrier end"
+msgstr "Transporteur fin"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__transp_deb
+msgid "Carrier from"
+msgstr "Transporteur de"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__transp_fin
+msgid "Carrier to"
+msgstr "Transporteur à"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_price_rule_search
+msgid "Carriers"
+msgstr "Transporteurs"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Comment / Signature"
+msgstr "Commentaire / Signature"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_price_rule_form2
+msgid "Condition"
+msgstr "Condition"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__create_uid
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__create_date
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__date_sel
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "Date"
+msgstr "Date"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Delivery Adress"
+msgstr "Adresse de livraison"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_choose_delivery_carrier
+msgid "Delivery Carrier Selection Wizard"
+msgstr "Assistant de sélection du transporteur"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_price_rule_form2
+msgid "Delivery Cost"
+msgstr "Frais de livraison"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Delivery Note"
+msgstr "Bordereau de transport"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_delivery_price_rule
+msgid "Delivery Price Rules"
+msgstr "Règles de prix de livraison"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "Delivery number"
+msgstr "Numéro de BL"
+
+#. module: ges_delivery
+#: model:ir.actions.act_window,name:ges_delivery.ges_action_delivery_price_rule
+#: model:ir.ui.menu,name:ges_delivery.menu_gesprim_tables_shipping_rules
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_price_rule_search
+msgid "Delivery price rules"
+msgstr "Règles de prix de livraison"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_choose_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_price_rule__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_res_partner__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_sale_order__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__end_date
+msgid "End date"
+msgstr "Date fin"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_sale_order__ges_delivery_price
+msgid "Estimated Delivery Price"
+msgstr "Prix de livraison estimé"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_wiz_form
+msgid "Filters"
+msgstr "Filtres"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_carrier__ges_pallet_rounding__fullpallet
+msgid "Full pallet"
+msgstr "Palette complète"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_carrier__ges_gasoiltax
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_carrier_form
+msgid "Gasoil tax"
+msgstr "Taxe Gasoil"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_move_line__ges_gross_weight
+msgid "Ges Gross Weight"
+msgstr "Poids brut"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_choose_delivery_carrier__ges_ship_cost_message
+msgid "Ges Ship Cost Message"
+msgstr "Ges Ship Cost Message"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Gross Weight"
+msgstr "Poids brut"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "Gross weight"
+msgstr "Poids brut"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_price_rule_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_carrier__ges_pallet_rounding__halfpallet
+msgid "Half pallet"
+msgstr "Demi palette"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_choose_delivery_carrier__id
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_price_rule__id
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__id
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__id
+#: model:ir.model.fields,field_description:ges_delivery.field_res_partner__id
+#: model:ir.model.fields,field_description:ges_delivery.field_sale_order__id
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_move_line__id
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ges_delivery
+#: model:ir.model.fields,help:ges_delivery.field_choose_delivery_carrier__ges_ship_cost_owed
+#: model:ir.model.fields,help:ges_delivery.field_res_partner__ges_ship_cost_owed
+#: model:ir.model.fields,help:ges_delivery.field_res_users__ges_ship_cost_owed
+msgid ""
+"If this box is not checked, the customer will not have to pay the shipping "
+"cost."
+msgstr ""
+"Si cette case n'est pas cochée, le client n'aura pas à payer les frais de "
+"port."
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_ges_bordtrp_wiz
+msgid "Impression bordereaux transport"
+msgstr "Impression bordereaux transport"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_choose_delivery_carrier____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_carrier____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_price_rule____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_res_partner____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_sale_order____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__write_uid
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__write_date
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: ges_delivery
+#: model_terms:ir.actions.act_window,help:ges_delivery.ges_action_delivery_price_rule
+msgid "Manage Delivery price rules"
+msgstr "Gérer les règles de prix de livraison"
+
+#. module: ges_delivery
+#: model:ir.model.fields,help:ges_delivery.field_delivery_carrier__ges_pallet_rounding
+msgid "Method to round pallet number"
+msgstr "Méthode d'arrondi du nombre de palette"
+
+#. module: ges_delivery
+#: code:addons/ges_delivery/models/ges_inh_delivery_grid.py:0
+#, python-format
+msgid "No price rule matching this order; delivery cost cannot be computed."
+msgstr ""
+"Aucune règle tarifaire ne correspond à cette commande; les frais de port ne "
+"peuvent être calculés."
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_carrier__ges_pallet_rounding__norounding
+msgid "No rounding"
+msgstr "Pas d'arrondi"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Packages"
+msgstr "Colis"
+
+#. module: ges_delivery
+#: model:ir.ui.menu,name:ges_delivery.menu_gesprim_packaging
+msgid "Packaging"
+msgstr "Colisage"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable__pallet
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable_factor__pallet
+msgid "Pallet"
+msgstr "Palette"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_carrier__ges_pallet_rounding
+msgid "Pallet rounding"
+msgstr "Arrondi palette"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_price_rule__ges_paltyp_id
+msgid "Pallet type"
+msgstr "Type de palette"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Pallets"
+msgstr "Palettes"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable__price
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable_factor__price
+msgid "Price"
+msgstr "Prix"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_view_delivery_price_rule_form2
+msgid "Price Rules"
+msgstr "Règles de prix"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_bordtrp_wiz_form
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_wiz_form
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: ges_delivery
+#: model:ir.actions.act_window,name:ges_delivery.ges_action_wiz_print_carrier_ctrl
+#: model:ir.actions.report,name:ges_delivery.ges_report_carrier_ctrl
+#: model:ir.model,name:ges_delivery.model_ges_carrier_ctrl_wiz
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_wiz_form
+msgid "Print carrier control"
+msgstr "Imprimer contrôle transporteur"
+
+#. module: ges_delivery
+#: model:ir.actions.act_window,name:ges_delivery.ges_action_wiz_imp_bordtrp
+#: model:ir.actions.report,name:ges_delivery.ges_wiz_report_bordtrp
+msgid "Print shipping note"
+msgstr "Imprimer bordereau de transport"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_bordtrp_wiz_form
+msgid "Print shipping notes"
+msgstr "Imprimer bordereau de transport"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Product"
+msgstr "Article"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements d'article (Ligne de mouvement de stock)"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable__quantity
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable_factor__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_sale_order__ges_ranktour
+#: model:ir.model.fields,help:ges_delivery.field_sale_order__ges_ranktour
+msgid "Rank in Tour"
+msgstr "Rang dans la tournée"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_picking__ges_ranktour
+msgid "Rank in tour"
+msgstr "Rang dans la tournée"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: ges_delivery
+#: model:ir.model.fields,help:ges_delivery.field_ges_bordtrp_wiz__date_sel
+msgid "Selection date"
+msgstr "Date de sélection"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_delivery_carrier
+#: model:ir.ui.menu,name:ges_delivery.menu_gesprim_tables_carrier
+msgid "Shipping Methods"
+msgstr "Méthodes d'expédition"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_choose_delivery_carrier__ges_ship_cost_owed
+#: model:ir.model.fields,field_description:ges_delivery.field_res_partner__ges_ship_cost_owed
+#: model:ir.model.fields,field_description:ges_delivery.field_res_users__ges_ship_cost_owed
+msgid "Shipping cost owed"
+msgstr "Port dû"
+
+#. module: ges_delivery
+#: model:ir.ui.menu,name:ges_delivery.menu_gesprim_shippingnote
+msgid "Shipping note"
+msgstr "Bordereau de transport"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__company_id
+msgid "Société"
+msgstr "Société"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_bordtrp_wiz__stock_picking_ids
+#: model:ir.model.fields,field_description:ges_delivery.field_ges_carrier_ctrl_wiz__stock_picking_ids
+msgid "Stock pickings"
+msgstr "Bons de livraison"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_bordtrp_wiz_form
+msgid "Sélection"
+msgstr "Sélection"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Third Parties"
+msgstr "Tiers"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_carrier_ctrl_template
+msgid "Third party"
+msgstr "Tiers"
+
+#. module: ges_delivery
+#: model:ir.model.fields,help:ges_delivery.field_delivery_carrier__ges_gasoiltax
+msgid "This percentage will be added to the shipping price."
+msgstr "Ce pourcentage sera ajouté au prix d'expédition."
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Total Stock picking"
+msgstr "Total bon de livraison"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_sale_order__ges_tour
+#: model:ir.model.fields,field_description:ges_delivery.field_stock_picking__ges_tour
+#: model:ir.model.fields,help:ges_delivery.field_sale_order__ges_tour
+msgid "Tour"
+msgstr "Tournée"
+
+#. module: ges_delivery
+#: model_terms:ir.ui.view,arch_db:ges_delivery.ges_wiz_imp_bordtrp_doc
+msgid "Tour/Ranktour"
+msgstr "Tournée / Rang tournée"
+
+#. module: ges_delivery
+#: model:ir.model,name:ges_delivery.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: ges_delivery
+#: model:ir.model.fields,help:ges_delivery.field_delivery_price_rule__ges_paltyp_id
+msgid "Type of the pallet for the rule"
+msgstr "Type de palette"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_price_rule__variable
+msgid "Variable"
+msgstr "Variable"
+
+#. module: ges_delivery
+#: model:ir.model.fields,field_description:ges_delivery.field_delivery_price_rule__variable_factor
+msgid "Variable Factor"
+msgstr "Facteur variable"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable__volume
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable_factor__volume
+msgid "Volume"
+msgstr "Volume"
+
+#. module: ges_delivery
+#: code:addons/ges_delivery/wizards/ges_inh_choose_delivery_carrier.py:0
+#, python-format
+msgid ""
+"Warning ! The shipping cost is not owed by the customer. The shipping cost "
+"will be set to 0."
+msgstr ""
+"Attention ! Les frais de port ne sont pas dû par le client. Ils seront mis "
+"à 0."
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable__weight
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable_factor__weight
+msgid "Weight"
+msgstr "Poids"
+
+#. module: ges_delivery
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable__wv
+#: model:ir.model.fields.selection,name:ges_delivery.selection__delivery_price_rule__variable_factor__wv
+msgid "Weight * Volume"
+msgstr "Poids * volume"
+
+#. module: ges_delivery
+#: code:addons/ges_delivery/models/ges_inh_delivery_grid.py:0
+#, python-format
+msgid "if %s %s  %s %.02f then"
+msgstr "si %s %s  %s %.02f alors"

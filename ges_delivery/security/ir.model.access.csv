@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_ges_delivery_ges_bordtrp_wiz","access.ges.delivery.ges.bordtrp.wiz","model_ges_bordtrp_wiz","base.group_user",1,1,1,1
+"access_ges_delivery_ges_carrier_ctrl_wiz","access.ges.delivery.ges.carrier.ctrl.wiz","model_ges_carrier_ctrl_wiz","base.group_user",1,1,1,1

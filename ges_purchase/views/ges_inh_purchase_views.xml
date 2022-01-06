@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="ges_purchase_rfq" model="ir.actions.act_window">
+		<field name="name">Requests for Quotation</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">purchase.order</field>
+		<field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+		<field name="view_id" ref="purchase.purchase_order_kpis_tree" />
+		<field name="domain">[]</field>
+		<field name="search_view_id" ref="purchase.view_purchase_order_filter" />
+		<field name="context">{'quotation_only': True, 'search_default_draft': 1}</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				No request for quotation found. Let's create one!
+			</p>
+			<p>
+				Requests for quotation are documents that will be sent to your suppliers to
+				request prices for different products you consider buying.
+				Once an agreement has been found with the supplier, they will be
+				confirmed and turned into purchase orders.
+			</p>
+		</field>
+	</record>
+	
+	<record id="ges_purchase_order_view_search" model="ir.ui.view">
+		<field name="name">ges.purchase.order.select</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_view_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='starred']" position="after">
+				<separator />
+				<filter string="To deliver" name="to_deliver"
+					domain="[('invoice_status','=','no')]" />
+			</xpath>
+		</field>
+	</record>
+            
+     <record id="ges_purchase_form_action_to_deliver" model="ir.actions.act_window">
+          <field name="name">Purchase Orders</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">purchase.order</field>
+          <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+          <field name="view_id" ref="purchase.purchase_order_view_tree"/>
+          <field name="domain">[('state','in',('purchase', 'done'))]</field>
+          <field name="search_view_id" ref="ges_purchase_order_view_search"/>
+          <field name="context">{'search_default_to_deliver': 1}</field>
+          <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              No purchase order found. Let's create one!
+            </p><p>
+              Once you ordered your products to your supplier, confirm your request for quotation and it will turn into a purchase order.
+            </p>
+          </field>
+     </record>
+     
+     <record id="ges_view_purchase_order_form_editable_list" model="ir.ui.view">
+            <field name="name">ges.view.purchase.order.form.editable.list</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="groups_id" eval="[(6,0, [ref('ges_purchase.ges_group_input_form_mode_pol')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                    <attribute name="editable"/>
+                </xpath>
+            </field>
+        </record>
+
+		<record id="ges_view_purchase_order_top_editable_list" model="ir.ui.view">
+            <field name="name">ges.view.purchase.order.form.editable.list</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="groups_id" eval="[(6,0, [ref('ges_purchase.ges_group_input_top_mode_pol')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                    <attribute name="editable">top</attribute>
+                </xpath>
+            </field>
+        </record>
+           
+     <record id="ges_purchase_order_form" model="ir.ui.view">
+		<field name="name">ges.purchase.order.form</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">
+			<xpath expr="//tree/field[@name='name']" position="replace">
+				<field name="name" widget="section_and_note_text" optional="show"
+				attrs="{'readonly': [('product_id', '!=', False)]}"/>
+				<field name="ges_category_id" optional="hide"/>
+				<field name="ges_origin_id" optional="hide"/>
+				<field name="ges_brand_id" optional="hide"/>
+				<field name="ges_size_id" optional="hide"/>
+				<field name="ges_pack" optional="show" string="Packages"/>
+				<field name="ges_piece" optional="show" string="Pieces"/>
+				<field name="ges_gweight" optional="show"/>
+				<field name="ges_tare" optional="show"/>
+				<field name="ges_nweight" optional="show"/>
+			</xpath>
+			<xpath expr="//field[@name='order_line']/form//label[@for='product_qty']" position="before">
+				<field name="ges_category_id" />
+				<field name="ges_origin_id"/>
+				<field name="ges_brand_id" />
+				<field name="ges_size_id"/>
+                <field name="ges_pack" string="Packages"/>
+				<field name="ges_piece" string="Pieces"/>
+				<field name="ges_gweight"/>
+				<field name="ges_tare"/>
+				<field name="ges_nweight"/>
+				
+				
+            </xpath>
+            <xpath expr="//group[@name='invoice_info']" position="inside">
+                <field name="ges_copies"/>
+            </xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="ges_carrier_ctrl_wiz_form" model="ir.ui.view">
+        <field name="name">ges.carrier.ctrl.wiz.form</field>
+        <field name="model">ges.carrier.ctrl.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print carrier control">
+                <separator string="Filters"/>
+                <group>
+                    <group>
+                        <field name="begin_date"/>
+                        <field name="end_date"/>
+                        <field name="carrier_begin"/>                        
+                        <field name="carrier_end"/>
+                    </group>
+                    <group/>
+                </group>
+                <footer>
+                    <button string="Print" type="object" name="print_carrier_ctrl"
+                        default_focus="1" class="oe_link"/>                    
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ges_action_wiz_print_carrier_ctrl" model="ir.actions.act_window">
+        <field name="name">Print carrier control</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.carrier.ctrl.wiz</field>
+        <!-- <field name="view_type">form</field>             -->
+        <!-- <field name="view_id" ref="ges_carrier_ctrl_wiz_form"/>         -->
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record> 
+         
+    </data>
+</odoo>

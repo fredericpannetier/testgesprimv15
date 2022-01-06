@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>  
+    <!-- ***Menu Transport -->
+    <menuitem id="menu_gesprim_tables_carrier" sequence="10" parent="ges_tables.menu_gesprim_table_shipping" action="delivery.action_delivery_carrier_form" />
+    <menuitem id="menu_gesprim_tables_shipping_rules" sequence="20" parent="ges_tables.menu_gesprim_table_shipping" action="ges_action_delivery_price_rule" />
+    <menuitem id="menu_gesprim_packaging" sequence="30" parent="ges_tables.menu_gesprim_table_shipping" action="ges_tables.ges_action_packaging" />
+    <!-- <menuitem id="menu_gesprim_pallet_type" sequence="40" parent="ges_tables.menu_gesprim_table_shipping" action="ges_tables.ges_action_pallet_type" groups="ges_menu.group_manage_pal"/>
+    <menuitem id="menu_gesprim_pallet_product" sequence="50" parent="ges_tables.menu_gesprim_table_shipping" action="ges_tables.ges_action_pallet_product" groups="ges_menu.group_manage_pal"/> -->
+    
+    
+    <!-- <menuitem id="menu_gesprim_sales_shipping" name="Shipping" sequence="49" parent="ges_menu.menu_gesprim_sales" /> -->
+    
+    <menuitem id="menu_gesprim_shippingnote" name="Shipping note" sequence="10" parent="ges_menu.menu_gesprim_shipping" action="ges_action_wiz_imp_bordtrp" />
+    <menuitem id="menu_gesprim_carrierctrl" name="Carrier control" sequence="20" parent="ges_menu.menu_gesprim_shipping" action="ges_action_wiz_print_carrier_ctrl" />
+    
+    
+</odoo>
+

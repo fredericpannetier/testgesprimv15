@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- ****Menu Facturation client-->
+	<menuitem id="menu_gesprim_customers_invoices" name="Invoices" sequence="20" parent="ges_menu.menu_gesprim_invoicing" action="account.action_move_out_invoice_type" />
+	<!-- ****Menu Facturation fournisseur-->
+	<menuitem id="menu_gesprim_supplier_invoices" name="Invoices" sequence="10" parent="ges_menu.menu_gesprim_invoicing_p" action="account.action_move_in_invoice_type" />	
+	<!-- ***Menu accounting -->
+	<menuitem id="menu_gesprim_tax" name="Taxes" sequence="30" parent="ges_tables.menu_gesprim_product" action="ges_invoice.ges_action_tax_form" />
+    <menuitem id="menu_gesprim_payment_term" name="Payment terms" sequence="20" parent="ges_tables.menu_gesprim_customer" action="account.action_payment_term_form" />
+    <!-- ***Menu reporting -->
+    <menuitem id="menu_gesprim_invoice_stat" name="Invoice analysis" sequence="10" parent="ges_menu.menu_gesprim_reporting" action="ges_invoice.ges_action_invoice_stat_all" />
+</odoo>

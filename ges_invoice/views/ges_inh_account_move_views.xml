@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>     
+    <record id="ges_account_invoice_form_editable_list" model="ir.ui.view">
+        <field name="name">ges.account.invoice.form.editable.list</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="groups_id" eval="[(6,0, [ref('ges_invoice.ges_group_input_form_mode_am')])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
+                <attribute name="editable"/>
+            </xpath>
+                       
+        </field>
+    </record>
+	<record id="ges_account_invoice_top_editable_list" model="ir.ui.view">
+        <field name="name">ges.account.invoice.top.editable.list</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="groups_id" eval="[(6,0, [ref('ges_invoice.ges_group_input_top_mode_am')])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
+                <attribute name="editable">top</attribute>
+            </xpath>
+                       
+        </field>
+    </record>
+
+	
+    
+     <record id="ges_view_move_form" model="ir.ui.view">
+		<field name="name">ges.account.move.form</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field eval="80" name="priority" />
+		<field name="arch" type="xml">
+		      <xpath expr="//group[@id='other_tab_group']" position="inside">
+                <group string="Additional informations">
+                    <field name="ges_copies"/>
+                </group>
+            </xpath> 
+			<xpath expr="//tree/field[@name='name']" position="replace">
+				<field name="name" widget="section_and_note_text" optional="show"
+				attrs="{'readonly': [('product_id', '!=', False)]}"/>
+
+				<field name="ges_category_id" optional="hide"/>
+				<field name="ges_origin_id" optional="hide"/>
+				<field name="ges_brand_id" optional="hide"/>
+				<field name="ges_size_id" optional="hide"/>
+				
+				<field name="ges_pack" optional="show" string="Packages"/>
+				<field name="ges_piece" optional="show" string="Pieces"/>
+				<field name="ges_gweight" optional="show"/>
+				<field name="ges_tare" optional="show"/>
+				<field name="ges_nweight" optional="show"/>
+			</xpath>
+			<xpath expr="//tree/field[@name='account_id']" position="attributes">			
+				<attribute name="optional">hide</attribute>
+            </xpath>
+ 			<xpath expr="//field[@name='invoice_line_ids']/form/sheet/group/field[@name='quantity']" position="before">
+				<field name="ges_category_id" />
+				<field name="ges_origin_id" />
+				<field name="ges_brand_id" />
+				<field name="ges_size_id" />
+				<field name="ges_pack"  string="Packages"/>
+				<field name="ges_piece"  string="Pieces"/>
+				<field name="ges_gweight" />
+				<field name="ges_tare" />
+				<field name="ges_nweight" />
+			</xpath>           
+		</field>
+	</record>
+	<record id="ges_action_tax_form" model="ir.actions.act_window">
+		<field name="name">Taxes</field>
+		<field name="res_model">account.tax</field>
+		<field name="view_mode">tree,kanban,form</field>
+		<field name="domain" eval="False"/> <!-- Force empty -->
+		<field name="context">{'search_default_sale': True, 'search_default_purchase': True, 'active_test': False, 'search_default_active': True}</field>
+		<field name="view_id" ref="account.view_tax_tree"/>
+		<field name="help" type="html">
+		  <p class="o_view_nocontent_smiling_face">
+			Create a new tax
+		  </p>
+		</field>
+	</record>
+</odoo>

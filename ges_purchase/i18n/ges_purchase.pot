@@ -1,0 +1,282 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-22 09:18+0000\n"
+"PO-Revision-Date: 2021-10-22 09:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+msgid "<span>Cancelled Purchase Order # </span>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+msgid "<span>Purchase Order # </span>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+msgid "<span>Request for Quotation # </span>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<span>Request for Quotation </span>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Brand</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Category - Size</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Gross weight</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Net weight</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Origin</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Packages</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Pieces</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Price</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_report_purchasequotation_document
+msgid "<strong>Product</strong>"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_brand_id
+msgid "Brand"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_category_id
+msgid "Category"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_gweight
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_gweight
+msgid "Gross weight"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_gweight_inv
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_gweight_inv
+msgid "Gross weight to invoice"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order__id
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ges_purchase
+#: model:res.groups,name:ges_purchase.ges_group_input_top_mode_pol
+msgid "Input data at the top of the table for purchase order lines"
+msgstr ""
+
+#. module: ges_purchase
+#: model:res.groups,name:ges_purchase.ges_group_input_form_mode_pol
+msgid "Input data in form mode for purchase order lines"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_nweight
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_nweight
+msgid "Net weight"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_nweight_inv
+msgid "Net weight to invoice"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.actions.act_window,help:ges_purchase.ges_purchase_form_action_to_deliver
+msgid "No purchase order found. Let's create one!"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.actions.act_window,help:ges_purchase.ges_purchase_rfq
+msgid "No request for quotation found. Let's create one!"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order__ges_copies
+msgid "Number of copies"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_pack
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_pack
+msgid "Number of packages"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_pack_inv
+msgid "Number of packages to invoice"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_piece
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_piece
+msgid "Number of pieces"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_piece_inv
+msgid "Number of pieces to invoice"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.actions.act_window,help:ges_purchase.ges_purchase_form_action_to_deliver
+msgid ""
+"Once you ordered your products to your supplier, confirm your request for "
+"quotation and it will turn into a purchase order."
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_origin_id
+msgid "Origin"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_purchase_order_form
+msgid "Packages"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_purchase_order_form
+msgid "Pieces"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model,name:ges_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model,name:ges_purchase.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.actions.act_window,name:ges_purchase.ges_purchase_form_action_to_deliver
+#: model:ir.ui.menu,name:ges_purchase.menu_gesprim_purchaseorders
+msgid "Purchase Orders"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.actions.act_window,name:ges_purchase.ges_purchase_rfq
+#: model:ir.ui.menu,name:ges_purchase.menu_gesprim_reqquot
+msgid "Requests for Quotation"
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.actions.act_window,help:ges_purchase.ges_purchase_rfq
+msgid ""
+"Requests for quotation are documents that will be sent to your suppliers to\n"
+"\t\t\t\trequest prices for different products you consider buying.\n"
+"\t\t\t\tOnce an agreement has been found with the supplier, they will be\n"
+"\t\t\t\tconfirmed and turned into purchase orders."
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_size_id
+msgid "Size"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_tare
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_tare
+msgid "Tare"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,field_description:ges_purchase.field_purchase_order_line__ges_tare_inv
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_tare_inv
+msgid "Tare to invoice"
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_brand_id
+msgid "The Brand of the product."
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_origin_id
+msgid "The Origin of the product."
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_size_id
+msgid "The Size of the product."
+msgstr ""
+
+#. module: ges_purchase
+#: model:ir.model.fields,help:ges_purchase.field_purchase_order_line__ges_category_id
+msgid "The category of the product."
+msgstr ""
+
+#. module: ges_purchase
+#: model_terms:ir.ui.view,arch_db:ges_purchase.ges_purchase_order_view_search
+msgid "To deliver"
+msgstr ""

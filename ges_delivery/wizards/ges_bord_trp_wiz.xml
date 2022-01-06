@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="ges_bordtrp_wiz_form" model="ir.ui.view">
+        <field name="name">ges.bordtrp.wiz.form</field>
+        <field name="model">ges.bordtrp.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print shipping notes">
+                <separator string="Sélection"/>
+                <group>
+                    <group>
+                        <field name="date_sel"/>
+                        <field name="transp_deb"/>                        
+                        <field name="transp_fin"/>
+                    </group>
+                    <group/>
+                </group>
+                <footer>
+                    <button string="Print" type="object" name="edit_bordereau"
+                        default_focus="1" class="oe_link"/>                    
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ges_action_wiz_imp_bordtrp" model="ir.actions.act_window">
+        <field name="name">Print shipping note</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ges.bordtrp.wiz</field>                
+        <!-- <field name="view_id" ref="ges_bordtrp_wiz_form"/>         -->
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record> 
+    
+    </data>
+</odoo>

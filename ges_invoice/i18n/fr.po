@@ -1,0 +1,677 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ges_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-19 12:36+0000\n"
+"PO-Revision-Date: 2021-10-19 14:49+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: ges_invoice
+#: model:ir.actions.report,print_report_name:ges_invoice.ges_account_invoices_lots
+msgid "(object._get_report_base_filename())"
+msgstr "(object._get_report_base_filename())"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Brand</span>"
+msgstr "<span>Marque</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Category - Size</span>"
+msgstr "<span>Categorie - Calibre</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Description</span>"
+msgstr "<span>Description</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Gross weight</span>"
+msgstr "<span>Poids brut</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Lot : </span>"
+msgstr "<span>Lot : </span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Lot</span>"
+msgstr "<span>Lot</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Net weight</span>"
+msgstr "<span>Poids net</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Origin</span>"
+msgstr "<span>Origine</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Packages</span>"
+msgstr "<span>Colis</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<span>Pieces</span>"
+msgstr "<span>Pièces</span>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>Code client :</strong>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<strong>Due Date:</strong>"
+msgstr "<strong>Date d'échéance:</strong>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>Date de facture :</strong>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Référence:</strong>"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_move_form
+msgid "Additional informations"
+msgstr "Informations complémentaires"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__analytic_account_id
+msgid "Analytic Account"
+msgstr "Compte analytique"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__product_id
+msgid "Article"
+msgstr "Article"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__price_average
+msgid "Average Price"
+msgstr "Prix moyen"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_brand_id
+msgid "Brand"
+msgstr "Marque"
+
+#. module: ges_invoice
+#: model:ir.filters,name:ges_invoice.ges_filter_invoice_country
+msgid "By Country"
+msgstr "Par pays"
+
+#. module: ges_invoice
+#: model:ir.filters,name:ges_invoice.ges_filter_invoice_refund
+msgid "By Credit Note"
+msgstr "Par avoir"
+
+#. module: ges_invoice
+#: model:ir.filters,name:ges_invoice.ges_filter_invoice_report_salespersons
+msgid "By Salespersons"
+msgstr "Par vendeur"
+
+#. module: ges_invoice
+#: model:ir.filters,name:ges_invoice.ges_filter_invoice_product_category
+msgid "By product category"
+msgstr "Par catégorie article"
+
+#. module: ges_invoice
+#: model:ir.filters,name:ges_invoice.ges_filter_invoice_product
+msgid "By products"
+msgstr "Par article"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__state__cancel
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "Cancelled Invoice"
+msgstr "Facture annulée"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_category_id
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: ges_invoice
+#: model:ir.model.fields,help:ges_invoice.field_ges_invoice_stat__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entité commerciale"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__company_id
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Company"
+msgstr "Société"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__company_currency_id
+msgid "Company Currency"
+msgstr "Devise de la société"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_purchase_price
+msgid "Cost"
+msgstr "Coût"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__country_id
+msgid "Country"
+msgstr "Pays"
+
+#. module: ges_invoice
+#: model_terms:ir.actions.act_window,help:ges_invoice.ges_action_tax_form
+msgid "Create a new tax"
+msgstr "Créer une nouvelle taxe"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "Credit Note"
+msgstr "Avoir"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Credit Notes"
+msgstr "Avoirs"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__move_type__out_refund
+msgid "Customer Credit Note"
+msgstr "Avoir client"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__move_type__out_invoice
+msgid "Customer Invoice"
+msgstr "Facture client"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Date"
+msgstr "Date"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move__display_name
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "Draft Invoice"
+msgstr "Facture brouillon"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Draft Invoices"
+msgstr "Facture brouillon"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__invoice_date_due
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__fiscal_position_id
+msgid "Fiscal Position"
+msgstr "Position fiscale"
+
+#. module: ges_invoice
+#: model_terms:ir.actions.act_window,help:ges_invoice.ges_action_invoice_stat_all
+msgid ""
+"From this report, you can have an overview of the amount invoiced from your "
+"vendors. The search tool can also be used to personalise your Invoices "
+"reports and so, match this analysis to your needs."
+msgstr ""
+"Depuis cet écran, vous pouvez visualiser les montants facturés de vos "
+"fournisseurs. L'outil de recherche peut permettre de personnaliser les "
+"écrans selon vos besoins."
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_gweight
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_gweight
+msgid "Gross weight"
+msgstr "Poids brut"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move__id
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__id
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__payment_state__in_payment
+msgid "In Payment"
+msgstr "En paiement"
+
+#. module: ges_invoice
+#: model:res.groups,name:ges_invoice.ges_group_input_top_mode_am
+msgid "Input data at the top of the table for account move"
+msgstr "Saisie des données en haut du tableau pour les factures"
+
+#. module: ges_invoice
+#: model:res.groups,name:ges_invoice.ges_group_input_form_mode_am
+msgid "Input data in form mode for account move"
+msgstr "Saisie des données en mode fiche pour les factures"
+
+#. module: ges_invoice
+#: model:account.tax.group,name:ges_invoice.ges_tax_group_tva_interfel
+msgid "Interfel"
+msgstr "Interfel"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__invoice_date
+msgid "Invoice Date"
+msgstr "Date de facture"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__state
+msgid "Invoice Status"
+msgstr "Statut de la facture"
+
+#. module: ges_invoice
+#: model:ir.ui.menu,name:ges_invoice.menu_gesprim_invoice_stat
+msgid "Invoice analysis"
+msgstr "Analyse des factures"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__invoice_number
+msgid "Invoice number"
+msgstr "Numéro de facture"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Invoiced"
+msgstr "Facturé"
+
+#. module: ges_invoice
+#: model:ir.ui.menu,name:ges_invoice.menu_gesprim_customers_invoices
+#: model:ir.ui.menu,name:ges_invoice.menu_gesprim_supplier_invoices
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: ges_invoice
+#: model:ir.actions.act_window,name:ges_invoice.ges_action_invoice_stat_all
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_invoice_stat_graph
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_invoice_stat_pivot
+msgid "Invoices Analysis"
+msgstr "Analyse des factures"
+
+#. module: ges_invoice
+#: model:ir.model,name:ges_invoice.model_ges_invoice_stat
+msgid "Invoices Statistics"
+msgstr "Statistiques factures"
+
+#. module: ges_invoice
+#: model:ir.actions.report,name:ges_invoice.ges_account_invoices_lots
+msgid "Invoices with lots"
+msgstr "Facture avec lots"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__journal_id
+msgid "Journal"
+msgstr "Journal"
+
+#. module: ges_invoice
+#: model:ir.model,name:ges_invoice.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: ges_invoice
+#: model:ir.model,name:ges_invoice.model_account_move_line
+msgid "Journal Item"
+msgstr "Écriture comptable"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Journal invoices with period in current year"
+msgstr "Factures du journal de l'année courante"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move____last_update
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Last month"
+msgstr "Mois dernier"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__lot_id
+msgid "Lot"
+msgstr "Lot"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_lots
+msgid "Lots on the invoice line"
+msgstr "Lots sur ligne de facture"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__margin
+msgid "Margin"
+msgstr "Marge"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__margin_on_sales
+msgid "Margin on sales"
+msgstr "Marge sur les ventes"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__move_id
+msgid "Move"
+msgstr "Ecriture"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__move_line_id
+msgid "Move Line"
+msgstr "Ligne d'écriture"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__move_type
+msgid "Move Type"
+msgstr "Type d'écriture"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "My Invoices"
+msgstr "Mes factures"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_nweight
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_nweight
+msgid "Net weight"
+msgstr "Poids net"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__payment_state__not_paid
+msgid "Not Paid"
+msgstr "Non payé"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_bank_statement_line__ges_copies
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move__ges_copies
+#: model:ir.model.fields,field_description:ges_invoice.field_account_payment__ges_copies
+msgid "Number of copies"
+msgstr "Nombre de copies"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_pack
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_pack
+msgid "Number of packages"
+msgstr "Nombre de colis"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_piece
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_piece
+msgid "Number of pieces"
+msgstr "Nombre de pièces"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_bank_statement_line__ges_one_lot
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move__ges_one_lot
+#: model:ir.model.fields,field_description:ges_invoice.field_account_payment__ges_one_lot
+msgid "Only one lot by line"
+msgstr "Un seul lot par ligne"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_one_lot
+msgid "Only one lot on the line"
+msgstr "Un seul lot sur la ligne"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__state__posted
+msgid "Open"
+msgstr "Ouvert"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_origin_id
+msgid "Origin"
+msgstr "Origine"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_move_form
+msgid "Packages"
+msgstr "Colis"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__partner_id
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Partner"
+msgstr "Tiers"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__commercial_partner_id
+msgid "Partner Company"
+msgstr "Société"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__payment_state
+msgid "Payment Status"
+msgstr "Statut du paiement"
+
+#. module: ges_invoice
+#: model:ir.ui.menu,name:ges_invoice.menu_gesprim_payment_term
+msgid "Payment terms"
+msgstr "Conditions de paiement"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_move_form
+msgid "Pieces"
+msgstr "Pièces"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__price_unit
+msgid "Price unit"
+msgstr "Prix unitaire"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__product_categ_id
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Product Category"
+msgstr "Catégorie article"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__quantity
+msgid "Product Quantity"
+msgstr "Quantité"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__purchase_amount_for_qty_sold
+msgid "Purchase amount"
+msgstr "Montant achat"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__purchase_nweight
+msgid "Purchase net weight"
+msgstr "Poids net achat"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__purchase_pack
+msgid "Purchase packages"
+msgstr "Colis achat"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__purchase_piece
+msgid "Purchase pieces"
+msgstr "Pièces achat"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__purchase_price
+msgid "Purchase price"
+msgstr "Prix d'achat"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__purchase_qty
+msgid "Purchase quantity"
+msgstr "Quantité achat"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__account_id
+msgid "Revenue/Expense Account"
+msgstr "Compte de revenu/dépense"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__sale_amount
+msgid "Sale amount"
+msgstr "Montant vente"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__sale_nweight
+msgid "Sale net weight"
+msgstr "Poids net vente"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__sale_pack
+msgid "Sale packages"
+msgstr "Colis vente"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__sale_piece
+msgid "Sale pieces"
+msgstr "Pièces vente"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__sale_qty
+msgid "Sale quantity"
+msgstr "Quantité vente"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__invoice_user_id
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Salesperson"
+msgstr "Vendeur"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_size_id
+msgid "Size"
+msgstr "Calibre"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Sold products"
+msgstr "Produits vendus"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "Status"
+msgstr "Statut"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_account_move_line__ges_tare
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_tare
+msgid "Tare"
+msgstr "Tare"
+
+#. module: ges_invoice
+#: model:ir.actions.act_window,name:ges_invoice.ges_action_tax_form
+#: model:ir.ui.menu,name:ges_invoice.menu_gesprim_tax
+msgid "Taxes"
+msgstr "Taxes"
+
+#. module: ges_invoice
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_brand_id
+msgid "The Brand of the product."
+msgstr "La marque de l'article."
+
+#. module: ges_invoice
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_origin_id
+msgid "The Origin of the product."
+msgstr "L'origine de l'article."
+
+#. module: ges_invoice
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_size_id
+msgid "The Size of the product."
+msgstr "Le calibre de l'article."
+
+#. module: ges_invoice
+#: model:ir.model.fields,help:ges_invoice.field_account_move_line__ges_category_id
+msgid "The category of the product."
+msgstr "La catégorie de l'article."
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "This month"
+msgstr "Ce mois"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "This year"
+msgstr "Cette année"
+
+#. module: ges_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_view_account_invoice_stat_search
+msgid "To Invoice"
+msgstr "A facturer"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__product_uom_id
+msgid "Unit of Measure"
+msgstr "Unité de mesure"
+
+#. module: ges_invoice
+#: model:ir.model.fields,field_description:ges_invoice.field_ges_invoice_stat__price_subtotal
+msgid "Untaxed Total"
+msgstr "Total hors taxe"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__move_type__in_invoice
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "Vendor Bill"
+msgstr "Facture fournisseur"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__move_type__in_refund
+#: model_terms:ir.ui.view,arch_db:ges_invoice.ges_report_invoice_document
+msgid "Vendor Credit Note"
+msgstr "Avoir fournisseur"
+
+#. module: ges_invoice
+#: model:ir.model.fields.selection,name:ges_invoice.selection__ges_invoice_stat__payment_state__paid
+msgid "paid"
+msgstr "payé"

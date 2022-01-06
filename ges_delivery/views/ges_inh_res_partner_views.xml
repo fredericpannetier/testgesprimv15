@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  
+    
+    <record id="ges_delivery_view_partner_property_form" model="ir.ui.view">
+        <field name="name">ges.delivery.res.partner.property.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field eval="80" name="priority" />
+        <field name="arch" type="xml">
+                  
+            <xpath expr="//group[@name='sale']" position="inside">
+                <field name="ges_ship_cost_owed" />
+                <!-- <field name="ges_carrier_id" />                     -->
+            </xpath>
+            
+        </field>                      
+    </record> 
+             
+</odoo>

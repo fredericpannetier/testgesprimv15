@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+	    <record id="ges_view_delivery_carrier_form" model="ir.ui.view">
+            <field name="name">ges.view.delivery.carrier.form</field>
+            <field name="model">delivery.carrier</field>
+            <field name="inherit_id" ref="delivery.view_delivery_carrier_form" />
+            <field eval="80" name="priority" />
+            <field name="arch" type="xml">                
+                <xpath expr="//field[@name='free_over']" position="before">                    
+                    <label for="ges_gasoiltax" string="Gasoil tax"/>
+                    <div>
+                        <field name="ges_gasoiltax" class="oe_inline"/>%
+                    </div>
+                    <field name="ges_adminfees"  />                                         
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">                                       
+                    <field name="ges_pallet_rounding"  />                                         
+                </xpath>
+            </field>
+        </record>
+	
+		<!-- surcharge mode liste de la grille de transport -->
+		<record id="ges_view_delivery_price_rule_tree" model="ir.ui.view">
+			<field name="name">ges.delivery.price.rule.tree</field>
+			<field name="model">delivery.price.rule</field>
+			<field name="inherit_id" ref="delivery.view_delivery_price_rule_tree" />
+			<field eval="80" name="priority" />
+			<field name="arch" type="xml">
+				<!-- on ajoute le transporteur(suivant contexte) + code destination -->
+				<xpath expr="//field[@name='name']" position="before">
+					<field name="carrier_id" invisible="context.get('show_carrier') != True" />										
+				</xpath>
+				<!-- on enlève le widget séquence -->
+				<!-- <xpath expr="//field[@name='sequence']" position="replace"> -->
+				<!-- </xpath> -->
+			</field>
+		</record>
+		<!-- surcharge mode fiche de la grille de transport standard (depuis la méthode de livraison)-->
+		<record id="ges_view_delivery_price_rule_form" model="ir.ui.view">
+			<field name="name">ges.delivery.price.rule.form</field>
+			<field name="model">delivery.price.rule</field>
+			<field name="inherit_id" ref="delivery.view_delivery_price_rule_form" />
+			<field eval="80" name="priority" />
+			<field name="arch" type="xml">							
+				<xpath expr="//field[@name='variable']" position="after">
+					<field name="ges_paltyp_id" attrs="{'invisible': [('variable', '!=', 'pallet')]}"/>
+				</xpath>
+				
+				
+			</field>
+		</record>
+		<!-- création d'une nouvelle vue fiche pour affichage depuis menu directement sinon bug en ajoutant le transporteur-->
+		<record id="ges_view_delivery_price_rule_form2" model="ir.ui.view">
+            <field name="name">ges.delivery.price.rule.form2</field>
+            <field name="model">delivery.price.rule</field>
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <form string="Price Rules">
+                    <group>
+                        <field name="name" invisible="1"/>
+                    </group>
+                    <group>
+                        <field name="carrier_id"/>
+						
+                        <label for="variable" string="Condition"/>
+                        <div class="o_row">
+                            <field name="variable"/>
+                            <field name="ges_paltyp_id" attrs="{'invisible': [('variable', '!=', 'pallet')]}"/>
+                            <field name="operator"/>
+                            <field name="max_value"/>
+                        </div>
+                        <label for="list_base_price" string="Delivery Cost"/>
+                        <div>
+                            <field name="list_base_price" class="oe_inline"/>
+                            <p class="oe_inline">+</p>
+                            <field name="list_price" class="oe_inline"/>
+                            <p class="oe_inline">*</p>
+                            <field name="variable_factor" class="oe_inline"/>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+		<!-- création action pour appeler de façon autonome la grille de transport -->
+		<record id="ges_action_delivery_price_rule" model="ir.actions.act_window">
+			<field name="name">Delivery price rules</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">delivery.price.rule</field>			
+			<field name="view_mode">tree,form</field>
+			<field name="view_ids" eval="[(5, 0, 0),			
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('delivery.view_delivery_price_rule_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('ges_view_delivery_price_rule_form2')})]"/>
+			<field name="context">{'show_carrier': True}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Aide
+				</p>
+				<p>
+					Manage Delivery price rules
+				</p>
+			</field>
+		</record>
+		<!-- recherche -->
+		<record id="ges_view_delivery_price_rule_search" model="ir.ui.view">
+            <field name="name">ges.delivery.price.rule.search</field>
+            <field name="model">delivery.price.rule</field>
+            <field name="arch" type="xml">
+                <search string="Delivery price rules">
+                	<field name="name" string="Delivery price rules" filter_domain="['|',('name','ilike',self),('carrier_id','ilike',self)]"/>
+                    <field name="carrier_id"/>                    
+                    <group expand="1" string="Group By">
+                        <filter string="Carriers" name="carrier_id" context="{'group_by':'carrier_id',}"/>
+                    </group>
+                </search>
+            </field>
+        </record>        
+	</data>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ges_view_order_product_pivot" model="ir.ui.view">
+         <field name="name">ges.purchase.stat.pivot</field>
+         <field name="model">ges.purchase.stat</field>
+         <field name="arch" type="xml">
+             <pivot string="Purchases Analysis" disable_linking="True" sample="1">                 
+                 <field name="partner_id"  type="row"/>                 
+                 <field name="product_id"  type="row"/>                 
+                 <field name="lot_id"  type="row"/>    
+                 <!-- <field name="date" type="measure" interval="day"/>                               -->
+                 <field name="ges_pack"  type="measure"/> 
+                 <field name="ges_piece"  type="measure"/> 
+                 <field name="ges_nweight"  type="measure"/> 
+                 <field name="product_uom_qty"  type="measure"/> 
+             </pivot>
+         </field>
+    </record>
+
+    <record id="ges_view_order_product_graph" model="ir.ui.view">
+         <field name="name">ges.purchase.stat.graph</field>
+         <field name="model">ges.purchase.stat</field>
+         <field name="arch" type="xml">
+             <graph string="Purchases Analysis" type="line" sample="1" disable_linking="1">
+                 <field name="date" type="row" interval="day"/>                 
+             </graph>
+         </field>
+    </record>
+
+    <record id="ges_view_order_product_search" model="ir.ui.view">
+        <field name="name">ges.purchase.stat.search</field>
+        <field name="model">ges.purchase.stat</field>
+        <field name="arch" type="xml">
+            <search string="purchases Analysis">
+                <field name="date"/>
+                <filter string="Date" name="year" invisible="1" date="date" default_period="this_year"/>
+                <filter name="Quotations" string="Quotations" domain="[('state','in', ('draft', 'sent'))]"/>
+                <filter name="purchases" string="purchases Orders" domain="[('state','not in',('draft', 'cancel', 'sent'))]"/>
+                <separator/>
+                <filter name="filter_date" date="date" default_period="this_month"/>
+                <separator/>                
+                <field name="product_id"/>
+                <field name="categ_id"/>
+                <field name="partner_id"/>
+                <field name="country_id"/>                
+                <group expand="0" string="Extended Filters">
+                    <field name="categ_id" filter_domain="[('categ_id', 'child_of', self)]"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </group>
+                <group expand="1" string="Group By">                    
+                    <filter string="Customer" name="Customer" context="{'group_by':'partner_id'}"/>
+                    <filter string="Customer Country" name="country_id" context="{'group_by':'country_id'}"/>                    
+                    <filter string="Product" name="Product" context="{'group_by':'product_id'}"/>
+                    <filter string="Product Category" name="Category" context="{'group_by':'categ_id'}"/>
+                    <filter name="status" string="Status" context="{'group_by':'state'}"/>
+                    <filter string="Company" name="company" groups="base.group_multi_company" context="{'group_by':'company_id'}"/>
+                    <separator/>
+                    <filter string="Order Date" name="date" context="{'group_by':'date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="ges_action_order_stat_all" model="ir.actions.act_window">
+        <field name="name">purchases Analysis</field>
+        <field name="res_model">ges.purchase.stat</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="view_id"></field>  <!-- force empty -->
+        <field name="search_view_id" ref="ges_view_order_product_search"/>
+        <field name="context">{'search_default_purchases':1, 'group_by_no_leaf':1,'group_by':[]}</field>
+        <field name="help">This stat performs analysis on your quotations and purchases orders. Analysis check your purchases revenues and sort it by different group criteria (purchasesman, partner, product, etc.) Use this stat to perform analysis on purchases not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis stat in the Accounting application.</field>
+    </record>
+</odoo>

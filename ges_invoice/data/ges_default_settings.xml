@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+    <data noupdate="1">
+        
+     
+         <record id="ges_tax_group_tva_interfel" model="account.tax.group">
+            <field name="name">Interfel</field>
+        </record>
+        <!-- <record id="ges_interfel" model="account.tax">
+            <field name="description">Interfel</field>            
+            <field name="type_tax_use">sale</field>
+            <field name="name">Interfel</field>
+            <field name="amount_type">percent</field>
+            <field name="amount" eval="0.206"/>
+            <field name="tax_group_id" ref="ges_invoice.ges_tax_group_tva_interfel"/>
+            <field name="di_tax_id" ref="l10n_fr.tva_normale"/> 
+            
+            
+                <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                    (0,0, {                        
+                        'factor_percent': 100,
+                        'repartition_type': 'base',                        
+                    }),
+        
+                    (0,0, {
+                        'company_id':[ref('base.main_company')],
+                        'factor_percent': 100,
+                        'repartition_type': 'tax',                        
+                        'account_id': ref('l10n_fr.pcg_44571'),
+                    }),
+                ]"/>
+                <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                    (0,0, {
+                        'factor_percent': 100,
+                        'repartition_type': 'base',                        
+                    }),
+        
+                    (0,0, {
+                        'company_id':[ref('base.main_company')],
+                        'factor_percent': 100,
+                        'repartition_type': 'tax',                        
+                        'account_id': ref('l10n_fr.pcg_44571'),
+                    }),
+                ]"/>
+                                   
+        </record>                               -->
+    </data>
+</odoo>

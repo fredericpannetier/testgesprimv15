@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="ges_carrier_ctrl_template">
+		<t t-set="doc" t-value="doc" />
+		<t t-set="flag" t-value="0"/>
+		<t t-foreach="doc.stock_picking_ids.sorted(key= lambda sp: str(sp.carrier_id.name) and str(sp.carrier_id.name) or '')" t-as="carrier">
+			<!-- afin de gérer les ruptures et les sauts de pages on fait un 1er parcours de boucle à ce niveau -->
+			<t t-set="print_header" t-value="0"/>
+			<t t-if="flag == 0">
+				<!-- au 1er passage on charge les données nécessaires et on lance l'impression de l'entête -->
+				<t t-set="flag" t-value="1"/>
+				<t t-set="carrier_id" t-value="carrier.carrier_id"/>
+				<t t-set="carrier_id_name" t-value="carrier.carrier_id.name"/>
+				<t t-set="print_header" t-value="1"/>
+			</t>
+			<t t-else="">
+				<t t-if="carrier_id != carrier.carrier_id">
+					<!-- si rupture transporteur on charge les données nécessaires et on lance l'impression de l'entête -->
+					<p style="page-break-before:always;"> </p>
+					<t t-set="carrier_id" t-value="carrier.carrier_id"/>
+					<t t-set="carrier_id_name" t-value="carrier.carrier_id.name"/>
+					<t t-set="print_header" t-value="1"/>
+				</t>
+			</t>
+			<t t-set="totpack" t-value="0" />
+			<t t-set="totpal" t-value="0.0" />
+			<t t-set="totweight" t-value="0.0" />
+			<t t-set="totamount" t-value="0.0" />
+			<!-- impression entête -->
+			<t t-if="print_header == 1">
+				<!-- impression adresse dossier -->
+				<!-- <h3 t-field="doc.company_id.name" />
+				<h5 t-field="doc.company_id.street" />
+				<h5>
+					<span t-field="doc.company_id.zip" />
+					<span t-field="doc.company_id.city" />
+				</h5>
+				<h5>
+					<span>Phone :</span>
+					<span t-field="doc.company_id.phone" />
+				</h5> -->
+				<!-- impression du titre du document -->
+				<h2 style="text-align: center">
+					<span>Carrier control from&amp;nbsp;</span>
+					<span t-field="doc.begin_date" />
+					<span>to</span>
+					<span t-field="doc.end_date" />
+				</h2>
+				<!-- impression du transporteur -->
+				<table class="table table-condensed table-bordered" width="100%">
+					<thead>
+						<tr>
+							<th width="50%">
+								<h3 style="text-align: center">
+									<span>From </span>
+									<span t-field="doc.begin_date"/>
+									<span> to </span>
+									<span t-field="doc.end_date"/>
+								</h3>
+							</th>
+							<th width="50%">
+								<t t-if="carrier_id">
+									<h3 style="text-align: center" t-esc="carrier_id_name"/>
+								</t>
+							</th>
+						</tr>
+					</thead>
+				</table>
+				<!-- impression des entêtes de colonnes -->
+				<table class="table table-condensed table-bordered" width="100%">
+					<thead>
+						<tr>
+							<th>
+								<h4 style="text-align: center">Date</h4>
+							</th>
+							<th>
+								<h4 style="text-align: center">Delivery number</h4>
+							</th>
+							<th>
+								<h4 style="text-align: center">Third party</h4>
+							</th>
+							<th>
+								<h4 style="text-align: center">Address</h4>
+							</th>
+							<th>
+								<h4 style="text-align: center">Packages</h4>
+							</th>
+							<th groups="ges_menu.group_manage_pal">
+								<h4 style="text-align: center">Pallets</h4>
+							</th>
+							<th>
+								<h4 style="text-align: center">Gross weight</h4>
+							</th>
+							<th>
+								<h4 style="text-align: center">Carriage amount</h4>
+							</th>
+						</tr>
+					</thead>
+					<!-- impression des lignes, on fait un 2eme parcours afin de rester entre les balises table -->
+					<tbody>
+						<t t-foreach="doc.stock_picking_ids.sorted(key= lambda sp: (str(sp.date_done) and str(sp.date_done) or '',str(sp.name) and str(sp.name) or ''))" t-as="sp">
+						<t t-if="sp.carrier_id == carrier_id">
+							<tr>
+								<td>
+									<span t-esc="sp.date_done" t-options='{"widget": "date"}'/>
+								</td>
+								<td>
+									<span t-field="sp.name"/>
+								</td>
+								<td>
+									<t t-if="sp.partner_id.ref">
+										<span t-field="sp.partner_id.ref" />
+									</t>
+									<t t-else="">
+										<span t-field="sp.partner_id.parent_id.ref" />
+									</t>
+									<span> - </span>
+									<t t-if="sp.partner_id.name">
+										<span t-field="sp.partner_id.name" />
+									</t>
+									<t t-else="">
+										<span t-field="sp.partner_id.parent_id.name" />
+									</t>
+								</td>
+								<td>
+									<div t-field="sp.partner_id.street" />
+									<div>
+										<span t-field="sp.partner_id.zip" />
+										<span t-field="sp.partner_id.city" />
+									</div>
+								</td>
+								<td><span t-field="sp.ges_pack"/></td>
+								<td groups="ges_menu.group_manage_pal"><span t-field="sp.ges_nbpal"/></td>
+								<td><span t-field="sp.weight"/></td>
+								<td>
+									
+									<!-- <t t-set="sale_order" t-value="env['sale.order']" />
+																			
+									<t t-set="so" t-value="sale_order.browse(sp.sale_id.id)" /> -->
+									<!-- <t if="so.ges_delivery_price"> -->
+									<t if="sp.sale_id and sp.sale_id.ges_delivery_price">
+										<span t-esc="sp.sale_id.ges_delivery_price"  t-options="{'widget': 'monetary',
+										'display_currency': doc.company_id.currency_id}" />
+										<t t-set="totamount" t-value="totamount + sp.sale_id.ges_delivery_price" />
+									</t>
+									
+									
+								</td>
+								<t t-set="totpack" t-value="totpack + sp.ges_pack" />
+								<t t-set="totpal" t-value="totpal + sp.ges_nbpal" />
+								<t t-set="totweight" t-value="totweight + sp.weight" />								
+							</tr>						
+						</t>
+						</t>
+						<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td style="text-align: right"><b>TOTAL</b></td>
+						<td><b t-esc="round(totpack,3)"/></td>
+						<td groups="ges_menu.group_manage_pal"><b t-esc="round(totpal,3)"/></td>
+						<td><b t-esc="round(totweight,3)"/></td>
+						<td>
+							<b t-esc="round(totamount,3)"  t-options="{'widget': 'monetary',
+							'display_currency': doc.company_id.currency_id}"
+							/>
+						</td>
+						</tr>
+					</tbody>
+				</table>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="ges_wiz_template_carrier_ctrl">
+		<t t-call="web.html_container">		
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<t t-call="ges_delivery.ges_carrier_ctrl_template" />
+						<t t-set="doc" t-value="doc" />
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+	
+		
+	<record id="ges_report_carrier_ctrl" model="ir.actions.report">
+        <field name="name">Print carrier control</field>
+        <field name="model">ges.carrier.ctrl.wiz</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ges_delivery.ges_wiz_template_carrier_ctrl</field>
+        <field name="report_file">ges_delivery.ges_wiz_template_carrier_ctrl</field>
+        <field name="print_report_name">'Carrier control'</field>                        
+    </record>
+</odoo>

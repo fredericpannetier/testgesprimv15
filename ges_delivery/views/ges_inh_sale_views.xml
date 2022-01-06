@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="ges_view_order_tree" model="ir.ui.view">
+        <field name="name">ges.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field eval="79" name="priority" />
+        <field name="arch" type="xml">            
+            <xpath expr="//tree/field[@name='user_id']" position="after">
+                <field name="carrier_id" optional="show"/> 
+                <field name="ges_tour" optional="show"/>
+                <field name="ges_ranktour" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="ges_view_order_form" model="ir.ui.view">
+        <field name="name">ges.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field eval="79" name="priority" />
+        <field name="arch" type="xml">            
+            <xpath expr="//group[@name='order_details']" position="after">
+                <group name="carrier_details" colspan="2" style="width:20%;">
+                    <field name="carrier_id" />
+                    <field name="ges_tour"/>
+                    <field name="ges_ranktour"/>
+                </group>
+            </xpath>
+		</field>
+	</record>
+	
+	<record id="ges_view_order_form_update_shipping" model="ir.ui.view">
+            <field name="name">delivery.sale.order.form.view.with_carrier</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field eval="82" name="priority" />
+            <field name="arch" type="xml">
+                <data>
+                   
+                    <xpath expr="//button[@name='action_open_delivery_wizard'][1]" position="attributes">
+                        <attribute name="attrs">{'invisible': ['|', '|','|',('is_all_service', '=', True), ('order_line', '=', []), ('delivery_set', '=', True),('invoice_status','=','invoiced')]}</attribute>
+                    </xpath>
+                    <xpath expr="//button[@name='action_open_delivery_wizard'][2]" position="attributes">
+                        <attribute name="attrs">{'invisible': ['|', '|','|',('is_all_service', '=', True), ('recompute_delivery_price', '=', False), ('delivery_set', '=', False),('invoice_status','=','invoiced')]}</attribute>
+                    </xpath>    
+                    <xpath expr="//button[@name='action_open_delivery_wizard'][3]" position="attributes">
+                        <attribute name="attrs">{'invisible': ['|', '|','|',('is_all_service', '=', True), ('recompute_delivery_price', '=', True), ('delivery_set', '=', False),('invoice_status','=','invoiced')]}</attribute>
+                    </xpath>                                                                                            
+                </data>
+            </field>
+        </record>
+	
+</odoo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+	<!-- ***Menu Ventes -->
+	<menuitem id="menu_gesprim_reqquot" name="Requests for Quotation" sequence="10" parent="ges_menu.menu_gesprim_purchases" action="ges_purchase_rfq" />
+	<menuitem id="menu_gesprim_purchaseorders" name="Purchase Orders" sequence="20" parent="ges_menu.menu_gesprim_purchases" action="ges_purchase_form_action_to_deliver" />
+</odoo>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+  <template id="ges_report_purchasequotation" inherit_id="purchase.report_purchasequotation">
+    <xpath expr="//t[@t-call='purchase.report_purchasequotation_document']" position="replace">
+      <t t-if="o.ges_copies == 0">
+          <t t-set="copies" t-value="1"/>                
+      </t>
+      <t t-else="">
+          <t t-set="copies" t-value="o.ges_copies"/>                    
+      </t>
+        <t t-foreach="range(copies)" t-as="n">
+            <t t-call="purchase.report_purchasequotation_document" t-lang="o.partner_id.lang"/>
+        </t>        
+    </xpath>      
+  </template>
+  
+  <template id="ges_report_purchaseorder" inherit_id="purchase.report_purchaseorder">
+    <xpath expr="//t[@t-call='purchase.report_purchaseorder_document']" position="replace">
+      <t t-if="o.ges_copies == 0">
+        <t t-set="copies" t-value="1"/>                
+    </t>
+    <t t-else="">
+        <t t-set="copies" t-value="o.ges_copies"/>                    
+    </t>
+        <t t-foreach="range(copies)" t-as="n">
+            <t t-call="purchase.report_purchaseorder_document" t-lang="o.partner_id.lang"/>
+        </t>        
+    </xpath>      
+  </template>
+
+  <template id="ges_report_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document">
+    <xpath expr="//h2[4]" position="replace">
+        <h2 t-if="o.state == 'cancel'"><span>Cancelled Purchase Order # </span><span t-field="o.name"/></h2>
+    </xpath>
+    <xpath expr="//h2[3]" position="replace">
+        <h2 t-if="o.state in ['purchase', 'done']"><span>Purchase Order # </span><span t-field="o.name"/></h2>
+    </xpath>
+    <xpath expr="//h2[2]" position="replace">
+        <h2 t-if="o.state in ['sent', 'to approve']"><span>Purchase Order # </span><span t-field="o.name"/></h2>
+    </xpath>
+    <xpath expr="//h2[1]" position="replace">
+        <h2 t-if="o.state == 'draft'"><span>Request for Quotation # </span><span t-field="o.name"/></h2>
+    </xpath>
+    
+            
+            
+            
+
+      <xpath expr="//div[contains(@class, 'page')]/table/thead/tr/th[@name='th_description']" position="replace">
+        <th name="th_description" class="text-left">
+            <div>
+                <strong>Product</strong>
+            </div>
+            <div>
+                <strong>Category - Size</strong>
+            </div>
+            <th name="ges_th_orig_brand" class="text-left">
+              <div>
+                  <strong>Origin</strong>
+              </div>
+              <div>
+                  <strong>Brand</strong>
+              </div>
+          </th>
+        </th>
+              
+      </xpath> 
+      <xpath expr="//div[contains(@class, 'page')]/table/thead/tr/th[@name='th_quantity']" position="before">
+        <th name="ges_th_packages" class="text-right">
+            <div>
+                <strong>Packages</strong>
+            </div>
+        </th>
+        <th name="ges_th_pieces" class="text-right">
+            <div>
+                <strong>Pieces</strong>
+            </div>
+        </th>
+        <th name="ges_th_nweight" class="text-right">
+            <div>
+                <strong>Net weight</strong>
+            </div>
+            <div>
+                <strong>Gross weight</strong>
+            </div>
+        </th>
+    </xpath>    
+    <xpath expr="//div[contains(@class, 'page')]/table/tbody/t[@t-foreach='o.order_line']/tr/t[@t-if='not line.display_type']/td[4]" position="before">
+      <td name="ges_td_packages" class="text-right">
+          <div>
+              <span t-field="line.ges_pack" />
+          </div>
+      </td>
+      <td name="ges_td_pieces" class="text-right">
+          <div>
+              <span t-field="line.ges_piece" />
+          </div>
+      </td>
+      <td name="ges_td_nweight" class="text-right">
+          <div>
+              <span t-field="line.ges_nweight" />
+          </div>
+          <div>
+              <span t-field="line.ges_gweight" />
+          </div>
+      </td>
+    </xpath>   
+    <xpath expr="//td[@id='product']" position="replace">
+      <td>
+        <div>
+            <span t-field="line.product_id.display_name" />            
+        </div>
+        <div>
+            <span t-field="line.ges_category_id.name" />
+            -
+            <span t-field="line.ges_size_id.name" />
+        </div>
+    </td>
+    <td name="ges_td_orig_brand" class="text-left">
+        <div>
+            <span t-field="line.ges_origin_id.name" />
+        </div>
+        <div>
+            <span t-field="line.ges_brand_id.name" />
+        </div>
+    </td>
+    </xpath>  
+  </template> 
+
+  <template id="ges_report_purchasequotation_document" inherit_id="purchase.report_purchasequotation_document">
+    <xpath expr="//h2" position="replace">
+        <h2><span>Request for Quotation </span><span t-field="o.name"/></h2>
+    </xpath>
+            
+      <xpath expr="//div[contains(@class, 'page')]/table/thead/tr/th[@name='th_description']" position="replace">
+        <th name="th_description" class="text-left">
+            <div>
+                <strong>Product</strong>
+            </div>
+            <div>
+                <strong>Category - Size</strong>
+            </div>
+            <th name="ges_th_orig_brand" class="text-left">
+              <div>
+                  <strong>Origin</strong>
+              </div>
+              <div>
+                  <strong>Brand</strong>
+              </div>
+          </th>
+        </th>
+              
+      </xpath> 
+      <xpath expr="//div[contains(@class, 'page')]/table/thead/tr/th[@name='th_quantity']" position="before">
+        <th name="ges_th_packages" class="text-right">
+            <div>
+                <strong>Packages</strong>
+            </div>
+        </th>
+        <th name="ges_th_pieces" class="text-right">
+            <div>
+                <strong>Pieces</strong>
+            </div>
+        </th>
+        <th name="ges_th_nweight" class="text-right">
+            <div>
+                <strong>Net weight</strong>
+            </div>
+            <div>
+                <strong>Gross weight</strong>
+            </div>
+        </th>
+    </xpath> 
+    <xpath expr="//div[contains(@class, 'page')]/table/thead/tr/th[@name='th_quantity']" position="after">
+      <th name="ges_th_price" class="text-right">
+          <div>
+              <strong>Price</strong>
+          </div>
+      </th>      
+  </xpath>    
+  <xpath expr="//div[contains(@class, 'page')]/table/tbody/t[@t-foreach='o.order_line']/tr/t[@t-if='not order_line.display_type']/td[3]" position="after">
+    <td></td>
+  </xpath>
+    <xpath expr="//div[contains(@class, 'page')]/table/tbody/t[@t-foreach='o.order_line']/tr/t[@t-if='not order_line.display_type']/td[3]" position="before">
+      <td name="ges_td_packages" class="text-right">
+          <div>
+              <span t-field="order_line.ges_pack" />
+          </div>
+      </td>
+      <td name="ges_td_pieces" class="text-right">
+          <div>
+              <span t-field="order_line.ges_piece" />
+          </div>
+      </td>
+      <td name="ges_td_nweight" class="text-right">
+          <div>
+              <span t-field="order_line.ges_nweight" />
+          </div>
+          <div>
+              <span t-field="order_line.ges_gweight" />
+          </div>
+      </td>
+    </xpath>   
+    
+    <xpath expr="//td[@id='product']" position="replace">
+      <td>
+        <div>
+            <span t-field="order_line.product_id.display_name" />            
+        </div>
+        <div>
+            <span t-field="order_line.ges_category_id.name" />
+            -
+            <span t-field="order_line.ges_size_id.name" />
+        </div>
+    </td>
+    <td name="ges_td_orig_brand" class="text-left">
+        <div>
+            <span t-field="order_line.ges_origin_id.name" />
+        </div>
+        <div>
+            <span t-field="order_line.ges_brand_id.name" />
+        </div>
+    </td>
+    </xpath>  
+  </template> 
+
+  
+ 
+</odoo>
+  
